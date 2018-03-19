@@ -11,7 +11,7 @@
 
 <body>
     <!--"test" -  nav sa nu fie fix -->
-    <div class="test">  
+    <div class="test">
         <div class="header neutral" id="header">
             <div class="logo">
                 <a href="index.html">ProGnosiX</a>
@@ -31,7 +31,7 @@
 
     <div id="navMenu" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
-        <a href="TW.html">Tehnologii Web</a>
+        <a href="materii.html">Tehnologii Web</a>
         <a href="PSGBD.html">PSGBD</a>
         <a href="PA.html">Programare Avansata</a>
         <a href="IP.html">Ingineria Programarii</a>
@@ -42,54 +42,54 @@
     <div id="content">
         <span class="burger-menu" onclick="toggleNav()">&#9776;</span>
         <div class="register">
-                <form action="action_page.php" method="POST"  class="container" style="border:1px solid #ccc">
-                    <h1>Cont nou</h1>
-                    <p>Va rugam sa completati toate campurile pentru a creea un cont nou.</p>
-                    <hr>
+            <form action="register.php" method="POST" class="container" style="border:1px solid #ccc">
+                <h1>Cont nou</h1>
+                <p>Va rugam sa completati toate campurile pentru a creea un cont nou.</p>
+                <hr>
 
-                    <label for="email">
-                        <b>Nume</b>
-                    </label>
-                    <input type="text" placeholder="Introduceti numele" name="lastName" required>
+                <label>
+                    <b>Nume</b>
+                </label>
+                <input type="text" placeholder="Introduceti numele" name="lastName" required>
 
-                    <label for="email">
-                        <b>Prenume</b>
-                    </label>
-                    <input type="text" placeholder="Introduceti prenumele" name="firstName" required>
+                <label>
+                    <b>Prenume</b>
+                </label>
+                <input type="text" placeholder="Introduceti prenumele" name="firstName" required>
 
-                    <label for="email">
-                        <b>Nume de utilizator</b>
-                    </label>
-                    <input type="text" placeholder="Nume de utilizator" name="username" required>
+                <label>
+                    <b>Nume de utilizator</b>
+                </label>
+                <input type="text" placeholder="Nume de utilizator" name="username" required>
 
-                    <label for="psw">
-                        <b>Parola</b>
-                    </label>
-                    <input type="password" placeholder="Introduceti parola" name="psw" required>
+                <label>
+                    <b>Parola</b>
+                </label>
+                <input type="password" placeholder="Introduceti parola" name="psw" required>
 
-                    <label for="psw-repeat">
-                        <b>Verificare parola</b>
-                    </label>
-                    <input type="password" placeholder="Reintroduceti parola" name="pswRepeat" required>
+                <label>
+                    <b>Verificare parola</b>
+                </label>
+                <input type="password" placeholder="Reintroduceti parola" name="pswRepeat" required>
 
-                    <label for="email">
-                        <b>Email</b>
-                    </label>
-                    <input type="text" placeholder="Introduceti Email" name="email" required>
+                <label>
+                    <b>Email</b>
+                </label>
+                <input type="text" placeholder="Introduceti Email" name="email" required>
 
-                    <label for="email">
-                        <b>Adresa</b>
-                    </label>
-                    <input type="text" placeholder="Introduceti adresa" name="adress" required>
+                <label>
+                    <b>Adresa</b>
+                </label>
+                <input type="text" placeholder="Introduceti adresa" name="adress" required>
 
-                    <p>Inregistrandu-te esti de acord cu
-                        <a href="#" style="color:dodgerblue">Termenii &amp; Conditiile</a>.</p>
+                <p>Inregistrandu-te esti de acord cu
+                    <a href="#" style="color:dodgerblue">Termenii &amp; Conditiile</a>.</p>
 
-                    <div class="clearfix">
-                        <button type="button" class="cancelbtn">Anuleaza</button>
-                        <button type="submit" class="signupbtn" name="submit">Inregistreaza-te</button>
-                    </div>
-                </form>
+                <div class="clearfix">
+                    <button type="button" class="cancelbtn">Anuleaza</button>
+                    <button type="submit" class="signupbtn" name="submit">Inregistreaza-te</button>
+                </div>
+            </form>
         </div>
     </div>
 
