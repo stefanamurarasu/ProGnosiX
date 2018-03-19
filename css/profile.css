@@ -1,0 +1,70 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box
+}
+
+img {
+    width: 20%; 
+    margin-right: 20px;
+}
+
+.pgx-content {
+	display: flex;
+    flex-direction: column;
+    
+}
+
+.pgx-user-details {
+    display: flex; 
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.bad {
+	width: 300px;
+	height: 50px;
+	position: relative;
+    background-color: red;
+}
+
+h3, .bad {
+    margin-left: 130px;
+    margin-bottom: 10px;
+}
+
+
+.good {
+	height: 50px;
+	position: absolute;
+	background-color: green;
+	animation-name: example;
+    animation-duration: 5s;
+    transition-timing-function:ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes example {
+    from { width: 0; }
+    to { width: 66%; }
+}
+
+.burger-menu {
+	font-size:30px; 
+	cursor:pointer
+}
+
+.pgx-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.pgx-card-header-info {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
