@@ -1,6 +1,3 @@
-/*eslint no-undef: "error"*/
-/*eslint-env browser*/
-
 let isMenuOpen = false;
 
 function toggleNav() {

@@ -1,7 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box
+	box-sizing: border-box;
 }
 
 /** 
@@ -17,7 +17,7 @@
 	margin-bottom: 50px;
 }
 
-.container {
+.container {   
   padding: 16px;
 }
 
@@ -25,7 +25,6 @@
   padding: 10px;
 }
 
-/* a thematic break */
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
@@ -45,7 +44,6 @@ input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 
-/* buttons */
 button {
   background-color: #4CAF50;
   color: white;
@@ -72,7 +70,7 @@ button:hover {
 }
 
 .clearfix::after {
-  content: "";
+  content: "";        
   clear: both;
   display: table;
 }

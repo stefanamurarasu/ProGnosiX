@@ -1,7 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box
+	box-sizing: border-box;
 }
 
 
@@ -44,7 +44,16 @@
 }
 
 .pgx-form__sub-title {
-	font-size: 20px;	
+	font-size: 20px;
+	text-decoration: none;	
+}
+
+/*in pagina de materii*/
+
+.pgx-form__sub-title_materii {
+	font-size: 20px;
+	text-decoration: none;
+    color: #A9A9A9!important;	
 }
 
 .pgx-form__label {
@@ -54,17 +63,12 @@
 	color: #1957d5;
 }
 
-.pgx-form__label:nth-last-child(1) {
+/* .pgx-form__label:nth-last-child(1) {
 	margin: 0;
-}
+} */
 
 .pgx-fomr__save-button {
-	width: 50%
+	width: 50%;
 }
 
 
-.profile {
-    float: inherit;
-    padding-top: 10px;
-    
-}
