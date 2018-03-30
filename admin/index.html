@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ProGnosiX</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/content.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+
+<body>
+    <!--"test" -  nav sa nu fie fix -->
+    <div class="test">
+        <div class="header neutral" id="header">
+            <div class="logo">
+                <a href="index.html">ProGnosiX</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="navMenu" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+        <a href="materii.html">Tehnologii Web</a>
+        <a href="PSGBD.html">PSGBD</a>
+        <a href="PA.html">Programare Avansată</a>
+        <a href="IP.html">Ingineria Programării</a>
+        <a href="Optional.html">Opțional 2</a>
+        <a href="Engleza.html">Limba Engleză</a>
+    </div>
+
+    <div id="content" class="pgx-content">
+        <span class="burger-menu" onclick="toggleNav()">&#9776;</span>
+        <div class="register login">
+            <form action="login.php" method="POST" class="container" style="border:1px solid #ccc">
+                <h1>Conectare</h1>
+                <hr>
+
+                <label>
+                    <b>Username</b>
+                </label>
+                <input type="text" placeholder="Introduceți username" name="username" required>
+
+                <label>
+                    <b>Parola</b>
+                </label>
+                <input type="password" placeholder="Introduceți parola" name="pwd" required>
+                
+                <div class="clearfix">
+                    <button type="submit" class="loginbtn" name="submit">Conectare</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer neutral" id="footer">
+        &copy; Copyright 2018.
+    </div>
+
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>

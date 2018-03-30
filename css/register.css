@@ -17,6 +17,10 @@
 	margin-bottom: 50px;
 }
 
+.login {
+    max-width: 460px;
+}
+
 .container {   
   padding: 16px;
 }
@@ -39,7 +43,7 @@ hr {
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -64,9 +68,15 @@ button:hover {
   background-color: #f44336;
 }
 
-.cancelbtn, .signupbtn {
+.cancelbtn, .signupbtn, .loginbtn {
   float: left;
   width: 50%;
+}
+
+.loginbtn{
+    margin: auto;
+    display: block;
+    width: 100%;
 }
 
 .clearfix::after {
@@ -75,7 +85,7 @@ button:hover {
   display: table;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 340px) {
   .cancelbtn, .signupbtn {
     width: 100%;
   }

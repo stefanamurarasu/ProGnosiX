@@ -2,7 +2,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ProGnosiX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ProGnosiX | Opțional</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/register.css">
@@ -10,18 +11,14 @@
 </head>
 
 <body>
-    <div class="test">
-        <div class="header neutral" id="header">
-            <div class="logo">
-                <a href="index.html">ProGnosiX</a>
-            </div>
-            <div class="header-right">
-                <span class="make-me-inline">Hello,
-                    <a href="profile.html">UserName</a>!
-                </span>
-                <div class="form make-me-inline">
-                    <input type="submit" value="Logout">
-                </div>
+    <div class="header neutral" id="header">
+        <div class="logo">
+            <a href="index.html">ProGnosiX</a>
+        </div>
+        <div class="header-right">
+            <span class="make-me-inline carbonText">Hello, <a href="profile.html" class="redText"><span class="redText">UserName</span></a>!</span>
+            <div class="form make-me-inline">
+                <input type="submit" value="Logout">
             </div>
         </div>
     </div>
@@ -40,31 +37,25 @@
         <span class="burger-menu" onclick="toggleNav()">&#9776;</span>
 
         <form class="pgx-card pgx-form">
-            <h1 class="pgx-form__title">Optional</h1>
+            <h1 class="pgx-form__title">Opțional</h1>
             <h2 class="pgx-form__sub-title"> Ce notă crezi că vei obține ? </h2>
-            <div>
-                <label class="pgx-form__label">
-                    <input type="radio" name="gradeValue"> 1 </label>
-                <label class="pgx-form__label">
-                    <input type="radio" name="gradeValue"> 2 </label>
-                <label class="pgx-form__label">
-                    <input type="radio" name="gradeValue"> 3 </label>
-                <label class="pgx-form__label">
-                    <input type="radio" name="gradeValue"> 4 </label>
-                <label class="pgx-form__label">
-                    <input type="radio" name="gradeValue"> 5 </label>
-                <label class="pgx-form__label">
-                    <input type="radio" name="gradeValue"> 6 </label>
-                <label class="pgx-form__label">
-                    <input type="radio" name="gradeValue"> 7 </label>
-                <label class="pgx-form__label">
-                    <input type="radio" name="gradeValue"> 8 </label>
-                <label class="pgx-form__label">
-                    <input type="radio" name="gradeValue"> 9 </label>
-                <label class="pgx-form__label">
-                    <input type="radio" name="gradeValue"> 10 </label>
+            <div class="pgx-block">
+                <input type="radio" name="gradeValue" value="1"><label for="gradeValue1" class="pgx-form__label"> 1 </label>
+                <input type="radio" name="gradeValue" value="2"><label for="gradeValue2" class="pgx-form__label"> 2 </label>
+                <input type="radio" name="gradeValue" value="3"><label for="gradeValue3" class="pgx-form__label"> 3 </label>
+                <input type="radio" name="gradeValue" value="4"><label for="gradeValue4" class="pgx-form__label"> 4 </label>
+                <input type="radio" name="gradeValue" value="5"><label for="gradeValue5" class="pgx-form__label"> 5 </label>
+                <input type="radio" name="gradeValue" value="6"><label for="gradeValue6" class="pgx-form__label"> 6 </label>
+                <input type="radio" name="gradeValue" value="7"><label for="gradeValue7" class="pgx-form__label"> 7 </label>
+                <input type="radio" name="gradeValue" value="8"><label for="gradeValue8" class="pgx-form__label"> 8 </label>
+                <input type="radio" name="gradeValue" value="9"><label for="gradeValue9" class="pgx-form__label"> 9 </label>
+                <input type="radio" name="gradeValue" value="10"><label for="gradeValue10" class="pgx-form__label"> 10 </label>
+                <span class="pgx-block"><input type="radio" name="gradeValue" value=""><label class="pgx-form__label"> Altă valoare:
+                    <input type="number" id="otherValue" name="otherValue" min="1" max="10" step="0.01"></label></span>
             </div>
             <button type="submit" class="pgx-fomr__save-button">Trimite nota</button>
+            <hr class="pgx-hr-spacer">
+            <button type="submit" class="pgx-result red">Vezi rezultatele</button>
         </form>
 
     </div>

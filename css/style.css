@@ -1,7 +1,7 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -34,6 +34,30 @@ html {
     background-color: #EFEFEF!important;
 }
 
+/* Text Color */
+
+.skyText,
+.skyText:hover {
+    color: #CAEBF2!important;
+}
+
+.carbonText,
+.carbonText:hover {
+    color: #A9A9A9!important;
+}
+
+.redText {
+    color: #FF3B3F!important;
+}
+
+.redText:hover {
+    opacity: 0.7;
+}
+
+.neutralText,
+.neutralText:hover {
+    color: #EFEFEF!important;
+}
 
 /**
 *
@@ -44,7 +68,7 @@ html {
 .header {
     transition: 0.5s;
     overflow: hidden;
-    padding: 20px 10px;
+    padding: 15px 10px;
     left: 0;
     top: 0;
     position: sticky;
@@ -57,14 +81,14 @@ html {
     float: left;
     color: black;
     text-align: center;
-    padding: 12px;
+    padding: 10px;
     text-decoration: none;
     font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
     font-size: 25px;
     font-weight: bold;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .logo a:hover {
@@ -76,13 +100,16 @@ html {
 
 .header-right {
     float: right;
+    margin-top: 10px;
 }
 
 .make-me-inline {
     display: inline;
     margin: 5px;
+    vertical-align: middle;
 }
-.make-me-inline a{
+
+.make-me-inline a {
     text-decoration: none;
     color: #A9A9A9!important;
 }
@@ -137,7 +164,8 @@ input[type=submit] {
     padding-top: 60px;
 }
 
-/* materii */ 
+/* materii */
+
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -152,6 +180,7 @@ input[type=submit] {
 }
 
 /* x button */
+
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -169,12 +198,12 @@ input[type=submit] {
 #content {
     transition: margin-left .5s;
     padding: 16px;
-    
+
 }
 
 .burger-menu {
-	font-size:30px; 
-	cursor:pointer
+    font-size: 30px;
+    cursor: pointer
 }
 
 /**
@@ -195,7 +224,7 @@ input[type=submit] {
 
 
 
-@media screen and (max-height: 640px) {
+@media screen and (max-height: 480px) {
     .sidenav {
         padding-top: 15px;
         margin-top: 0px;
@@ -205,15 +234,17 @@ input[type=submit] {
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 480px) {
     .header a {
         float: none;
-        display: block;
-        text-align: left;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
     }
     .header-right {
-        float: none;
-        display: none;
+        margin-top: 15px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
     }
 }
-
