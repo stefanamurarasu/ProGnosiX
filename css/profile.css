@@ -4,64 +4,16 @@
 	box-sizing: border-box;
 }
 
-img {
-    width: 20%; 
-    margin-right: 20px;
+.pgx-user-info {
+    display: inline-block;
+    max-width: 95%;
+    float: left;
 }
 
-.pgx-content {
-	display: flex;
-    flex-direction: column; 
+.pgx-avatar img {
+    min-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    max-width: 100px;
 }
-
-.pgx-user-details {
-    display: flex; 
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-/* Progress bar */
-
-.bad {
-	width: 300px;
-	height: 50px;
-	position: relative;
-    background-color: red;
-}
-
-h3, .bad {
-    margin-left: 130px;
-    margin-bottom: 10px;
-}
-
-
-.good {
-	height: 50px;
-	position: absolute;
-	background-color: green;
-	animation-name: example;
-    animation-duration: 5s;
-    transition-timing-function:ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-@keyframes example {
-    from { width: 0; }
-    to { width: 66%; }
-}
-
-
-.pgx-card-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-}
-
-.pgx-card-header-info {
-    height: 75%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
 

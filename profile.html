@@ -2,26 +2,24 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ProGnosiX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ProGnosiX | Profil</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="css/profile.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 
 <body>
-    <div class="test">
-        <div class="header neutral" id="header">
-            <div class="logo">
-                <a href="index.html">ProGnosiX</a>
-            </div>
-            <div class="header-right">
-                <span class="make-me-inline">Hello,
-                    <a href="profile.html">UserName</a>!
-                </span>
-                <div class="form make-me-inline">
-                    <input type="submit" value="Logout">
-                </div>
+    <div class="header neutral" id="header">
+        <div class="logo">
+            <a href="index.html">ProGnosiX</a>
+        </div>
+        <div class="header-right">
+            <span class="make-me-inline carbonText">Hello, <a href="profile.html" class="redText"><span class="redText">UserName</span></a>!</span>
+            <div class="form make-me-inline">
+                <input type="submit" value="Logout">
             </div>
         </div>
     </div>
@@ -38,29 +36,25 @@
 
     <div id="content" class="pgx-content">
         <span class="burger-menu" onclick="toggleNav()">&#9776;</span>
-        <div class="pgx-user-details">
-            <div class="pgx-card pgx-form">
-                <div class="pgx-card-header">
-                    <img href="#" src="images/user.jpg" alt="User image">
-                    <div class="pgx-card-header-info">
+
+        <span class="pgx-card pgx-form">
+            <div class="pgx-user-details">
+                <div class="pgx-avatar"><img src="images/user.jpg" alt="User Image"></div>
+                    <div class="">
                         <h1>John Doe</h1>
                         <p>Username: johnnyDepp</p>
                         <p>E-mail: johnnydoeyjoy@gmail.com</p>
-                    </div>
-                    <div>
-                        <h3>Progresul tău:</h3>
-                        <div class="bad">
-                            <div class="good"></div>
-                        </div>
-                    </div>
                 </div>
+                <h3>Progresul tău:</h3>
             </div>
-        </div>
+            <hr class="pgx-hr-spacer">
+        </span>
+
     </div>
 
-    <div class="footer neutral" id="footer">
+    <footer class="footer neutral" id="footer">
         &copy; Copyright 2018.
-    </div>
+    </footer>
 
     <script src="scripts/main.js"></script>
 </body>
