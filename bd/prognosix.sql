@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 30 Mar 2018 la 12:32
+-- Generation Time: 02 Apr 2018 la 10:36
 -- Versiune server: 10.1.31-MariaDB
 -- PHP Version: 5.6.34
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admins` (
   `ID` int(3) NOT NULL,
-  `username` varchar(10) NOT NULL,
+  `username` varchar(50) NOT NULL,
   `psw` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -42,7 +42,7 @@ CREATE TABLE `admins` (
 
 CREATE TABLE `cursuri` (
   `ID` int(3) NOT NULL,
-  `title` varchar(30) NOT NULL,
+  `title` varchar(100) NOT NULL,
   `year` int(4) NOT NULL,
   `semester` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -71,11 +71,18 @@ CREATE TABLE `studenti` (
   `nr_matricol` varchar(16) NOT NULL,
   `lastName` varchar(30) NOT NULL,
   `firstName` varchar(30) NOT NULL,
-  `username` varchar(10) NOT NULL,
+  `username` varchar(50) NOT NULL,
   `psw` varchar(15) NOT NULL,
   `pswRepeat` varchar(15) NOT NULL,
   `email` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Salvarea datelor din tabel `studenti`
+--
+
+INSERT INTO `studenti` (`ID`, `nr_matricol`, `lastName`, `firstName`, `username`, `psw`, `pswRepeat`, `email`) VALUES
+(2, '', 'Dudau', 'Codruta', 'codrutadudau', 'hellothere', 'hellothere', 'andreeacodruta89@yahoo.com');
 
 --
 -- Indexes for dumped tables
@@ -132,7 +139,7 @@ ALTER TABLE `note`
 -- AUTO_INCREMENT for table `studenti`
 --
 ALTER TABLE `studenti`
-  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
