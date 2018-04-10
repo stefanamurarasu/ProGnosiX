@@ -15,6 +15,16 @@ html {
     height: 500px;
 }
 
+
+/* log in */
+
+.user-icon {
+    display: inline;
+    margin: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
 /* Pentru toata coloana */
 .news-col {
     position: absolute;
@@ -119,7 +129,7 @@ ul {
 
 .weekdays li {
     display: inline-block;
-    width: 13.6%;
+    width: 13%;
     color: #666;
     text-align: center;
 }
@@ -134,7 +144,7 @@ ul {
 .days li {
     list-style-type: none;
     display: inline-block;
-    width: 13.6%;
+    width: 13%;
     text-align: center;
     margin-bottom: 5px;
     font-size:12px;
