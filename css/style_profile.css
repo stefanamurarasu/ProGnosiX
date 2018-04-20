@@ -105,6 +105,13 @@ html {
 
 /* log in */
 
+.user-icon {
+    display: inline;
+    margin: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+ 
 .header-right {
     float: right;
     margin-top: 10px;
@@ -119,7 +126,7 @@ html {
 .make-me-inline a {
     text-decoration: none;
     color: #A9A9A9!important;
-}
+} 
 
 .header input[type=text],
 .header input[type=password] {
@@ -133,11 +140,11 @@ html {
 
 input[type=submit] {
     background-color: #4CAF50;
-    border: none;
+    border-radius: 6px;
+    border-color: #4CAF50;
     color: white;
-    padding: 10px 30px;
+    padding: 9px 30px;
     font-size: 12pt;
-    text-decoration: none;
     cursor: pointer;
 }
 
@@ -164,8 +171,8 @@ input[type=submit] {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #37474F;
-    color: #EFEFEF;
+    background-color: #f1f1f1;
+    color: #ccc;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -177,13 +184,13 @@ input[type=submit] {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #EFEFEF;
+    color: black;
     display: block;
     transition: 0.3s;
 }
 
 .sidenav a:hover {
-    color: #CAEBF2;
+    color: #ccc;
 }
 
 /* x button */
