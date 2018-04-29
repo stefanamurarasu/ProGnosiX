@@ -42,11 +42,19 @@ h1 {
     font-weight: 400;
 }
 
+a {
+    text-decoration: none;
+}
+
 .logo {
     background-color: #000;
     color: #fff;
     padding-left: 8px;
     padding-right: 8px;
+}
+
+.logo:hover {
+    background-color: #b7b7b7;
 }
 
 .display-logo {
