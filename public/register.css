@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, h3 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: black;
+}
+
+body, html {
+    height: 100%;
+    line-height: 2.5;
+}
+
+/* Register Section */
+
+.register-section {
+    background-color: #e6e6e6;
+    border: 1px dashed white;
+    margin: auto;
+    max-width: 960px;
+}
+
+
+.register-section input[type=text], .register-section input[type=password] {
+   width: 100%;
+   padding: 15px;
+   margin: 5px 0 22px 0;
+   display: inline-block;
+   border: 1px dashed white;
+   background:#e6e6e6;
+}
+  
+input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
+   background-color: #ddd;
+   outline: none;
+}
+  
+button {
+   background-color:#616161!important;
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   opacity: 0.9;
+}
+  
+.cancelbtn:hover, .signupbtn:hover {
+  color: #000!important;
+  background-color: #ccc!important;
+}
+
+  
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+  
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.container {   
+  padding: 16px;
+}
+  
+.container h1, .container p {
+  padding: 10px;
+}
+  
+hr {
+   border: 1px solid #f1f1f1;
+   margin-bottom: 25px;
+}
+
+.clearfix {
+    padding: 0px 1px;
+}
+
+.clearfix::after {
+    content: "";        
+    clear: both;
+    display: table;
+}
