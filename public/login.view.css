@@ -91,7 +91,7 @@ input[type=submit] {
 .img-cover {
     background-position: center;
     background-size: cover;
-    background-image: url("../images/home-cover.png");
+    background-image: url("../public/images/home-cover.png");
     min-height: 90%;
     position: relative;
 }
@@ -197,15 +197,15 @@ input[type=submit] {
 }
 
 .check-in-icon {
-    background: url("../images/check.png") no-repeat 0% 50%;
+    background: url("../public/images/check.png") no-repeat 0% 50%;
 }
 
 .phone-icon {
-    background: url("../images/to-call.png") no-repeat 0% 50%;
+    background: url("../public/images/to-call.png") no-repeat 0% 50%;
 }
 
 .mail-icon {
-    background: url("../images/mail-icon.png") no-repeat 0% 50%;
+    background: url("../public/images/mail-icon.png") no-repeat 0% 50%;
 }
 
 ul {
