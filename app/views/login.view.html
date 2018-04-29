@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ProGnosiX</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1 class="display-logo">
+            <b>Welcome to
+                <span class="logo">ProGnosiX</span>
+            </b>
+        </h1>
+        <form class="form">
+            <input type="text" placeholder="E-mail..." name="e-mail" required>
+            <input type="password" placeholder="Parolă..." name="parolă" required>
+            <input type="submit" value="Log In">
+        </form>
+    </header>
+
+    <!-- Log in / register section -->
+    <div class="img-cover">
+        <hr class="hr-dashed">
+        <div class="display-left text-white">
+            <div class="background-transparent hide-small">
+                <span class="display-block title-size">Ai curaj să-ți pui nota la încercare?</span>
+                <span class="display-block subtitle-size">Dacă răspunsul este DA, FII curajos și fă-ți un cont!</span>
+            </div>
+            <br>
+            <div class="background-transparent hide-large hide-medium">
+                <span class="large display-block">Ai curaj să-ți pui nota la încercare?</span>
+                <span class="display-block subtitle-size">Dacă răspunsul este DA, FII curajos și fă-ți un cont!</span>
+            </div>
+            <br>
+            <!-- <span class="subtitle-size">Dacă răspunsul este DA, FII curajos și fă-ți un cont!</span> -->
+            <p class="create-account">
+                <a href="#about" class="button subtitle-size button-white button-opacity">Creează-ți un cont acum</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Application details -->
+
+    <div class="app-details-section">
+        <h3 class="to-align text-white">Despre aplicație</h3>
+        <br>
+        <p class="details subtitle-size text-white to-align">
+            ProGnosiX este o aplicație Web ce permite studenților de la Facultatea de Informatică, să ghicească ce note vor obține la
+            anumite probe de evaluare -- teste, examene. Când se afișează rezultatele, dacă notele ghicite vor coincide sau
+            nu cu cele reale, punctajele ar putea crește/scade, după situație. Cu alte cuvinte, dacă ești student la FII,
+            ai mai avea o șansă să obții minimul visat, dacă se aliniază stelele în favoarea ta. Dar ține cont de un lucru:
+            nu te poți răzgândi... Ai avea curaj să riști? </p>
+    </div>
+
+    <!-- Contact section -->
+    <div class="contact">
+        <h3 class="to-align">CONTACT</h3>
+        <div class="contact-info-left margin-top">
+
+            <div>
+                <div class="team-member">
+                    <img src="./images/codruta.png" class="potato-head">
+                    <p class="to-align">Codruța</p>
+                </div>
+                <div class="team-member">
+                    <img src="./images/raluca.png" class="potato-head">
+                    <p class="to-align">Raluca</p>
+                </div>
+            </div>
+
+            <ul class="pad-left">
+                <li class="check-in-icon">
+                    <i class="info to-align large"></i>Iași, RO</li>
+                <li class="phone-icon">
+                    <i class="info to-align large"></i>Phone: 0748 022 866</li>
+                <li class="mail-icon">
+                    <i class="info to-align large"></i>Email: prognosix@gmail.com
+                </li>
+            </ul>
+        </div>
+
+        <!-- Google Map -->
+        <div id="google-map" class="g-map margin-top"></div>
+    </div>
+
+    <script src="scripts/google_maps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5WeMOGA2ezX4oAVZBatY-R9R52Gc9QnA&callback=myMap"></script>
+
+    <footer class="footer" id="footer">
+        &copy; Copyright ProGnosiX Team 2018
+    </footer>
+
+</body>
+
+</html>
