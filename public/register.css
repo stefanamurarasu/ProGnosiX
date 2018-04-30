@@ -1,10 +1,16 @@
+/* se suprapune peste culoarea de la home.css */
+body {
+  background-color: #ffffff;
+}
+
 /* Register Section */
 
 .register-section {
-    background-color: #e6e6e6;
-    border: 1px dashed white;
+    background-color: #ddd;
+    border: 1px dashed #0e0e0e82;
     margin: auto;
     max-width: 960px;
+    margin-bottom: 30px;
 }
 
 
