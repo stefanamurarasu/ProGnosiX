@@ -30,7 +30,7 @@ body, html {
     padding: 15px 10px;
     left: 0;
     top: 0;
-    position: sticky;
+    /* position: sticky; */
     margin-top: 0;
     background-color: #151515;
 }
@@ -110,7 +110,7 @@ input[type=submit] {
     color: #A9A9A9!important;
 } 
 
-
+/*continut vechi*/
 /* Pentru toata coloana */
 .news-col {
     position: absolute;
@@ -244,3 +244,122 @@ ul {
     color: white !important
 }
 
+/*  /continut vechi  */
+
+
+
+/* Schimbat */
+
+.main-content {
+    transition: margin-left .4s;
+    color: #ddd;
+}
+
+.paragraph-padding-64 {
+    padding-top: 64px!important;
+    padding-bottom: 64px!important;
+}
+
+.paragraph-padding-32 {
+    padding-top: 32px!important;
+    padding-bottom: 32px!important;
+}
+
+.clear:before, .pg-container:before{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.position-paragraph {
+    float: left;
+    width: 100%;
+}
+
+.pg-container {
+    padding: 0.01em 16px;
+}
+
+.txt-color {
+    color: #32b473d6!important;
+}
+
+.to-align {
+    text-align: center!important;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.pg-border {
+    border: 1px solid #ccc!important; 
+}
+
+.pg-padding-large {
+    padding: 12px 24px!important;
+}
+
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.pag-center .pagination {
+    display: inline-block;
+    width: auto;
+}
+
+.pagination .pag-button {
+    white-space: normal;
+}
+
+.button-black, .button-black-hover:hover {
+    color: #fff!important;
+    background-color: #000!important;
+}
+
+.button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Footer de scos */
+.footer {
+    color: white;
+    transition: 0.5s;
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    /* padding: 20px; */
+    background-color: #090909e0;
+}
+
+@media (max-width: 992px){
+    .main-content  {
+        margin-left: 0!important;
+        margin-right: 0!important;
+    }
+}
+
+@media (min-width: 601px){
+    .position-paragraph {
+        width: 33.33333%;
+    }
+}
