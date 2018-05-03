@@ -114,145 +114,24 @@ input[type=submit] {
     color: #A9A9A9!important;
 } 
 
-/*continut vechi*/
-/* Pentru toata coloana */
-.news-col {
-    position: absolute;
-    height: 100%;
-    right: 20px;
-    width: 300px;
-}
-
-.rss-feed {
-    height: 126.5px;
-    border: 2px solid rgb(255, 255, 255);
-    box-shadow: 0 0 1px rgba(0,0,0,0.2);
-    margin-bottom: 30px;
-}
-
-.calendar, .rss-feed {
-    display: block;
-}
-
-/* Titlu */
-.rss-text {
-    font-size: 17px;
-    background-color: #6595da; 
-    line-height: 30px;
-    margin: 15px 5px 10px 5px;
-    text-align: center;
-    color: #fff;
-}
-
-/* Continut pentru casute */
-.rss-subtext { 
-    color: #222;
-    cursor: pointer;
-    padding-left:20px;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-.rss-image {
-    background: url("../public/images/rss.png") no-repeat 0% 50%;
-    margin: 0px 0px 10px 5px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-
-/* Month header */
-.month {
-    position: relative;
-    padding: 70px 25px;
-    width: 100%;
-    background: url("../public/images/calendar.jpg") no-repeat 0% 50%;
-    text-align: center;
-}
-
-.transparent {
-    position: absolute;
-    width: 300px;
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    bottom: 0px;
-    left:0px;
-    padding: 10px;
-}
-
-.transparent li {
-    color: #fff !important;
-}
-
-/* Month list */
-.month ul {
-    margin: 0;
-    padding: 0;
-}
-
-.month ul li {
-    color: #666;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-/* Previous button inside month header */
-.month .prev {
-    float: left;
-    padding-top: 10px;
-}
-
-/* Next button */
-.month .next {
-    float: right;
-    padding-top: 10px;
-}
-
-/* Weekdays (Mon-Sun) */
-.weekdays {
-    margin: 0;
-    padding: 10px 0;
-    background-color:#ddd;
-}
-
-.weekdays li {
-    display: inline-block;
-    width: 13%;
-    color: #666;
-    text-align: center;
-}
-
-/* Days (1-31) */
-.days {
-    padding: 10px 0;
-    background: #eee;
-    margin: 0;
-}
-
-.days li {
-    list-style-type: none;
-    display: inline-block;
-    width: 13%;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size:12px;
-    color: #777;
-}
-
-/* Highlight the "current" day */
-.days li .active {
-    padding: 5px;
-    background: #7ee465;
-    color: white !important
-}
-
-/*  /continut vechi  */
-
 
 
 /* Schimbat */
+
+.dark-content {
+    color: #fff!important;
+    background-color: #000!important;
+}
+
+.white-content {
+    color: #000!important;
+    background-color: #fff!important;
+}
+
+.grey-content {
+    color: #000!important;
+    background-color: #f1f1f1!important;
+}
 
 .main-content {
     transition: margin-left .4s;
@@ -270,16 +149,11 @@ ul {
     padding-bottom: 32px!important;
 }
 
-.clear:before, .pg-container:before{
+/* .clear:before, .pg-container:before{
     content: "";
     display: table;
     clear: both;
-}
-
-.position-paragraph, .position-details, .info-section  {
-    float: left;
-    width: 100%;
-}
+} */
 
 .txt-color {
     color: #1797a5!important;
@@ -311,22 +185,16 @@ p {
     padding: 12px 24px!important;
 }
 
-.clear:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
-.pag-center .pagination {
-    display: inline-block;
+.pagination .pag-numbers {
     width: auto;
 }
 
-.pag-center {
+.pagination {
     padding: 2% 15%!important;
 }
 
-.button-black, .button-black-hover:hover, .info-color {
+.button-black, .button-black-hover:hover{
     color: #fff!important;
     background-color: #000!important;
 }
@@ -345,34 +213,121 @@ p {
     white-space: nowrap;
 }
 
-.info-margin {
+/* info section */
+.info-section {
+    
+}
+
+/* tags */
+.tags-section, .rss-section, .subscribe-section {
     margin: 16px!important;
 }
 
-.info-padding {
+.tags-content {
     padding: 8px 16px!important;
 }
 
-/* .news {
-    float: left;
-} */
+.text-tags {
+    padding: 0.01em 16px;
+}
 
-.tags {
+.tag-item {
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+}
+.tag-margin{
+    margin-bottom: 16px!important;
+}
+
+.tag-small-size {
+    font-size: 12px!important;
+}
+
+/* RSS FEED */
+.rss-subtext { 
+    color: #222;
+    cursor: pointer;
+    padding-left:20px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.rss-image {
+    background: url("../public/images/rss.png") no-repeat 0% 50%;
+    margin: 0px 0px 10px 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/* Subscribe to newsletter */
+
+.sub-input {
+    padding: 8px;
+    display: block;
+    border: 1px solid #ccc!important;
+}
+
+.button-sub {
+    color: #fff!important;
+    background-color: #f44336!important;
+    display: inline-block;
     width: 100%;
+    border: none;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 5px 0px 15px 0px;
+}
+
+.test {
+    background-color: #1797a573;
 }
 
 /* Footer de scos */
 .footer {
-    color: white;
     transition: 0.5s;
-    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
     padding: 20px;
-    background-color: #090909e0;
 }
+
+.main-content:before,
+.main-content:after {
+    content: "";
+    display: table;
+}
+.main-content:after {
+    clear: both;
+}
+.main-content, .pagination {
+    clear: both;
+    *zoom: 1;
+}
+.news-section {
+    float: left;
+    margin: 0 1.5%;
+    width: 63%;
+}
+
+.info-section {
+    float: right;
+    margin: 0 1.5%;
+    width: 30%;
+}
+
 
 @media (max-width: 992px){
     .main-content  {
@@ -394,11 +349,11 @@ p {
         padding: 2% 15%!important;
     }
 
-    .news {
+    .news-section {
         width: 60%;
     }
 
     .info-section {
-        width: 40%;
+        width: auto;
     }
 }
