@@ -9,17 +9,22 @@ html, h3 {
     font-weight: 400;
 }
 
-h3 {
-    font-size: 24px;
+h1 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 20px;
 }
 
 body {
     background-color: #151515;
+    color: #ddd;;
 }
 
 body, html {
     height: 100%;
-    line-height: 2.5;
+    line-height: 2.3;
 }
 
 /* Header -de scos sa nu fie duplicat*/
@@ -30,7 +35,6 @@ body, html {
     padding: 15px 10px;
     left: 0;
     top: 0;
-    /* position: sticky; */
     margin-top: 0;
     background-color: #151515;
 }
@@ -253,6 +257,7 @@ ul {
 .main-content {
     transition: margin-left .4s;
     color: #ddd;
+    position: relative;
 }
 
 .paragraph-padding-64 {
@@ -271,17 +276,13 @@ ul {
     clear: both;
 }
 
-.position-paragraph {
+.position-paragraph, .position-details, .info-section  {
     float: left;
     width: 100%;
 }
 
-.pg-container {
-    padding: 0.01em 16px;
-}
-
 .txt-color {
-    color: #32b473d6!important;
+    color: #1797a5!important;
 }
 
 .to-align {
@@ -294,6 +295,12 @@ p {
     -webkit-margin-after: 1em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
+}
+
+.pg-container a {
+    text-decoration: none;
+    color: #506dc1;
+    font-size: 14px;
 }
 
 .pg-border {
@@ -315,11 +322,11 @@ p {
     width: auto;
 }
 
-.pagination .pag-button {
-    white-space: normal;
+.pag-center {
+    padding: 2% 15%!important;
 }
 
-.button-black, .button-black-hover:hover {
+.button-black, .button-black-hover:hover, .info-color {
     color: #fff!important;
     background-color: #000!important;
 }
@@ -338,16 +345,32 @@ p {
     white-space: nowrap;
 }
 
+.info-margin {
+    margin: 16px!important;
+}
+
+.info-padding {
+    padding: 8px 16px!important;
+}
+
+/* .news {
+    float: left;
+} */
+
+.tags {
+    width: 100%;
+}
+
 /* Footer de scos */
 .footer {
     color: white;
     transition: 0.5s;
-    /* position: fixed; */
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
-    /* padding: 20px; */
+    padding: 20px;
     background-color: #090909e0;
 }
 
@@ -360,6 +383,22 @@ p {
 
 @media (min-width: 601px){
     .position-paragraph {
-        width: 33.33333%;
+        width: 50%;
+    }
+
+    p, .pag-center, .pg-details {
+        width: 100%;
+    }
+
+    .pag-center {
+        padding: 2% 15%!important;
+    }
+
+    .news {
+        width: 60%;
+    }
+
+    .info-section {
+        width: 40%;
     }
 }
