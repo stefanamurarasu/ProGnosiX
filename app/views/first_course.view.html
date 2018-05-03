@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ProGnosiX</title>
-    <link rel="stylesheet" href="../../public/home.css">
+    <link rel="stylesheet" href="../../public/hfsm-style.css">
     <link rel="stylesheet" href="../../public/courses.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 </head>
 
-
+<!-- in progress -->
 <body>
     <!-- De schimbat header dintr-un singur css, acum e din home.css -->
     <header class="header neutral" id="header">
@@ -29,13 +29,82 @@
         </div>
     </header>
     <hr class="hr-dashed">
+    <div id="navMenu" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+        <a href="TW.html">Tehnologii Web</a>
+        <a href="PSGBD.html">PSGBD</a>
+        <a href="PA.html">Programare Avansată</a>
+        <a href="IP.html">Ingineria Programării</a>
+        <a href="Optional.html">Opțional 2</a>
+        <a href="Engleza.html">Limba Engleză</a>
+    </div>
 
-    <div class="container">
+    <div id="content" class="container">
+        <span class="burger-menu" onclick="toggleNav()">&#9776;</span>
         <div class="course-prognose">
             <h3 class="title">Ce notă crezi că vei obține?</h3>
-            
+            <div class="radio-buttons">
+                <input type="radio" name="gradeValue" value="1">
+                <label for="gradeValue1" class="pgx-form__label"> 1 </label>
+                <input type="radio" name="gradeValue" value="2">
+                <label for="gradeValue2" class="pgx-form__label"> 2 </label>
+                <input type="radio" name="gradeValue" value="3">
+                <label for="gradeValue3" class="pgx-form__label"> 3 </label>
+                <input type="radio" name="gradeValue" value="4">
+                <label for="gradeValue4" class="pgx-form__label"> 4 </label>
+                <input type="radio" name="gradeValue" value="5">
+                <label for="gradeValue5" class="pgx-form__label"> 5 </label>
+                <input type="radio" name="gradeValue" value="6">
+                <label for="gradeValue6" class="pgx-form__label"> 6 </label>
+                <input type="radio" name="gradeValue" value="7">
+                <label for="gradeValue7" class="pgx-form__label"> 7 </label>
+                <input type="radio" name="gradeValue" value="8">
+                <label for="gradeValue8" class="pgx-form__label"> 8 </label>
+                <input type="radio" name="gradeValue" value="9">
+                <label for="gradeValue9" class="pgx-form__label"> 9 </label>
+                <input type="radio" name="gradeValue" value="10">
+                <label for="gradeValue10" class="pgx-form__label"> 10 </label>
+
+                <button type="submit" class="pgx-fomr__save-button">Trimite nota</button>
+                <h2>Punctajul final va aparea in: </h2>
+                <p id="demo" style="font-size:28px"></p>
+
+            </div>
         </div>
     </div>
+
+    <div class="contact">
+        <h3 class="to-align">CONTACT</h3>
+        <div class="contact-info-left margin-top">
+
+            <div>
+                <div class="team-member">
+                    <img src="../../public/images/codruta.png" class="potato-head">
+                    <p class="to-align">Codruța</p>
+                </div>
+                <div class="team-member">
+                    <img src="../../public/images/raluca.png" class="potato-head">
+                    <p class="to-align">Raluca</p>
+                </div>
+            </div>
+
+            <ul class="pad-left">
+                <li class="check-in-icon">
+                    <i class="info to-align large"></i>Iași, RO</li>
+                <li class="phone-icon">
+                    <i class="info to-align large"></i>Phone: 0748 022 866</li>
+                <li class="mail-icon">
+                    <i class="info to-align large"></i>Email: prognosix@gmail.com
+                </li>
+            </ul>
+        </div>
+
+        <footer class="footer" id="footer">
+            &copy; Copyright 2018.
+        </footer>
+
+        <script src="../../public/sidemenu.js"></script>
+        <script src="../../public/comingsoon.js"></script>
 
 </body>
 
