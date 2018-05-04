@@ -1,0 +1,50 @@
+html{
+    font-family: 'Ubuntu', sans-serif;
+    background-color:#151515;
+}
+
+.failed-content{
+    border: 2px solid green;
+    width: 40%;
+    margin-top: 250px;
+    margin-left: 430px;
+    padding:10px 5px;
+    border: #151515;
+    line-height: 5px;
+    border-radius: 15px;
+    text-align:center;
+}
+
+.content-opacity{
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.failed-content h4{
+    font-size: 32px;
+    color: #ff0505bf;
+}
+
+.failed-content h5{
+    font-size: 17px;
+    color: #ebebeb;
+}
+
+.footer {
+    transition: 0.5s;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #151515;
+    color: white;
+    margin-left:-45px;
+}
+
+.button{
+    text-decoration: none;
+    color:#ff0505bf;
+}
+
+
