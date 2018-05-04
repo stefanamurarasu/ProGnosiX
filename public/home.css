@@ -15,11 +15,12 @@ h1 {
 
 h4 {
     font-size: 20px;
+    color:  #ff5722b5;;
 }
 
 body {
     background-color: #151515;
-    color: #ddd;;
+    color: #ddd;
 }
 
 body, html {
@@ -44,7 +45,6 @@ body, html {
     border: 0;
     border-bottom: 1px dashed #b5e853;
     color: #b5e853;
-
 }
 
 
@@ -89,7 +89,7 @@ input[type=submit] {
     color: #151515;
 }
 
-/* log in */
+/* log out */
 
 .user-icon {
     display: inline;
@@ -114,10 +114,6 @@ input[type=submit] {
     color: #A9A9A9!important;
 } 
 
-
-
-/* Schimbat */
-
 .dark-content {
     color: #fff!important;
     background-color: #000!important;
@@ -125,7 +121,7 @@ input[type=submit] {
 
 .white-content {
     color: #000!important;
-    background-color: #fff!important;
+    background-color: #f1f1f1!important;
 }
 
 .grey-content {
@@ -156,7 +152,7 @@ input[type=submit] {
 } */
 
 .txt-color {
-    color: #1797a5!important;
+    color: #f3fbfcc7!important
 }
 
 .to-align {
@@ -213,18 +209,11 @@ p {
     white-space: nowrap;
 }
 
-/* info section */
-.info-section {
-    
-}
-
 /* tags */
-.tags-section, .rss-section, .subscribe-section {
-    margin: 16px!important;
-}
 
 .tags-content {
     padding: 8px 16px!important;
+    background-color: #7a7b7b45;
 }
 
 .text-tags {
@@ -274,7 +263,7 @@ ul {
 
 .button-sub {
     color: #fff!important;
-    background-color: #f44336!important;
+    background-color: #000000ad!important;
     display: inline-block;
     width: 100%;
     border: none;
@@ -290,19 +279,13 @@ ul {
     margin: 5px 0px 15px 0px;
 }
 
+/* test culoare pentru timpul ramas */
 .test {
-    background-color: #1797a573;
+    background-color: #61a6b1ab;
+    color: white;
 }
 
-/* Footer de scos */
-.footer {
-    transition: 0.5s;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-}
+/* Pozitionare continut */
 
 .main-content:before,
 .main-content:after {
@@ -328,32 +311,187 @@ ul {
     width: 30%;
 }
 
+/* side menu */
 
-@media (max-width: 992px){
-    .main-content  {
-        margin-left: 0!important;
-        margin-right: 0!important;
-    }
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    color: #ccc;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-@media (min-width: 601px){
-    .position-paragraph {
-        width: 50%;
+/* materii */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #ccc;
+}
+
+/* x button */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.burger-menu {
+    float: left;
+    font-size: 30px;
+    cursor: pointer;
+    color:#EFEFEF;
+    padding: 1%;
+}
+
+/* Footer de scos */
+.footer {
+    transition: 0.5s;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+/* for mobile phones */
+@media (max-width: 600px){
+
+    body {
+        line-height: 1.8;
     }
 
-    p, .pag-center, .pg-details {
+    .logo {
+        display: block;
+        padding: 5% 25%;
+    }
+
+    .header-right {
+        padding: 7%;
+    }
+    .paragraph-padding-64 {
+        padding-top: 15px!important;
+        padding-bottom: 15px!important;
+    }
+
+    /* tot continutul */
+    .main-content{
+        width: 100%;
+    }
+    
+    /* anunturi materii */
+    .news-section {
         width: 100%;
     }
 
-    .pag-center {
-        padding: 2% 15%!important;
+    /* fiecare anunt din sectiune */
+    .news-item {
+        padding: 5%!important;
     }
 
-    .news-section {
-        width: 60%;
+    div.position-details.pg-details {
+        padding: 1%!important;
     }
-
+    
+    /* informatii */
     .info-section {
-        width: auto;
+        width: 100%;
+        padding-left: 6%;
     }
+    
+    .tags-section, .rss-section, .subscribe-section{
+        margin: 5%!important;
+    }
+
+    /* paginare */
+    .pagination {
+        padding: 2% 20%!important;
+    }
+}
+
+
+/* for tablets */
+@media (min-width: 601px){
+
+    .paragraph-padding-64 {
+        padding-top: 15px!important;
+        padding-bottom: 30px!important;
+    }
+
+    /* tot continutul */
+    .main-content{
+        width: 100%;
+    }
+    
+    /* anunturi materii */
+    .news-section {
+        width: 100%;
+    }
+
+    /* fiecare anunt din sectiune */
+    .news-item {
+        padding: 5%!important;
+    }
+    
+    /* informatii */
+    .info-section {
+        width: 100%;
+        padding-left: 6%;
+    }
+    
+    .tags-section, .rss-section, .subscribe-section{
+        margin: 5%!important;
+    }
+
+    /* paginare */
+    .pagination {
+        padding: 2% 35%!important;
+    }
+}
+
+/* for desktop */
+@media (min-width: 992px){
+
+    /* tot continutul */
+    .main-content{
+        width: 100%;
+    }
+
+    /* anunturi materii */
+    .news-section {
+        width: 55%;
+        padding-left: 20%;
+        padding-right: 5%;
+    }
+
+    /* informatii */
+    .info-section {
+        width: 20%;
+    }
+
+    .tags-section, .rss-section, .subscribe-section {
+        margin: 5%!important;
+    }
+
+    /* paginare */
+    .pagination {
+        padding: 2% 35%!important;
+    }
+
 }

@@ -15,7 +15,7 @@
             <a href="index.html">ProGnosiX</a>
         </div>
         <div class="header-right">
-            <span class="make-me-inline carbonText">Hello,
+            <span class="make-me-inline">Hello,
                 <a href="profile.html">
                     <img src="../../public/images/user-icon.png" alt="User icon" class="user-icon">
                 </a>
@@ -27,13 +27,25 @@
     </header>
     <hr class="hr-dashed">
 
+    <!-- Meniul materiilor -->
+    <div id="navMenu" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+        <a href="TW.html">Tehnologii Web</a>
+        <a href="PSGBD.html">PSGBD</a>
+        <a href="PA.html">Programare Avansată</a>
+        <a href="IP.html">Ingineria Programării</a>
+        <a href="Optional.html">Opțional 2</a>
+        <a href="Engleza.html">Limba Engleză</a>
+    </div>
+
     <!-- Main content -->
-    <div class="main-content" style="margin-left:320px">
+    <div id="content" class="main-content">
+        <span class="burger-menu" onclick="toggleNav()">&#9776;</span>
 
         <!-- News -->
         <div class="news-section">
 
-            <div class="clear paragraph-padding-64">
+            <div class="clear news-item paragraph-padding-64">
                 <div class="position-paragraph pg-container">
                     <h1 class="txt-color">TEHNOLOGII WEB</h1>
                     <p>Tocmai s-a activat o nouă rundă. Fii sigur că ești printre primii care își încearcă norocul!</p>
@@ -46,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="clear paragraph-padding-64">
+            <div class="clear news-item paragraph-padding-64">
                 <div class="position-paragraph pg-container">
                     <h1 class="txt-color">INGINERIA PROGRAMĂRII</h1>
                     <p>S-au afisat rezultatele la Ingineria Programarii, la testul de laborator. Daca nu ai aflat deja ce nota
@@ -61,7 +73,7 @@
                 </div>
             </div>
 
-            <div class="clear paragraph-padding-64">
+            <div class="clear news-item paragraph-padding-64">
                 <div class="position-paragraph pg-container">
                     <h1 class="txt-color">PROGRAMARE AVANSATĂ</h1>
                     <p>S-a mai activat o rundă. Verifică detaliile de pe pagina de Programare Avansată.</p>
@@ -78,11 +90,11 @@
         </div>
 
         <!-- Informations -->
-        <div class="info-section">
+        <div class="info-section paragraph-padding-64">
 
             <!-- Tags -->
-            <div class="tags-section white-content">
-                <div class="tags-content dark-content">
+            <div class="info-item tags-section white-content">
+                <div class="tags-content">
                     <h4>Tags</h4>
                 </div>
                 <div class="text-tags white-content">
@@ -100,7 +112,7 @@
 
             <!-- RSS Feed Section -->
             <div class="rss-section white-content">
-                <div class="tags-content dark-content">
+                <div class="tags-content">
                     <h4>RSS FEED</h4>
                 </div>
                 <div class="text-tags white-content">
@@ -118,7 +130,7 @@
 
             <!-- Subscribe Section -->
             <div class="subscribe-section white-content">
-                <div class="tags-content dark-content">
+                <div class="tags-content">
                     <h4>Subscribe</h4>
                 </div>
                 <div class="clear text-tags white-content">
@@ -131,9 +143,6 @@
                 </div>
                 <!-- Subscribe Section -->
             </div>
-
-
-
             <!-- /Informations -->
         </div>
 
@@ -143,8 +152,6 @@
                 <a class="button button-black" href="#">1</a>
                 <a class="button button-black-hover" href="#">2</a>
                 <a class="button button-black-hover" href="#">3</a>
-                <a class="button button-black-hover" href="#">4</a>
-                <a class="button button-black-hover" href="#">5</a>
                 <a class="button button-black-hover" href="#">»</a>
             </div>
         </div>
@@ -153,81 +160,11 @@
 
 
     <footer class="footer dark-content" id="footer">
-        &copy; Copyright ProGnosiX Team 2018
+        &copy; ProGnosiX Team 2018
     </footer>
+
+    <script src="../../public/sidemenu.js"></script>
 </body>
 
 </html>
 
-
-<!-- <div id="content">
-            <div class="news-col">
-                    <div class="rss-feed">
-                        <h1 class="rss-text">Keep in Touch</h1>
-                        <ul>
-                            <li class="rss-image">
-                                <a class="rss-subtext" href="#" title="Subscribe to RSS Feed">RSS Feed</a>
-                            </li>
-                            <li class="rss-image">
-                                <a class="rss-subtext" href="#" title="Subscribe to posts via RSS feed">RSS Feed for Posts</a>
-                            </li>
-                        </ul>
-                    </div>
-        
-                    <div class="calendar">
-                        <div class="month">
-                            <ul class="transparent">
-                                <li class="prev">&#10094;</li>
-                                <li class="next">&#10095;</li>
-                                <li> April 2018</li>
-                            </ul>
-                        </div>
-        
-                        <ul class="weekdays">
-                            <li>Mo</li>
-                            <li>Tu</li>
-                            <li>We</li>
-                            <li>Th</li>
-                            <li>Fr</li>
-                            <li>Sa</li>
-                            <li>Su</li>
-                        </ul>
-        
-                        <ul class="days">
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            <li>6</li>
-                            <li>7</li>
-                            <li>8</li>
-                            <li>9</li>
-                            <li>10</li>
-                            <li>11</li>
-                            <li>12</li>
-                            <li>
-                                <span class="active">13</span>
-                            </li>
-                            <li>14</li>
-                            <li>15</li>
-                            <li>16</li>
-                            <li>17</li>
-                            <li>18</li>
-                            <li>19</li>
-                            <li>20</li>
-                            <li>21</li>
-                            <li>22</li>
-                            <li>23</li>
-                            <li>24</li>
-                            <li>25</li>
-                            <li>26</li>
-                            <li>27</li>
-                            <li>28</li>
-                            <li>29</li>
-                            <li>30</li>
-                            <li>31</li>
-                        </ul>
-                    </div>
-                </div>
-    </div> -->
