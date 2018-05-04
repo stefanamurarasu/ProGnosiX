@@ -5,21 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ProGnosiX</title>
-    <link rel="stylesheet" href="../../public/hfsm-style.css">
+    <!-- <link rel="stylesheet" href="../../public/hfsm-style.css"> -->
     <link rel="stylesheet" href="../../public/courses.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 </head>
 
-<!-- in progress -->
 <body>
-    <!-- De schimbat header dintr-un singur css, acum e din home.css -->
+
     <header class="header neutral" id="header">
         <div class="logo">
-            <a href="index.html">ProGnosiX</a>
+            <a href="./login.view.html">ProGnosiX</a>
         </div>
         <div class="header-right">
-            <span class="make-me-inline carbonText">Hello,
-                <a href="profile.html">
+            <span class="make-me-inline">Hello,
+                <a href="./profile.view.html">
                     <img src="../../public/images/user-icon.png" alt="User icon" class="user-icon">
                 </a>
             </span>
@@ -28,6 +26,7 @@
             </div>
         </div>
     </header>
+
     <hr class="hr-dashed">
     <div id="navMenu" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
@@ -39,55 +38,125 @@
         <a href="Engleza.html">Limba Engleză</a>
     </div>
 
-    <div id="content" class="container">
+    <div id="content" class="main-content">
         <span class="burger-menu" onclick="toggleNav()">&#9776;</span>
-        <div class="course-prognose">
-            <h3 class="title">Ce notă crezi că vei obține?</h3>
-            <div class="radio-buttons">
-                <input type="radio" name="gradeValue" value="1">
-                <label for="gradeValue1" class="pgx-form__label"> 1 </label>
-                <input type="radio" name="gradeValue" value="2">
-                <label for="gradeValue2" class="pgx-form__label"> 2 </label>
-                <input type="radio" name="gradeValue" value="3">
-                <label for="gradeValue3" class="pgx-form__label"> 3 </label>
-                <input type="radio" name="gradeValue" value="4">
-                <label for="gradeValue4" class="pgx-form__label"> 4 </label>
-                <input type="radio" name="gradeValue" value="5">
-                <label for="gradeValue5" class="pgx-form__label"> 5 </label>
-                <input type="radio" name="gradeValue" value="6">
-                <label for="gradeValue6" class="pgx-form__label"> 6 </label>
-                <input type="radio" name="gradeValue" value="7">
-                <label for="gradeValue7" class="pgx-form__label"> 7 </label>
-                <input type="radio" name="gradeValue" value="8">
-                <label for="gradeValue8" class="pgx-form__label"> 8 </label>
-                <input type="radio" name="gradeValue" value="9">
-                <label for="gradeValue9" class="pgx-form__label"> 9 </label>
-                <input type="radio" name="gradeValue" value="10">
-                <label for="gradeValue10" class="pgx-form__label"> 10 </label>
 
-                <button type="submit" class="pgx-fomr__save-button">Trimite nota</button>
-                <h2>Punctajul final va aparea in: </h2>
-                <p id="demo" style="font-size:28px"></p>
+        <!-- News -->
+        <div class="news-section">
+            <!-- Alege nota -->
+            <div class="course-prognose">
+                <h3 class="title">Ce notă crezi că vei obține?</h3>
+                <div class="radio-buttons">
+                    <input type="radio" name="gradeValue" value="1">
+                    <label for="gradeValue1" class="pgx-form__label"> 1 </label>
+                    <input type="radio" name="gradeValue" value="2">
+                    <label for="gradeValue2" class="pgx-form__label"> 2 </label>
+                    <input type="radio" name="gradeValue" value="3">
+                    <label for="gradeValue3" class="pgx-form__label"> 3 </label>
+                    <input type="radio" name="gradeValue" value="4">
+                    <label for="gradeValue4" class="pgx-form__label"> 4 </label>
+                    <input type="radio" name="gradeValue" value="5">
+                    <label for="gradeValue5" class="pgx-form__label"> 5 </label>
+                    <input type="radio" name="gradeValue" value="6">
+                    <label for="gradeValue6" class="pgx-form__label"> 6 </label>
+                    <input type="radio" name="gradeValue" value="7">
+                    <label for="gradeValue7" class="pgx-form__label"> 7 </label>
+                    <input type="radio" name="gradeValue" value="8">
+                    <label for="gradeValue8" class="pgx-form__label"> 8 </label>
+                    <input type="radio" name="gradeValue" value="9">
+                    <label for="gradeValue9" class="pgx-form__label"> 9 </label>
+                    <input type="radio" name="gradeValue" value="10">
+                    <label for="gradeValue10" class="pgx-form__label"> 10 </label>
 
+                    <button type="submit" class="pgx-fomr__save-button">Trimite nota</button>
+                    <h2>Punctajul final va aparea in: </h2>
+                    <p id="demo" style="font-size:28px"></p>
+                </div>
+                <!--/ Alege nota -->
             </div>
+        </div>
+
+        <!-- Informations -->
+        <div class="info-section paragraph-padding-64">
+
+            <!-- Vote -->
+            <div class="tags-section white-content">
+                <div class="tags-content">
+                    <h4>Îți place pagina noastră?</h4>
+                </div>
+                <div class="text-tags white-content">
+                    <br>
+                    <!-- Au raspuns cu DA -->
+                    <div class="side">
+                        <p>DA</p>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-5"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <p>30</p>
+                    </div>
+
+                    <!-- Au raspuns cu NU -->
+                    <div class="side">
+                        <p>NU</p>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-2"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <p>4</p>
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <!-- /Vote-->
+            </div>
+
+            <!-- RSS Feed Section -->
+            <div class="rss-section white-content">
+                <div class="tags-content">
+                    <h4>RSS FEED</h4>
+                </div>
+                <div class="text-tags white-content">
+                    <ul>
+                        <li class="rss-image">
+                            <a class="rss-subtext" href="#" title="Subscribe to RSS Feed">RSS Feed</a>
+                        </li>
+                        <li class="rss-image">
+                            <a class="rss-subtext" href="#" title="Subscribe to posts via RSS feed">RSS Feed for Posts</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- RSS Feed Section -->
+            </div>
+
+            <!-- Subscribe Section -->
+            <div class="subscribe-section white-content">
+                <div class="tags-content">
+                    <h4>Subscribe</h4>
+                </div>
+                <div class="clear text-tags white-content">
+                    <p>
+                        Introduceți e-mailul pentru a primi notificări
+                        <br> despre ultimele postări de pe aplicație.
+                    </p>
+                    <input class="sub-input" type="text" placeholder="E-mail..." style="width:100%">
+                    <button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="button-sub">Subscribe</button>
+                </div>
+                <!-- Subscribe Section -->
+            </div>
+            <!-- /Informations -->
         </div>
     </div>
 
     <div class="contact">
-        <h3 class="to-align">CONTACT</h3>
+        <h3 class="to-align">CONTACT PROFESOR</h3>
         <div class="contact-info-left margin-top">
-
-            <div>
-                <div class="team-member">
-                    <img src="../../public/images/codruta.png" class="potato-head">
-                    <p class="to-align">Codruța</p>
-                </div>
-                <div class="team-member">
-                    <img src="../../public/images/raluca.png" class="potato-head">
-                    <p class="to-align">Raluca</p>
-                </div>
-            </div>
-
             <ul class="pad-left">
                 <li class="check-in-icon">
                     <i class="info to-align large"></i>Iași, RO</li>
@@ -98,13 +167,14 @@
                 </li>
             </ul>
         </div>
+    </div>
 
-        <footer class="footer" id="footer">
-            &copy; Copyright 2018.
-        </footer>
+    <footer class="footer dark-content" id="footer">
+        &copy; ProGnosiX Team 2018
+    </footer>
 
-        <script src="../../public/sidemenu.js"></script>
-        <script src="../../public/comingsoon.js"></script>
+    <script src="../../public/sidemenu.js"></script>
+    <script src="../../public/comingsoon.js"></script>
 
 </body>
 

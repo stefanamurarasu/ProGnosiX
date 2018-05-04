@@ -1,13 +1,165 @@
-.container {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, h3 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 20px;
+    color:  #ff5722b5;;
+}
+
+body {
+    background-color: #151515;
+    color: #ddd;
+}
+
+body, html {
     height: 100%;
-    width:100%;
+    line-height: 2.5;
+}
+
+
+/* Header -de scos sa nu fie duplicat*/
+.dark-content {
+    color: #fff!important;
+    background-color: #000!important;
+}
+
+.header {
+    transition: 0.5s;
+    overflow: hidden;
+    padding: 15px 10px;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    background-color: #151515;
+}
+
+.hr-dashed{
+    height: 0;
+    border: 0;
+    border-bottom: 1px dashed #b5e853;
+    color: #b5e853;
+}
+
+
+.header input[type=text],
+.header input[type=password] {
+    padding: 10px;
+    width: 160px;
+    font-size: 11pt;
+    line-height: 14px;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    border-radius: 6px;
+    border-color: #4CAF50;
+    color: white;
+    padding: 9px 30px;
+    font-size: 12pt;
+    cursor: pointer;
+}
+
+/* logo */
+
+.logo a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.logo a:hover {
+    background-color: #ddd;
+    color: #151515;
+}
+
+/* log out */
+
+.user-icon {
+    display: inline;
+    margin: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+ 
+.header-right {
+    float: right;
+    margin-top: 10px;
+}
+
+.make-me-inline {
+    display: inline;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+.make-me-inline a {
+    text-decoration: none;
+    color: #A9A9A9!important;
+} 
+
+.dark-content {
+    color: #fff!important;
+    background-color: #000!important;
+}
+
+.white-content {
+    color: #000!important;
+    background-color: #f1f1f1!important;
+}
+
+.grey-content {
+    color: #000!important;
+    background-color: #f1f1f1!important;
+}
+
+.main-content {
+    transition: margin-left .4s;
+    color: #ddd;
+    position: relative;
+}
+
+.paragraph-padding-64 {
+    padding-top: 64px!important;
+    padding-bottom: 64px!important;
+}
+
+.paragraph-padding-32 {
+    padding-top: 32px!important;
+    padding-bottom: 32px!important;
+}
+
+/* /De schimbat */
+
+
+.main-content {
+    width: 100%;
+    height: auto;
 }
 
 .course-prognose{
     align-content: center;
-    line-height: 80px;
-   
-
 }
 
 .title {
@@ -28,10 +180,9 @@
 }
 
 .contact {
+    height: 30%;    
     color: #000!important;
     background-color: #f1f1f1!important;
-    min-height: 80%;
-    position: relative;
 }
 
 .margin-top {
@@ -74,41 +225,221 @@ ul {
     padding-left: 45px;
 }
 
-/* our team */
+/* side menu */
 
-.team-member {
-    display: inline-block;
-    padding: 30px 0px 30px 70px;
-    text-align: center;
-}
-
-.potato-head {
-    /* display: inline-block; */
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-}
-.potato-head:hover {
-    opacity: 0.60;
-}
-
-.footer {
-    color: white;
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    color: #ccc;
+    overflow-x: hidden;
     transition: 0.5s;
-    /* position: fixed; */
+    padding-top: 60px;
+}
+
+/* materii */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #ccc;
+}
+
+/* x button */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.burger-menu {
+    float: left;
+    font-size: 30px;
+    cursor: pointer;
+    color:#EFEFEF;
+    padding: 1%;
+}
+
+.main-content {
+    transition: margin-left .4s;
+    color: #ddd;
+    position: relative;
+}
+
+.paragraph-padding-64 {
+    padding-top: 64px!important;
+    padding-bottom: 64px!important;
+}
+
+.paragraph-padding-32 {
+    padding-top: 32px!important;
+    padding-bottom: 32px!important;
+}
+
+/* Footer de scos */
+.footer {
+    transition: 0.5s;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
-    /* padding: 20px; */
-    background-color: #090909e0;
-}
-
-.contact, .app-details-section, .footer {
-    padding: 12px 12px;
+    padding: 20px;
 }
 
 
+/* Sectiune newslletter si RSS */
+
+/* poll */
+
+.side {
+    float: left;
+    width: 15%;
+    /* margin-top:10px; */
+}
+.middle {
+    /* margin-top:10px; */
+    float: left;
+    width: 70%;
+}
+
+.right {
+    text-align: right;
+}
+/* The bar container */
+.bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+
+/* RSS FEED */
+
+.tags-content {
+    padding: 8px 16px!important;
+    background-color: #7a7b7b45;
+}
+
+.text-tags {
+    padding: 0.01em 16px;
+}
+
+.white-content {
+    color: #000!important;
+    background-color: #f1f1f1!important;
+}
+
+.rss-subtext { 
+    color: #222;
+    cursor: pointer;
+    padding-left:20px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.rss-image {
+    background: url("../public/images/rss.png") no-repeat 0% 50%;
+    margin: 0px 0px 10px 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/* Subscribe to newsletter */
+
+.sub-input {
+    padding: 8px;
+    display: block;
+    border: 1px solid #ccc!important;
+}
+
+.button-sub {
+    color: #fff!important;
+    background-color: #000000ad!important;
+    display: inline-block;
+    width: 100%;
+    border: none;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 5px 0px 15px 0px;
+}
+
+/* Pozitionare continut */
+
+.main-content:before,
+.main-content:after {
+    content: "";
+    display: table;
+}
+.main-content:after {
+    clear: both;
+}
+.main-content {
+    clear: both;
+    *zoom: 1;
+}
+.news-section {
+    float: left;
+    margin: 0 1.5%;
+    width: 63%;
+}
+.info-section {
+    float: right;
+    margin: 0 1.5%;
+    width: 30%;
+}
+
+/* for desktop */
+@media (min-width: 992px){
+
+    /* tot continutul */
+    .main-content{
+        width: 100%;
+    }
+
+    /* anunturi materii */
+    .news-section {
+        width: 55%;
+        padding-left: 20%;
+        padding-right: 5%;
+    }
+
+    /* informatii */
+    .info-section {
+        width: 20%;
+    }
+
+    .tags-section, .rss-section, .subscribe-section {
+        margin: 5%!important;
+    }
+}
 
 
 
