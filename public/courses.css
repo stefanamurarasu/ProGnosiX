@@ -15,7 +15,7 @@ h1 {
 
 h4 {
     font-size: 20px;
-    color:  #ff5722b5;;
+    color:  #007396c4;
 }
 
 body {
@@ -27,6 +27,7 @@ body, html {
     height: 100%;
     line-height: 2.5;
 }
+
 
 
 /* Header -de scos sa nu fie duplicat*/
@@ -300,6 +301,39 @@ ul {
     padding: 20px;
 }
 
+/* Sectiune de facute prognoze */
+
+#lab, #curs {
+    background-color: rgba(124, 148, 196, 0.06);
+    border: 1.2px dashed #9e9e9e;
+}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+
+/* //Sectiune de facute prognoze */
+
 
 /* Sectiune newslletter si RSS */
 
@@ -307,29 +341,93 @@ ul {
 
 .side {
     float: left;
-    width: 15%;
-    /* margin-top:10px; */
+    width: 18%;
+    padding: 20px 1px;
+    /* margin-bottom: 5%; */
 }
+
 .middle {
-    /* margin-top:10px; */
     float: left;
     width: 70%;
+    /* padding-top: 2%; */
+    padding: 5% 3%;
+    margin-bottom: 5%;
 }
 
 .right {
-    text-align: right;
-}
-/* The bar container */
-.bar-container {
-    width: 100%;
-    background-color: #f1f1f1;
-    text-align: center;
-    color: white;
+    float: left;
+    text-align: left;
+    width: 3%;
+    margin-bottom: 5%;
+
 }
 
-/* Individual bars */
-.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
-.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+/* Procentaj */
+.procentaj {
+    width: 100%;
+    text-align: center;
+}
+
+/* raspuns*/
+
+.text-font {
+    font-size: 14px;
+    color: #222;
+    padding-left: 100%;
+}
+.yes { 
+    width: 70%; 
+    height: 15px; 
+    background-color: #4CAF50;
+}
+
+.yes-image {
+    background: url("../public/images/yes-response.png") no-repeat 0% 50%;
+    /* margin: 0px 0px 10px 5px; */
+}
+
+.no {
+    width: 10%; 
+    height: 15px; 
+    background-color: #e91e1ee3;
+}
+
+.no-image {
+    background: url("../public/images/no-response.png") no-repeat 0% 50%;
+    /* margin: 0px 0px 10px 5px; */
+}
+
+.votes {
+    padding: 1.3em;
+    margin-bottom: 5%;
+}
+
+.vote-button {
+    color: #fff!important;
+    background-color: #000000ad!important;
+    display: inline-block;
+    width: 35%;
+    border: none;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0% 0% 4% 9%;
+}
+
+.vote-button:hover, .button-sub:hover {
+    opacity: 1;;
+} 
+
+.vote-button, .button-sub {
+    opacity: 0.8;
+}
+
 
 /* RSS FEED */
 
@@ -426,9 +524,8 @@ ul {
 
     /* anunturi materii */
     .news-section {
-        width: 55%;
-        padding-left: 20%;
-        padding-right: 5%;
+        width: 70%;
+        padding: 10% 5%;
     }
 
     /* informatii */
@@ -438,6 +535,16 @@ ul {
 
     .tags-section, .rss-section, .subscribe-section {
         margin: 5%!important;
+    }
+}
+
+/* coloanele sa stea unele peste celelalte */
+@media (max-width: 400px) {
+    .side, .middle {
+        width: 100%;
+    }
+    .right {
+        display: none;
     }
 }
 
