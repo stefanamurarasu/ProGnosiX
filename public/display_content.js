@@ -1,13 +1,12 @@
-
-function openCity(evalType, elmnt, color) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
+function openCity(evalType,elmnt,color) {
+    var i, tabcontent, buttons;
+    tabcontent = document.getElementsByClassName("course-content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
+    buttons = document.getElementsByClassName("button-course");
+    for (i = 0; i < buttons.length; i++) {
+        buttons[i].style.backgroundColor = "";
     }
     document.getElementById(evalType).style.display = "block";
     elmnt.style.backgroundColor = color;
