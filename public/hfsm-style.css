@@ -21,7 +21,6 @@ html {
     padding: 15px 10px;
     left: 0;
     top: 0;
-    position: sticky;
     margin-top: 0;
     background-color: #151515;
 }
@@ -30,8 +29,8 @@ html {
     height: 0;
     border: 0;
     width: 100%;
-    border-bottom: 1px dashed #b5e853;
-    color: #b5e853;
+    border-bottom: 1px dashed #40babd;
+    color: #40babd;
 
 }
 
@@ -93,9 +92,9 @@ html {
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: #40babd;
     border-radius: 6px;
-    border-color: #4CAF50;
+    border-color: #40babd;
     color: white;
     padding: 9px 30px;
     font-size: 12pt;
@@ -182,8 +181,6 @@ input[type=submit] {
 */
 
 .footer {
-    transition: 0.5s;
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
