@@ -103,10 +103,11 @@
 
 .content {
     padding: 10px 30px;
-    background-color: #40babd;
+    background-color: #5bc0de;
     position: relative;
     border-radius: 6px;
     line-height: 45px;
+    color:#efefefd9;
 }
 
 
