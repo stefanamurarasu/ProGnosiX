@@ -22,7 +22,7 @@
                 </a>
             </span>
             <div class="form make-me-inline">
-                <input type="submit" value="Logout">
+                <input class="logout-btn" type="submit" value="Logout">
             </div>
         </div>
     </header>
@@ -30,12 +30,12 @@
     <hr class="hr-dashed">
     <div id="navMenu" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
-        <a href="TW.html">Tehnologii Web</a>
-        <a href="PSGBD.html">PSGBD</a>
-        <a href="PA.html">Programare Avansată</a>
-        <a href="IP.html">Ingineria Programării</a>
-        <a href="Optional.html">Opțional 2</a>
-        <a href="Engleza.html">Limba Engleză</a>
+        <a href="./first_course.view.html">Tehnologii Web</a>
+        <a href="./second_course.view.html">PSGBD</a>
+        <a href="./third_course.view.html">Programare Avansată</a>
+        <a href="./fourth_course.view.html">Ingineria Programării</a>
+        <a href="./fifth_course.view.html">Opțional 2</a>
+        <a href="./sixth_course.view.html">Limba Engleză</a>
     </div>
 
     <div id="content" class="main-content">
@@ -123,7 +123,6 @@
 
             <button class="button-course" onclick="openCity('lab', this, 'rgba(0, 150, 136, 0.77)')" id="defaultOpen">Laborator</button>
             <button class="button-course" onclick="openCity('curs', this, 'rgba(0, 150, 136, 0.77)')">Curs</button>
-            <!-- <button class="button-course" onclick="#">Rezultate</button> -->
         <!-- /Prognoze -->
         </div>
 
@@ -192,7 +191,7 @@
                 <div class="clear text-tags white-content">
                     <p>
                         Introduceți e-mailul pentru a primi notificări
-                        <br> despre ultimele postări de pe aplicație.
+                        <br id="break"> despre ultimele postări de pe aplicație.
                     </p>
                     <input class="sub-input" type="text" placeholder="E-mail..." style="width:100%">
                     <button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="button-sub">Subscribe</button>

@@ -374,8 +374,6 @@ input[type=submit] {
 
 /* /Radio buttons  */
 
-
-
 .counter {
     color: #757575!important;
     font-size:28px;
@@ -423,19 +421,6 @@ input[type=submit] {
 .to-align {
     text-align: center!important;
 }
-
-/* .contact-info-left {
-    display: inline-block;
-    width: 39%;
-    padding: 0% 0% 0% 20%;
-}
-
-.contact-info-right {
-    display: inline-block;
-    width: 39%;
-    padding: 0% 20% 0% 0%;
-} */
-
 
 .info {
     display: inline-block;
@@ -545,13 +530,11 @@ ul {
     float: left;
     width: 18%;
     padding: 20px 1px;
-    /* margin-bottom: 5%; */
 }
 
 .middle {
     float: left;
     width: 70%;
-    /* padding-top: 2%; */
     padding: 5% 3%;
     margin-bottom: 5%;
 }
@@ -585,7 +568,6 @@ ul {
 
 .yes-image {
     background: url("../public/images/yes-response.png") no-repeat 0% 50%;
-    /* margin: 0px 0px 10px 5px; */
 }
 
 .no {
@@ -596,7 +578,6 @@ ul {
 
 .no-image {
     background: url("../public/images/no-response.png") no-repeat 0% 50%;
-    /* margin: 0px 0px 10px 5px; */
 }
 
 .votes {
@@ -744,10 +725,190 @@ ul {
 }
 
 
+/* for mobile phones */
+@media (max-width: 600px){
+
+    body {
+        line-height: 1.5;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h3, h4 {
+        font-size: 15px;
+    }
+
+    .title-grey, .counter  {
+        font-size: 15px;
+    }
+
+    body {
+        line-height: 1.5;
+    }
+
+    .logo {
+        display: block;
+        padding: 0% 35%;
+    }
+
+    .logo a {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .header-right {
+        float: left;
+        padding-top: 4%;
+        padding-left: 20%;
+    }
+
+    input.logout-btn {
+        padding: 5px 10px;
+    }
+
+    .paragraph-padding-64 {
+        padding-top: 15px!important;
+        padding-bottom: 15px!important;
+    }
+
+    /* tot continutul */
+    .main-content{
+        width: 100%;
+    }
+    
+    /* anunturi materii */
+    .news-section {
+        width: 100%;
+        padding: 2% 8% 0% 8%;
+    }
+
+    .grades {
+        padding: 3% 0%;
+    }
+
+    .grades span.checkmark {
+        height: 40%;
+        width: 25%;
+    }
+
+    .container .checkmark:after {
+        top: 3px;
+        left: 2px;
+    }
+
+    label.container {
+        font-size: 13px;
+        padding-left: 35px;
+        padding-top: 15px;
+    }
+
+    .pick-grade {
+        font-size: 13px;
+        width: 35%;
+        margin: 0% 9% 5% 11%;
+        padding: 5px 5px;
+    }
+
+    .button-course {
+        padding: 10px 1px;
+        font-size: 13px;
+        width: 30%;
+    }
+
+    .dropbtn {
+        padding: 3%;
+    }
+
+    .dropdown-content {
+        min-width: 113px;
+    }
+
+    .dropbtn, .dropdown-content {
+        font-size: 12px;
+    }
+    
+    /* informatii */
+    .info-section {
+        width: 80%;
+        margin: 3% 10%;
+    }
+
+    /* emojis */
+    div.side.yes-image, div.side.no-image {
+        width: 23%;
+        margin-left: 1%;
+        margin-bottom: 1%;
+    }
+
+    div.middle {
+        width: 65%;
+        padding: 5% 5%;
+    }
+
+    .vote-button {
+        padding: 6px 2px;
+        width: 25%;
+        margin: 0% 0% 4% 15%;
+    }
+
+    .tags-section {
+        margin-top: 7%!important;
+    }
+
+    .procentaj {
+        width: 80%;
+    }
+
+    .tags-section, .rss-section, .subscribe-section{
+        margin: 5%!important;
+    }
+
+    #break {
+        display: none;
+    }
+
+     /* Contact section */
+
+     .contact-info-left{
+        padding: 3% 0% 3% 5%;
+        
+    }
+
+    .contact-info-right {
+        float: right;
+        width: 40%;
+        padding: 3% 5% 3% 0%;
+    }
+
+    .check-in-icon, .phone-icon, .mail-icon {
+        background: #f1f1f1;
+        font-size: 13px;
+    }
+
+    .info {
+        width: 0%;
+    }
+
+    .sendm {
+        padding-top: 5px!important;
+        padding-bottom: 5px!important;
+        margin: 2px 0px;
+    }
+}
 
 
 /* for tablets */
-@media (min-width: 601px){
+@media (min-width: 601px) and (max-width: 991px){
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .title-grey, .counter  {
+        font-size: 20px;
+    }
 
     .paragraph-padding-64 {
         padding-top: 15px!important;
@@ -762,21 +923,74 @@ ul {
     /* anunturi materii */
     .news-section {
         width: 100%;
+        padding: 2% 8% 0% 6%;
     }
 
-    /* fiecare anunt din sectiune */
-    .news-item {
-        padding: 5%!important;
+    .grades {
+        padding: 3% 35% 0% 9%;
+    }
+
+    .grades span.checkmark {
+        height: 30%;
+        width: 30%;
+    }
+
+    .container .checkmark:after {
+        top: 4px;
+        left: 3px;
+    }
+
+    .pick-grade {
+        width: 20%;
+        margin: 0% 9% 5% 11%;
     }
     
     /* informatii */
     .info-section {
-        width: 100%;
-        padding-left: 6%;
+        width: 60%;
+        margin: 0% 20% 0% 0%;
     }
-    
+
+    /* emojis */
+    div.side.yes-image, div.side.no-image {
+        width: 14%;
+        margin-left: 6%;
+    }
+
+    div.middle {
+        width: 65%;
+        padding: 5% 5%;
+    }
+    .tags-section {
+        margin-top: 7%!important;
+    }
+
+    .procentaj {
+        width: 80%;
+    }
+
     .tags-section, .rss-section, .subscribe-section{
         margin: 5%!important;
+    }
+
+    #break {
+        display: none;
+    }
+
+     /* Contact section */
+
+     .contact-info-left{
+        padding: 3% 0% 3% 5%;
+    }
+
+    .contact-info-right {
+        float: right;
+        width: 40%;
+        padding: 3% 5% 3% 0%;
+    }
+
+    .check-in-icon, .phone-icon, .mail-icon {
+        background: #f1f1f1;
     }
 }
 
@@ -806,7 +1020,7 @@ ul {
     }
 }
 
-/* coloanele sa stea unele peste celelalte */
+/* coloanele sa stea unele peste celelalte
 @media (max-width: 400px) {
     .side, .middle {
         width: 100%;
@@ -814,7 +1028,7 @@ ul {
     .right {
         display: none;
     }
-}
+} */
 
 
 
