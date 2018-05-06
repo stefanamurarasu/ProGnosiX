@@ -41,15 +41,15 @@
     <div id="content" class="main-content">
         <span class="burger-menu" onclick="toggleNav()">&#9776;</span>
 
-        <!-- News -->
+        <!-- Prognoze -->
         <div class="news-section">
 
-            <h1 class="to-align">Tehnologii WEB</h1>
             <!-- Alege nota laborator -->
             <div id="lab" class="course-content">
-
-                <h2 class="to-align">Ce notă crezi că vei obține?</h2>
-
+                <h1 class="to-align">Tehnologii WEB</h1>
+                <h2 class="title-grey">Ce notă crezi că vei obține?</h2>
+                <hr class="sep">
+                <p class="text-grey">Nu uita! Ai voie să ghicești o singură dată.</p>
                 <div class="grades">
                     <label class="container">1
                         <input type="radio" checked="checked" name="radio">
@@ -94,69 +94,37 @@
                 </div>
 
                 <button type="submit" class="pick-grade">Submit</button>
-                <h3 class="to-align">Punctajul final va apărea în: </h3>
-                <p id="demo" style="font-size:28px; padding-bottom: 1%"></p>
+                <h2 class="title-grey">Cât mai trebuie să aștepți până la rezultate:</h2>
+                <hr class="sep">
+                <p id="demo" class="counter"></p>
                 <!-- / Alege nota laborator-->
             </div>
 
 
-            <!-- Alege nota curs -->
+            <!-- Alege nota laborator -->
             <div id="curs" class="course-content">
+                <h1 class="to-align">Tehnologii WEB</h1>
 
-                <h2 class="to-align">Ce notă crezi că vei obține?</h2>
-
-                <div class="grades">
-                    <label class="container">1
-                        <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">2
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">3
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">4
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">5
-                        <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">6
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">7
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">8
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">9
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">10
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
+                <h2 class="title-grey">Vezi ultimele rezultate:
+                    <a href="#">aici</a>
+                </h2>
+                <hr class="sep">
+                <h2 class="title-grey padd-subtitle">Descarcă rezultatele în format PDF/CSV:</h2>
+                <hr class="sep">
+                <div class="dropdown">
+                    <button class="dropbtn">Descarcă rezultate</button>
+                    <div class="dropdown-content">
+                        <a href="#">CSV</a>
+                        <a href="#">PDF</a>
+                    </div>
                 </div>
-
-                <button type="submit" class="pick-grade">Submit</button>
-                <h3 class="to-align">Punctajul final va apărea în: </h3>
-                <p id="demo" style="font-size:28px; padding-bottom: 1%"></p>
-                <!-- / Alege nota curs-->
+                <!-- / Alege nota laborator-->
             </div>
 
             <button class="button-course" onclick="openCity('lab', this, 'rgba(0, 150, 136, 0.77)')" id="defaultOpen">Laborator</button>
             <button class="button-course" onclick="openCity('curs', this, 'rgba(0, 150, 136, 0.77)')">Curs</button>
-            <button class="button-course" onclick="#">Rezultate</button>
+            <!-- <button class="button-course" onclick="#">Rezultate</button> -->
+        <!-- /Prognoze -->
         </div>
 
         <!-- Informations -->
@@ -237,28 +205,38 @@
 
     <div class="contact">
         <h3 class="to-align title">CONTACT</h3>
-
-
-        <div class="contact-info-left margin-top">
+        <div class="contact-info-left">
             <h3>Dacă ceva nu este în regulă, nu ezita să ne scrii:</h3>
             <ul>
                 <li class="check-in-icon">
                     <i class="info to-align large"></i>Iași, RO</li>
+                <li class="phone-icon">
+                    <i class="info to-align large"></i>Phone: 0748 022 866</li>
                 <li class="mail-icon">
                     <i class="info to-align large"></i>Email: prognosix@gmail.com
                 </li>
             </ul>
-
         </div>
 
-        <div class="contact-info-right margin-top">
-            <h3>Detalii pentru consultații:</h3>
-            <ul>
-                <li>
-                    <i class="to-align large"></i>Program: 08:00 - 09:00 </li>
-                <li>
-                    <i class="to-align large"></i>Sala: Cabinet </li>
-            </ul>
+        <div class="contact-info-right">
+            <h3>Contestațiile se pot face de aici:</h3>
+            <form action="../controllers/send_message.controller.php">
+                <p>
+                    <input class="sendm" type="text" placeholder="Nume..." required name="Nume">
+                </p>
+                <p>
+                    <input class="sendm" type="text" placeholder="E-mail..." required name="E-mail">
+                </p>
+                <p>
+                    <input class="sendm" type="text" placeholder="Subiect" required name="Subiect">
+                </p>
+                <p>
+                    <input class="sendm" type="text" placeholder="Mesaj" required name="Mesaj">
+                </p>
+                <p>
+                    <button class="sendm-button">Trimite</button>
+                </p>
+            </form>
         </div>
 
     </div>
