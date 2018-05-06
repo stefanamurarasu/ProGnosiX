@@ -1,0 +1,239 @@
+html{
+    font-family: 'Ubuntu', sans-serif;
+    background-color:#151515;
+}
+
+.header {
+    transition: 0.5s;
+    overflow: hidden;
+    padding: 15px 10px;
+    left: 0;
+    top: 0;
+    position: sticky;
+    margin-top: 0;
+    background-color: #151515;
+}
+
+.hr-dashed{
+    height: 0;
+    border: 0;
+    width: 100%;
+    border-bottom: 1px dashed #40babd;
+    color: #40babd;
+}
+
+/* logo */
+
+.logo a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.logo a:hover {
+    background-color: #ddd;
+    color: #151515;
+}
+
+/* log out */
+
+.user-icon {
+    display: inline;
+    margin: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+ 
+.header-right {
+    float: right;
+    margin-top: 10px;
+}
+
+.make-me-inline {
+    display: inline;
+    margin: 5px;
+    vertical-align: middle;
+    color:#ddd;
+}
+
+.make-me-inline a {
+    text-decoration: none;
+    color: #A9A9A9!important;
+} 
+
+.header input[type=text],
+.header input[type=password] {
+    padding: 10px;
+    width: 160px;
+    font-size: 11pt;
+    line-height: 14px;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=submit] {
+    background-color: #40babd;
+    border-radius: 6px;
+    border-color: #40babd;
+    color: white;
+    padding: 9px 30px;
+    font-size: 12pt;
+    cursor: pointer;
+}
+
+
+
+/** 
+*
+*   SIDE MENU
+*  
+**/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    color: #ccc;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/* materii */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #ccc;
+}
+
+/* x button */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/** 
+*
+* CONTENT
+*  
+*/
+
+#content {
+    transition: margin-left .5s;
+    padding: 16px;
+
+}
+
+.burger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    color:#EFEFEF;
+}
+
+/**
+*
+*     FOOTER 
+*
+*/
+
+.footer {
+    transition: 0.5s;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #151515;
+    color: white;
+}
+
+.title-news{
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 270px;
+    padding:25px;
+    border: #151515;
+}
+    
+.title-opacity{
+     background: rgba(255, 255, 255, 0.07);
+}
+
+
+h1{
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 36px;
+}
+
+.title-news h2{
+    color: #f1f1f1;
+    font-size: 25px;
+    text-align: left;
+    line-height: 50px;
+}
+
+[itemprop="name"]{
+    text-align:left;
+    color: #f1f1f1;
+}
+
+[itemprop="dateTime"]{
+    text-align: left;
+    color: #f1f1f1;
+
+}
+
+.title-news p{
+    text-align: left;
+    color: #40babd;
+}
+
+.course-button{
+    padding: 10px 15px;
+    margin-bottom:12px;
+    margin-top:12px;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #666;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgba(0, 150, 136, 0.77);
+}
+
+.course-button:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+
+}
+
+.paragraph{
+    margin-top:50px;
+    margin-bottom:30px;
+}
