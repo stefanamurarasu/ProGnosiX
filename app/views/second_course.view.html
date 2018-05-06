@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ProGnosiX</title>
+    <!-- <link rel="stylesheet" href="../../public/hfsm-style.css"> -->
+    <link rel="stylesheet" href="../../public/courses.css">
+</head>
+
+<body>
+
+    <header class="header neutral" id="header">
+        <div class="logo">
+            <a href="./login.view.html">ProGnosiX</a>
+        </div>
+        <div class="header-right">
+            <span class="make-me-inline">Hello,
+                <a href="./profile.view.html">
+                    <img src="../../public/images/user-icon.png" alt="User icon" class="user-icon">
+                </a>
+            </span>
+            <div class="form make-me-inline">
+                <input class="logout-btn" type="submit" value="Logout">
+            </div>
+        </div>
+    </header>
+
+    <hr class="hr-dashed">
+    <div id="navMenu" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+        <a href="./first_course.view.html">Tehnologii Web</a>
+        <a href="./second_course.view.html">PSGBD</a>
+        <a href="./third_course.view.html">Programare Avansată</a>
+        <a href="./fourth_course.view.html">Ingineria Programării</a>
+        <a href="./fifth_course.view.html">Opțional 2</a>
+        <a href="./sixth_course.view.html">Limba Engleză</a>
+    </div>
+
+    <div id="content" class="main-content">
+        <span class="burger-menu" onclick="toggleNav()">&#9776;</span>
+
+        <!-- Prognoze -->
+        <div class="news-section">
+
+            <!-- Alege nota laborator -->
+            <div id="lab" class="course-content">
+                <h1 class="to-align">PSGBD</h1>
+                <h2 class="title-grey">Ce notă crezi că vei obține?</h2>
+                <hr class="sep">
+                <p class="text-grey">Nu uita! Ai voie să ghicești o singură dată.</p>
+                <div class="grades">
+                    <label class="container">1
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">2
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">3
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">4
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">5
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">6
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">7
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">8
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">9
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">10
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="pick-grade">Submit</button>
+                <h2 class="title-grey">Cât mai trebuie să aștepți până la rezultate:</h2>
+                <hr class="sep">
+                <p id="demo" class="counter"></p>
+                <!-- / Alege nota laborator-->
+            </div>
+
+
+            <!-- Alege nota laborator -->
+            <div id="curs" class="course-content">
+                <h1 class="to-align">PSGBD</h1>
+
+                <h2 class="title-grey">Vezi ultimele rezultate:
+                    <a href="#">aici</a>
+                </h2>
+                <hr class="sep">
+                <h2 class="title-grey padd-subtitle">Descarcă rezultatele în format PDF/CSV:</h2>
+                <hr class="sep">
+                <div class="dropdown">
+                    <button class="dropbtn">Descarcă rezultate</button>
+                    <div class="dropdown-content">
+                        <a href="#">CSV</a>
+                        <a href="#">PDF</a>
+                    </div>
+                </div>
+                <!-- / Alege nota laborator-->
+            </div>
+
+            <button class="button-course" onclick="openCity('lab', this, 'rgba(0, 150, 136, 0.77)')" id="defaultOpen">Laborator</button>
+            <button class="button-course" onclick="openCity('curs', this, 'rgba(0, 150, 136, 0.77)')">Curs</button>
+        <!-- /Prognoze -->
+        </div>
+
+        <!-- Informations -->
+        <div class="info-section paragraph-padding-64">
+
+            <!-- Vote -->
+            <div class="tags-section white-content">
+                <div class="tags-content">
+                    <h4>Îți place aplicația noastră?</h4>
+                </div>
+                <div class="votes white-content">
+
+                    <!-- Au raspuns cu DA -->
+                    <div class="side yes-image"></div>
+                    <div class="middle">
+                        <div class="procentaj">
+                            <div class="yes"></div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div>30</div>
+                    </div>
+
+                    <!-- Au raspuns cu NU -->
+                    <div class="side no-image"></div>
+                    <div class="middle">
+                        <div class="procentaj">
+                            <div class="no"></div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div>1</div>
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <button type="button" class="vote-button">Da</button>
+                <button type="button" class="vote-button">Meh</button>
+                <!-- /Vote-->
+            </div>
+
+            <!-- RSS Feed Section -->
+            <div class="rss-section white-content">
+                <div class="tags-content">
+                    <h4>RSS Feed</h4>
+                </div>
+                <div class="text-tags white-content">
+                    <ul>
+                        <li class="rss-image">
+                            <a class="rss-subtext" href="#" title="Subscribe to RSS Feed">RSS Feed</a>
+                        </li>
+                        <li class="rss-image">
+                            <a class="rss-subtext" href="#" title="Subscribe to posts via RSS feed">RSS Feed for Posts</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- RSS Feed Section -->
+            </div>
+
+            <!-- Subscribe Section -->
+            <div class="subscribe-section white-content">
+                <div class="tags-content">
+                    <h4>Subscribe</h4>
+                </div>
+                <div class="clear text-tags white-content">
+                    <p>
+                        Introduceți e-mailul pentru a primi notificări
+                        <br id="break"> despre ultimele postări de pe aplicație.
+                    </p>
+                    <input class="sub-input" type="text" placeholder="E-mail..." style="width:100%">
+                    <button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="button-sub">Subscribe</button>
+                </div>
+                <!-- Subscribe Section -->
+            </div>
+            <!-- /Informations -->
+        </div>
+    </div>
+
+    <div class="contact">
+        <h3 class="to-align title">CONTACT</h3>
+        <div class="contact-info-left">
+            <h3>Dacă ceva nu este în regulă, nu ezita să ne scrii:</h3>
+            <ul>
+                <li class="check-in-icon">
+                    <i class="info to-align large"></i>Iași, RO</li>
+                <li class="phone-icon">
+                    <i class="info to-align large"></i>Phone: 0748 022 866</li>
+                <li class="mail-icon">
+                    <i class="info to-align large"></i>Email: prognosix@gmail.com
+                </li>
+            </ul>
+        </div>
+
+        <div class="contact-info-right">
+            <h3>Contestațiile se pot face de aici:</h3>
+            <form action="../controllers/send_message.controller.php">
+                <p>
+                    <input class="sendm" type="text" placeholder="Nume..." required name="Nume">
+                </p>
+                <p>
+                    <input class="sendm" type="text" placeholder="E-mail..." required name="E-mail">
+                </p>
+                <p>
+                    <input class="sendm" type="text" placeholder="Subiect" required name="Subiect">
+                </p>
+                <p>
+                    <input class="sendm" type="text" placeholder="Mesaj" required name="Mesaj">
+                </p>
+                <p>
+                    <button class="sendm-button">Trimite</button>
+                </p>
+            </form>
+        </div>
+
+    </div>
+
+    <footer class="footer dark-content" id="footer">
+        &copy; ProGnosiX Team 2018
+    </footer>
+
+    <script src="../../public/sidemenu.js"></script>
+    <script src="../../public/comingsoon.js"></script>
+    <script src="../../public/display_content.js"></script>
+
+</body>
+
+</html>
