@@ -136,6 +136,10 @@ input[type=submit] {
 
 /* Create account button */
 
+.clearfix {
+    overflow: auto; 
+}
+
 .create-account {
     padding: 0px 130px;
 }
@@ -171,11 +175,6 @@ input[type=submit] {
     line-height: 1.8;
 }
 
-/* .details {
-    padding: 10px 0px;
-} */
-
-
 /* Contact Section*/
 .contact {
     color: #000!important;
@@ -195,7 +194,6 @@ input[type=submit] {
 .contact-info-left {
     width: 100%;
     display: inline-block;
-    /* height: 400px; */
     left: 40px;
 }
 
@@ -243,11 +241,11 @@ ul {
 
 /* Google maps */
 .g-map {
-    float: right;
+    /* float: right; */
     width: 45%; 
     height: 400px; 
     overflow: hidden;
-    right: 40px;
+    /* right: 40px; */
 }
 
 .footer {
@@ -267,7 +265,7 @@ ul {
 }
 
 
-@media (max-width: 600px){
+/* @media (max-width: 600px){
     .hide-small {
         display: none!important;
     }
@@ -288,5 +286,128 @@ ul {
 @media (min-width: 601px){
     .contact-info-left {
         width: 49.99999%;
+    }
+} */
+
+/* for desktop */
+@media (min-width: 992px){
+    .contact-info-left {
+        width: 50%;
+    }
+
+    .g-map {
+        float: right;
+        right: 40px;
+    }
+
+}
+
+/* for tablets */
+@media (min-width: 601px) and (max-width: 991px){
+    .title-size {
+        font-size: 36px!important;
+    }
+
+    .display-logo {
+        padding: 0% 20%;
+    }
+
+    .display-block {
+        padding: 2%!important;
+    }
+
+    .display-left {
+        padding: 60% 0%;
+    }
+
+    .contact {
+        padding: 10% 15%;
+    }
+
+    .contact-info-left {
+        left:0px;
+    }
+
+    .pad-left {
+        padding: 2% 15%;
+    }
+
+    .g-map {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .footer {
+        padding: 5%;
+    }
+
+}
+
+/* for mobile phones */
+@media (max-width: 600px){
+    .display-logo {
+        padding: 0% 12%;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .title-size {
+        font-size: 20px!important;
+    }
+
+    .subtitle-size {
+        font-size: 15px!important;
+    }
+
+    .display-block {
+        padding: 5%!important;
+    }
+
+    .display-left {
+        padding: 50% 0%;
+    }
+
+    .img-cover {
+        min-height: 60%;
+    }
+
+    p.create-account {
+        padding: 0% 5%;
+    }
+
+    .app-details-section{
+        padding: 10% 15%;
+    }
+
+    
+    .contact {
+        padding: 5% 0%;
+    }
+
+    .contact-info-left {
+        left: 0px;
+    }
+
+    .margin-top {
+        margin-top: 1.5em;
+    }    
+
+    .pad-left {
+        padding: 0% 15%;
+    }
+
+    .team-member {
+        padding: 0% 0% 5% 15%;
+    }
+
+    .g-map {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .footer {
+        padding: 5%;
     }
 }
