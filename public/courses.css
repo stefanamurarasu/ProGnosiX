@@ -1020,15 +1020,27 @@ ul {
     }
 }
 
-/* coloanele sa stea unele peste celelalte
-@media (max-width: 400px) {
-    .side, .middle {
-        width: 100%;
+/* iPad Pro*/
+@media (width: 1024px) and (height: 1366px){
+    .news-section {
+        width: 50%;
     }
-    .right {
-        display: none;
+    .info-section {
+        width: 35%;
     }
-} */
+    .paragraph-padding-64 {
+        padding-top: 40px!important;
+        padding-bottom: 64px!important;
+    }
+    .pick-grade {
+        width: 25%;
+    }
+
+    .info {
+        width: 15%;
+    }
+
+}
 
 
 
