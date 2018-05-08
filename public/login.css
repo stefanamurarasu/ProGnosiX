@@ -107,7 +107,7 @@ input[type=submit] {
 .display-left {
     position: absolute;
     /* top: 35%; */
-    padding: 20% 0%;
+    padding: 10% 0%;
     left: 0%;
     width:100%;
 }
