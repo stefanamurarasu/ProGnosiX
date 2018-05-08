@@ -1,4 +1,4 @@
-function openCity(evalType,elmnt,color) {
+function choose_eval(evalType,elmnt,color) {
     var i, tabcontent, buttons;
     tabcontent = document.getElementsByClassName("course-content");
     for (i = 0; i < tabcontent.length; i++) {
