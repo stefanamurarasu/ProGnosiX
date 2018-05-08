@@ -40,11 +40,12 @@ body, html {
     background-color: #151515;
 }
 
-.hr-dashed{
+.hr-dashed {
     height: 0;
     border: 0;
-    border-bottom: 1px dashed #b5e853;
-    color: #b5e853;
+    width: 100%;
+    border-bottom: 1px dashed #40babd;
+    color: #40babd;
 }
 
 
@@ -59,9 +60,9 @@ body, html {
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: #40babd;
     border-radius: 6px;
-    border-color: #4CAF50;
+    border-color: #40babd;
     color: white;
     padding: 9px 30px;
     font-size: 12pt;
