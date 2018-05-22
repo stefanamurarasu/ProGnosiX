@@ -1,54 +1,35 @@
 <?php
+    session_start();
 
-session_start();
-$_SESSION['message'] = '';
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = 'prognosix';
-
-$connection = new mysqli($servername, $username, $password) or die(mysqli_error());
-$select_db = mysqli_select_db($connection, $db) or die("Conectarea la baza de date nu se poate efectua!");
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-    if ($_POST['psw'] == $_POST['pswRepeat']){
-
-         if (isset($_POST["submit"])) {
-      
-            if (!empty($_POST['lastName']) && !empty($_POST['firstName']) && !empty($_POST['username']) && !empty($_POST['psw']) && !empty($_POST['pswRepeat']) && !empty($_POST['email'])) {
-                
-                $lastName = $_POST['lastName'];
-                $firstName = $_POST['firstName'];
-                $username = $_POST['username'];
-                $psw = $_POST['psw'];
-                $pswRepeat = $_POST['pswRepeat'];
-                $email = $_POST['email'];
-                 
-                    $_SESSION['username'] = $username;
-                        
-                    $sql = "INSERT INTO studenti (lastName, firstName, username, psw, pswRepeat, email) VALUES ('$lastName', '$firstName', '$username', '$psw', '$pswRepeat', '$email')";
-             
-                    $result = mysqli_query($connection, $sql);
-            
-                    if ($result === true) {
-                        ?>
-                         <script>alert("V-ați înregistrat cu succes!");</script>
-                        <?php
-                        header("Refresh: 1; url=profile.html");
-                    }
-                    else {
-                        ?>
-                         <script>alert( "Ne pare rau, dar nu v-ați putut înregistra cu succes! încercați din nou!");</script>
-                        <?php
-                        header("Refresh: 1; url=index.html");
-                    }
+    switch ($_SERVER['REQUEST_METHOD']){
+        case "GET":
+           if(isset($_SESSION["token"])){
+               header("Location: ../views/home.views.html");
+            } else if(isset($_SESSION["register_failed"])){
+                unset($_SESSION["register_failed"]); 
+                header("Location: /"); //?
+            } else{
+                include_once "../views/register.views.html"; //?
             }
-        else{
-            $SESSION['message'] = 'Session Registration Failed!';
-            }   
+            break;
+        case "POST":
+           include_once "../models/auth.model.php";
+
+           if(isset($_POST["cancel_register"])){
+                header("Location: /");
+            } else if(isset($_POST["submit_register"])){
+               $registerToken = Auth::register($_POST["nr_matricol"], $_POST["nume"], $_POST["prenume"], $_POST["username"], $_POST["parola"], $_POST["repeat_parola"], $_POST["email"]);
+
+               if($registerToken) {
+                $_SESSION["token"] = $registerToken;
+                header("Location: ../views/home.views.html");
+            } else {
+                $_SESSION["register_failed"] = TRUE;
+                header("Location: /");
+            }
         }
+        break;
+    default:
+        break;
     }
-}
 ?>
