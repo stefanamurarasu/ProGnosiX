@@ -4,12 +4,12 @@
     switch ($_SERVER['REQUEST_METHOD']){
         case "GET":
            if(isset($_SESSION["token"])){
-               header("Location: ../views/home.views.html");
+               header("Location: ../views/home.view.html");
             } else if(isset($_SESSION["login_failed"])){
                 unset($_SESSION["login_failed"]); 
-                include_once "../views/login_failed.views.html";
+                include_once "../views/login_failed.view.html";
             } else{
-                include_once "../views/login.views.html";
+                include_once "../views/login.view.html";
             }
             break;
         case "POST":
@@ -20,7 +20,7 @@
 
                if($loginToken) {
                 $_SESSION["token"] = $loginToken;
-                header("Location: ../views/home.views.html");
+                header("Location: ../views/home.view.html");
             } else {
                 $_SESSION["login_failed"] = TRUE;
                 header("Location: /");
