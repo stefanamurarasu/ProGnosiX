@@ -1,4 +1,6 @@
 <?php
+    include "../config.php";
+    
     // creeaza coneziunea la BD
     $conn = new mysqli($GLOBALS["servername"], $GLOBALS["username"], $GLOBALS["password"], $GLOBALS["db"]);
 
