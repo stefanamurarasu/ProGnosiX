@@ -13,19 +13,19 @@
             $result = $conn->query($sql);
 
             //verifica sa nu fie deja inregistrat
-            if ($result->num_rows > 0) {
+            if ($result->num_rows < 0) {
                 return FALSE;
 
             //daca nu are deja cont
             } else {
 
                 //asigneaza un token
-                $token = bin2hex(random_bytes(10));
+                $token = bin2hex(openssl_random_pseudo_bytes(10));
                 $tokenSql = "INSERT INTO token (session_token, username) VALUES ('{$token}', '{$username}')";
                 $conn->query($tokenSql);
 
                 //INSERT in BD cu datele introduse in form
-                $dataToInsert = "INSERT INTO student (registration_number, last_name, first_name, username, password, repeat_password, e-mail) VALUES ('{$registration_nb}', '{$last_name}', '{$first_name}', '{$username}', '{$password}', '{$repeat_password}', '{$email}')";
+                $dataToInsert = "INSERT INTO student (registration_number, last_name, first_name, username, psw, repeat_password, email) VALUES ('{$registration_nb}', '{$last_name}', '{$first_name}', '{$username}', '{$password}', '{$repeat_password}', '{$email}')";
                 $conn->query($dataToInsert);
 
                 return $token;
