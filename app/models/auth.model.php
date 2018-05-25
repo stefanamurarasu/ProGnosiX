@@ -20,7 +20,7 @@
             } else {
 
                 //asigneaza un token
-                $token = bin2hex(openssl_random_pseudo_bytes(10));
+                $token = bin2hex(openssl_random_pseudo_bytes(30));
                 $tokenSql = "INSERT INTO token (session_token, username) VALUES ('{$token}', '{$username}')";
                 $conn->query($tokenSql);
 
