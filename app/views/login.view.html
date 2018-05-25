@@ -18,8 +18,8 @@
                 <a href="./login.view.html"><span class="logo">ProGnosiX</span></a>
             </b>
         </h1>
-        <form class="form">
-            <input type="text" placeholder="E-mail..." name="e-mail" required>
+        <form  action="../controllers/login.controller.php" method="POST" class="form">
+            <input type="text" placeholder="Nume de utilizator..." name="e-mail" required>
             <input type="password" placeholder="Parolă..." name="parolă" required>
             <input type="submit" value="Log In" name="submit_login">
         </form>
