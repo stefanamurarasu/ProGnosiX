@@ -7,7 +7,7 @@
                header("Location: ../views/home.view.html");
             } else if(isset($_SESSION["login_failed"])){
                 unset($_SESSION["login_failed"]); 
-                include_once "../views/login_failed.view.html";
+                header("Location: /");
             } else{
                 include_once "../views/login.view.html";
             }
