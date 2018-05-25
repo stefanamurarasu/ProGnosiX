@@ -33,6 +33,25 @@
         
         }
 
+        static function login($username, $password){
+            global $conn;
+
+            $sql = "SELECT username, psw FROM student WHERE username='{$username}' AND psw='{$password}'";
+            $result = $conn->query($sql);
+
+            if($result->num_rows < 0){
+                return FALSE;
+            
+            }else{
+
+                $token = bin2hex(openssl_random_pseudo_bytes(30));
+                $tokenSql = "INSERT INTO token (session_token, username) VALUES ('{$token}', '{$username}')";
+                $conn->query($tokenSql);
+
+                return $token;
+            }
+        }
+
         // static function login($username, $password){
         //     global $conn;
 
