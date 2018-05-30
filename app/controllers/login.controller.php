@@ -16,7 +16,7 @@
            include_once "../models/auth.model.php";
 
            if(isset($_POST["submit_login"])){
-               $loginToken = Auth::login($_POST["username"], $_POST["password"]);
+               $loginToken = Auth::login($_POST["username"], $_POST["psw"]);
 
                if($loginToken) {
                 $_SESSION["token"] = $loginToken;
