@@ -13,7 +13,7 @@
             $result = $conn->query($sql);
 
             //verifica sa nu fie deja inregistrat
-            if ($result->num_rows < 0) {
+            if ($result->num_rows > 0) {
                 return FALSE;
 
             //daca nu are deja cont
@@ -39,10 +39,10 @@
             $sql = "SELECT username, psw FROM student WHERE username='{$username}' AND psw='{$password}'";
             $result = $conn->query($sql);
 
-            if($result->num_rows < 0){
+            if($result->num_rows === 0){
                 return FALSE;
             
-            }else{
+            } else {
 
                 $token = bin2hex(openssl_random_pseudo_bytes(30));
                 $tokenSql = "INSERT INTO token (session_token, username) VALUES ('{$token}', '{$username}')";
