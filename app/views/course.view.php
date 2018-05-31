@@ -43,30 +43,20 @@
         <div class="news-section">
 
             <!-- Alege nota laborator -->
-            <?php 
-                include_once "../../app/views/components/general.components.php";
-
-                echo Components::choose_grade_lab();
-            ?>
+            <div id="lab" class="course-content">
+                <?php 
+                    include_once "../../app/views/components/general.components.php";
+                    echo Components::active_round_view();
+                ?>
+            </div>
 
             <!-- Alege nota curs -->
             <div id="curs" class="course-content">
-                <h1 class="to-align">Tehnologii WEB</h1>
-
-                <h2 class="title-grey">Vezi ultimele rezultate:
-                    <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRMnYur2yUmHnkaCgx0zglwzm95TdfiUqolq-FmojbJKz3xruW89GLxu4w-CO8IQt5GJh2DkM7gY3JG/pubhtml">aici</a>
-                </h2>
-                <hr class="sep">
-                <h2 class="title-grey padd-subtitle">Descarcă rezultatele în format PDF/CSV:</h2>
-                <hr class="sep">
-                <div class="dropdown">
-                    <button class="dropbtn">Descarcă rezultate</button>
-                    <div class="dropdown-content">
-                        <a href="#">CSV</a>
-                        <a href="#">PDF</a>
-                    </div>
-                </div>
-                <!-- / Alege nota curs-->
+                <?php 
+                    include_once "../../app/views/components/general.components.php";
+                    echo Components::inactive_round_view();
+                ?>
+                
             </div>
 
             <button class="button-course" onclick="choose_eval('lab', this, 'rgba(0, 150, 136, 0.77)')" id="defaultOpen">Laborator</button>
