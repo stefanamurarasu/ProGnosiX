@@ -5,7 +5,7 @@
         case "GET":
 
            if(isset($_SESSION["token"])){
-               header("Location: ../views/home.view.html");
+               header("Location: ../views/home.view.php");
             } else if(isset($_SESSION["login_failed"])){
                 unset($_SESSION["login_failed"]); 
                 header("Location: ../views/login_failed.view.html");
@@ -23,7 +23,7 @@
 
                if($loginToken) {
                     $_SESSION["token"] = $loginToken;
-                    header("Location: ../views/home.view.html");
+                    header("Location: ../views/home.view.php");
                 } else {
                     $_SESSION["login_failed"] = TRUE;
                     header("Location: ../views/login_failed.view.html");
