@@ -6,7 +6,7 @@
 
     class Auth{
 
-        static function register($registration_nb, $last_name, $first_name, $username, $password, $repeat_password, $email){
+        static function register($registration_nb, $last_name, $first_name, $year, $username, $password, $repeat_password, $email){
             global $conn;
 
             $sql = "SELECT registration_number FROM student WHERE registration_number='{$registration_nb}'";
@@ -27,7 +27,7 @@
                 $conn->query($tokenSql);
 
                 //INSERT in BD cu datele introduse in form
-                $dataToInsert = "INSERT INTO student (registration_number, last_name, first_name, username, psw, repeat_password, email) VALUES ('{$registration_nb}', '{$last_name}', '{$first_name}', '{$username}', '{$password}', '{$repeat_password}', '{$email}')";
+                $dataToInsert = "INSERT INTO student (registration_number, last_name, first_name, year, username, psw, repeat_password, email) VALUES ('{$registration_nb}', '{$last_name}', '{$first_name}', '{$year}', '{$username}', '{$password}', '{$repeat_password}', '{$email}')";
                 $conn->query($dataToInsert);
                 return $token;
             }
