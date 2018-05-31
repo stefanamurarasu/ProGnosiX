@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ProGnosiX</title>
-    <!-- <link rel="stylesheet" href="../../public/hfsm-style.css"> -->
     <link rel="stylesheet" href="../../public/courses.css">
 </head>
 
@@ -21,9 +20,11 @@
                     <img src="../../public/images/user-icon.png" alt="User icon" class="user-icon">
                 </a>
             </span>
-            <div class="form make-me-inline">
-                <input class="logout-btn" type="submit" value="Logout">
-            </div>
+            <form action="../controllers/course.controller.php" method="POST">
+                <div class="form make-me-inline">
+                    <input class="logout-btn" type="submit" value="Logout" name="logout_user">
+                </div>
+            </form>
         </div>
     </header>
 

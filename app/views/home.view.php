@@ -20,9 +20,11 @@
                     <img src="../../public/images/user-icon.png" alt="User icon" class="user-icon">
                 </a>
             </span>
-            <div class="form make-me-inline">
-                <input type="submit" value="Logout">
-            </div>
+            <form action="../controllers/course.controller.php" method="POST">
+                <div class="form make-me-inline">
+                    <input class="logout-btn" type="submit" value="Logout" name="logout_user">
+                </div>
+            </form>
         </div>
     </header>
     <hr class="hr-dashed">

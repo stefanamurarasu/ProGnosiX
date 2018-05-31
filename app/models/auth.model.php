@@ -4,7 +4,7 @@
     // creeaza coneziunea la BD
     $conn = new mysqli($GLOBALS["servername"], $GLOBALS["username"], $GLOBALS["password"], $GLOBALS["db"]);
 
-    class Auth{
+    class Auth {
 
         static function register($registration_nb, $last_name, $first_name, $year, $username, $password, $repeat_password, $email){
             global $conn;
@@ -21,18 +21,18 @@
                 
                 if($password == $repeat_password){
                     
-                //asigneaza un token
-                $token = bin2hex(openssl_random_pseudo_bytes(30));
-                $tokenSql = "INSERT INTO token (session_token, username) VALUES ('{$token}', '{$username}')";
-                $conn->query($tokenSql);
+                    //asigneaza un token
+                    $token = bin2hex(openssl_random_pseudo_bytes(30));
+                    $tokenSql = "INSERT INTO token (session_token, username) VALUES ('{$token}', '{$username}')";
+                    $conn->query($tokenSql);
 
-                //INSERT in BD cu datele introduse in form
-                $dataToInsert = "INSERT INTO student (registration_number, last_name, first_name, year, username, psw, repeat_password, email) VALUES ('{$registration_nb}', '{$last_name}', '{$first_name}', '{$year}', '{$username}', '{$password}', '{$repeat_password}', '{$email}')";
-                $conn->query($dataToInsert);
-                return $token;
+                    //INSERT in BD cu datele introduse in form
+                    $dataToInsert = "INSERT INTO student (registration_number, last_name, first_name, year, username, psw, repeat_password, email) VALUES ('{$registration_nb}', '{$last_name}', '{$first_name}', '{$year}', '{$username}', '{$password}', '{$repeat_password}', '{$email}')";
+                    $conn->query($dataToInsert);
+                    return $token;
+                }
             }
         }
-    }
 
         static function login($username, $password){
             global $conn;
@@ -54,12 +54,12 @@
         }
         
         static function logout() {
+
             session_start();
-            unset($_SESSION);
+            //unset($_SESSION);
+            session_unset();
             session_destroy();
             session_write_close();
         }
-
     }
-
 ?>

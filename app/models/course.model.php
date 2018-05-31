@@ -6,10 +6,11 @@
 
     //clasa pentru materiile pe care le are utilizatorul
     class Courses {
-        static function getCourses() {
+        
+        static function getCourses($year) {
             global $conn;
 
-            $sql = "SELECT course_name FROM course WHERE year = 2";
+            $sql = "SELECT course_name FROM course WHERE year = '{$year}'";
             
             $result = $conn->query($sql);
             $courses = [];

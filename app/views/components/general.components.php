@@ -4,7 +4,7 @@
             return '
             <div id="navMenu" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
-                <a href="./first_course.view.php">Tehnologii Web</a>
+                <a href="./course.view.php">Tehnologii Web</a>
                 <a href="./second_course.view.html">Practica SGBD</a>
                 <a href="./third_course.view.html">Programare Avansată</a>
                 <a href="./fourth_course.view.html">Ingineria Programării</a>
@@ -14,7 +14,7 @@
             ';
         }
 
-        //va fi apelata pentru Laborator/Curs
+        //va fi apelata pentru runda activa
         static function active_round_view(){
             return '
                     <h1 class="to-align">Tehnologii WEB</h1>
@@ -71,6 +71,7 @@
                     ';
         }
 
+        //va fi apelata pentru runda inactiva
         static function inactive_round_view(){
             return '
                 <h1 class="to-align">Tehnologii WEB</h1>
