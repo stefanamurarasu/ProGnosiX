@@ -13,5 +13,64 @@
             </div>
             ';
         }
+        static function choose_grade_lab(){
+            return '
+                <div id="lab" class="course-content">
+                <h1 class="to-align">Tehnologii WEB</h1>
+                <h2 class="title-grey">Ce notă crezi că vei obține?</h2>
+                <hr class="sep">
+                <p class="text-grey">Nu uita! Ai voie să ghicești o singură dată.</p>
+                <div class="grades">
+                    <label class="container">1
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">2
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">3
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">4
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">5
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">6
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">7
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">8
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">9
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">10
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="pick-grade">Submit</button>
+                <h2 class="title-grey">Cât mai trebuie să aștepți până la rezultate:</h2>
+                <hr class="sep">
+                <p id="demo" class="counter"></p>
+                <!-- / Alege nota laborator-->
+            </div>
+            
+            ';
+        }
     }
 ?>
