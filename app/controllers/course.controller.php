@@ -1,8 +1,10 @@
 <?php 
     session_start();
-    switch ($_SERVER['REQUEST_METHOD']) { 
+    switch ($_SERVER['REQUEST_METHOD']) {
+
         case "GET":
             include_once "../models/user.model.php";
+            include_once "../models/course.model.php";
 
             if(!isset($_SESSION["token"])) {
                 $loggedUser = new User(NULL);
@@ -27,6 +29,7 @@
                 header("Location: ../views/login.view.html");
             }
             break;
+
         default:
             break;
     }

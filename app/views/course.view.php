@@ -9,7 +9,9 @@
 </head>
 
 <body>
-
+    <?php 
+        include "../controllers/course.controller.php";
+    ?>
     <header class="header neutral" id="header">
         <div class="logo">
             <a href="./login.view.html">ProGnosiX</a>
@@ -37,10 +39,32 @@
         echo Components::createMenu();
     ?>
 
+    <!-- incercare pentru a testa cum se poate accesa un curs si id-ul sau -->
+    <!-- <div>
+        <?php 
+            //include_once "../../app/models/course.model.php";
+            //$courses = Courses::getCourses();
+           // foreach($courses as $key=>$value){
+                //echo $key . '-' . $value;
+            //}
+            
+        ?>
+    </div> -->
+
+    <div>
+        <?php 
+                foreach($courses as $key=>$value){
+                    echo $key . '-' . $value;
+                }
+                
+            ?>
+    </div>
+
     <div id="content" class="main-content">
         <span class="burger-menu" onclick="toggleNav()">&#9776;</span>
 
         <!-- Prognoze -->
+
         <div class="news-section">
 
             <!-- Alege nota laborator -->
@@ -183,6 +207,7 @@
     <script src="../../public/sidemenu.js"></script>
     <script src="../../public/comingsoon.js"></script>
     <script src="../../public/display_content.js"></script>
+    
 
 </body>
 
