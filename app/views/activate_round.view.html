@@ -26,29 +26,31 @@
     <hr class="hr-dashed">\
 
     <div id="content" class="admin-content">
-        <div class="choose">
-            <button class="button-year">Alegeți anul</button>
-            <div class="button-year-content">
-                <a href="#">Anul 1</a>
-                <a href="#">Anul 2</a>
-                <a href="#">Anul 3</a>
+        <form action="../controllers/round.controller.php" method="POST" class="container">
+            <div class="choose">
+                <button class="button-year" type="button">Alegeți anul</button>
+                <select name="selectYear" class="button-year-content">
+                    <option value="1">Anul 1</option>
+                    <option value="2">Anul 2</option>
+                    <option value="3">Anul 3</option>
+                </select>
             </div>
-        </div>
-        <div class="choose_1">
-            <button class="button-sgroup">Alegeți materia</button>
-            <div class="button-sgroup-content">
-                <a href="#">Tehnologii Web</a>
-                <a href="#">PSGBD</a>
-                <a href="#">Programare Avansată</a>
-                <a href="#">Ingineria Programării</a>
-                <a href="#">Opțional</a>
-                <a href="#">Limba Engleză</a>
+            <div class="choose_1">
+                <button class="button-sgroup" type="button">Alegeți materia</button>
+                <select name="selectCourse" class="button-sgroup-content">
+                    <option value="TW">Tehnologii Web</option>
+                    <option value="PSGBD">PSGBD</option>
+                    <option value="PA">Programare Avansată</option>
+                    <option value="IP">Ingineria Programării</option>
+                    <option value="OPT">Opțional</option>
+                    <option value="LE">Limba Engleză</option>
+                </select>
             </div>
-        </div>
-        <h2>Pentru alegerile tale: </h2>
-        <input type="date" type=date form="sf1" name="date" placeholder="Te rog specifică o dată">
-        <input type="date" type=date form="sf1" name="date" placeholder="Te rog specifică o dată">
-        <button href="./register.view.html" class="result-button button-white vutton-opacity">Activează runda</button>
+            <h2>Pentru alegerile tale: </h2>
+            <input type="date" required name="start_time" placeholder="Te rog specifică o dată">
+            <input type="date" required name="end_time" placeholder="Te rog specifică o dată">
+            <button name="activate_round" type="submit" class="result-button button-white vutton-opacity">Activează runda</button>
+        </form>
     </div>
 
 
