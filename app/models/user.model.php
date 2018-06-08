@@ -14,14 +14,7 @@
             $this -> courses = [];
 
             $usernameSql = "SELECT username FROM token WHERE session_token = '".$token."' ";
-            echo $usernameSql;
             $usernameResult =  $conn->query($usernameSql);
-            // echo $usernameResult;
-
-            $yearSql = "SELECT year FROM student WHERE username = '".$usernameResult."' ";
-            
-            $yearResult =  $conn->query($yearSql);
-            // echo $yearResult;
 
             if($usernameResult -> num_rows === 0) {
                 $username = NULL;
@@ -31,19 +24,27 @@
                 $this -> isLogged = TRUE;
             }
 
-            $coursesSql = "
+            // anul userului
+            $yearSql = 'SELECT year FROM student WHERE username = "' . $username . '" ';
+            $yearResult =  $conn->query($yearSql);
+
+            $year =  $yearResult -> fetch_assoc()["year"];
+            //$year = mysqli_fetch_assoc($yearResult);
+            //echo $year;
+
+            $coursesSql = '
                         SELECT ID, course_name FROM course
-                        WHERE year = '".$yearResult."'
-                ";
+                        WHERE year = ' . $year ;
 
-            $result = $conn->query($coursesSql);
+            $result = $conn -> query($coursesSql);
 
-            while($row = $result->fetch_assoc()) {
+            while($row = $result -> fetch_assoc()) {
                 //$this -> courses[] = $row["course_name"];
-                $this -> $courses[$row['ID']] = $row['course_name'];
+                $this -> courses[$row['ID']] = $row['course_name'];
             }
         }
 
+        // cursurile userului
         public function getCourses() {
             return $this -> courses;
         }
