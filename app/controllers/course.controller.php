@@ -31,6 +31,14 @@
                 header("Location: ../views/login.view.html");
             }
 
+            $username = $loggedUser -> getUsername();
+            $regNumber = $loggedUser -> getRegistrationNb($username);
+
+            // if(isset($_POST["submit_grade"])) {
+            //     User::makePrediction($_POST["radio"]);
+            //     header("Location: ../");
+            // }
+
             break;
 
         default:

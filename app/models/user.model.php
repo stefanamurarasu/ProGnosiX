@@ -8,6 +8,8 @@
         private $isLogged;
         private $courses;
         private $year;
+        private $registrationNb;
+        private $username;
 
         public function __construct($token) {
             global $conn;
@@ -17,25 +19,25 @@
             $usernameResult =  $conn->query($usernameSql);
 
             if($usernameResult -> num_rows === 0) {
-                $username = NULL;
+                $this -> username = NULL;
                 $this -> isLogged = FALSE;
             } else {
-                $username = $usernameResult -> fetch_assoc()["username"];
+                $this -> username = $usernameResult -> fetch_assoc()["username"];
                 $this -> isLogged = TRUE;
             }
 
             // anul userului
-            $yearSql = 'SELECT year FROM student WHERE username = "' . $username . '" ';
+            $yearSql = 'SELECT year FROM student WHERE username = "' . $this -> username . '" ';
             $yearResult =  $conn->query($yearSql);
 
-            $year =  $yearResult -> fetch_assoc()["year"];
+            $this -> year =  $yearResult -> fetch_assoc()["year"];
             //$year = mysqli_fetch_assoc($yearResult);
             //echo $year;
 
             if ($this -> isLogged == TRUE ){
                 $coursesSql = '
                             SELECT ID, course_name FROM course
-                            WHERE year = ' . $year ;
+                            WHERE year = ' . $this -> year ;
 
                 $result = $conn -> query($coursesSql);
                 
@@ -46,6 +48,26 @@
             }
         }
 
+        static function makePrediction($username , $grade, $round_ID,  $courseID, $evalType){
+            global $conn;
+
+            $registrationNb = getRegistrationNb($username);
+
+            $sql = "INSERT INTO token (choose_grade, registration_number, round_ID, course_ID, evaluation_type) 
+                    VALUES ('{$grade}', '{$registrationNb}', '{$round_ID}', '{$courseID}', '{$evalType}')
+                ";
+
+            $conn->query($sql);
+        }
+
+        private function getRegistrationNb($username){
+            
+            $sql = "SELECT registration_number FROM student WHERE username='{$username}'";
+            $this -> registrationNb = $conn->query($sql);
+
+            return $this -> registrationNb;
+        }
+
         // cursurile userului
         public function getCourses() {
             return $this -> courses;
@@ -53,6 +75,14 @@
 
         public function isLogged() {
             return $this -> isLogged;
+        }
+
+        public function getYear(){
+            return $this -> year;
+        }
+
+        public function getUsername(){
+            return $this -> username;
         }
 
     }

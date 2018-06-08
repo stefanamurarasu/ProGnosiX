@@ -63,7 +63,7 @@
                         </label>
                     </div>
 
-                    <button type="submit" class="pick-grade">Submit</button>
+                    <button type="submit" class="pick-grade" name="submit_grade">Submit</button>
                     <h2 class="title-grey">Cât mai trebuie să aștepți până la rezultate:</h2>
                     <hr class="sep">
                     <p id="demo" class="counter"></p>
