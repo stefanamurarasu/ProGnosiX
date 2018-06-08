@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ProGnosiX</title>
+    <title>Pagina cursului</title>
     <link rel="stylesheet" href="../../public/courses.css">
 </head>
 
@@ -34,28 +34,21 @@
 
     <!-- Meniul materiilor -->
     <?php 
-        include_once "../../app/views/components/general.components.php";
 
-        echo Components::createMenu();
+        echo '<div id="navMenu" class="sidenav"
+                <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>';
+        foreach($courses as $key=>$value){
+            echo '<a href="./course.view.php" id=' . $key . ' >' . $value . '</a>';
+        }
+
+        echo '</div>';
     ?>
-
-    <!-- incercare pentru a testa cum se poate accesa un curs si id-ul sau -->
-    <!-- <div>
-        <?php 
-            //include_once "../../app/models/course.model.php";
-            //$courses = Courses::getCourses();
-           // foreach($courses as $key=>$value){
-                //echo $key . '-' . $value;
-            //}
-            
-        ?>
-    </div> -->
 
     <div>
         <?php 
-                foreach($courses as $key=>$value){
-                    echo $key . '-' . $value;
-                }
+                // foreach($courses as $key=>$value){
+                //     echo $key . '-' . $value;
+                // }
                 
             ?>
     </div>

@@ -22,7 +22,6 @@
                 if($password == $repeat_password){
                     
                     //asigneaza un token
-                    
                     $generate_token = bin2hex(openssl_random_pseudo_bytes(10));
                     $token = substr($generate_token, 0, 10);
                     $tokenSql = "INSERT INTO token (session_token, username) VALUES ('{$token}', '{$username}')";

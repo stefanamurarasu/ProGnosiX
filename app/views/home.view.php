@@ -10,6 +10,9 @@
 </head>
 
 <body>
+<?php 
+        include "../controllers/home.controller.php";
+    ?>
     <header class="header neutral" id="header">
         <div class="logo">
             <a href="./login.view.html">ProGnosiX</a>
@@ -30,11 +33,13 @@
     <hr class="hr-dashed">
 
     <!-- Meniul materiilor -->
-    <?php 
-        include_once "../../app/views/components/general.components.php";
+    <?php
+         include_once "../../app/views/components/general.components.php";
 
-        echo Components::createMenu();
+         echo Components::createMenu();
+
     ?>
+
 
     <!-- Main content -->
     <div id="content" class="main-content">

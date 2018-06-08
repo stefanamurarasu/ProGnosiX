@@ -32,15 +32,17 @@
             //$year = mysqli_fetch_assoc($yearResult);
             //echo $year;
 
-            $coursesSql = '
-                        SELECT ID, course_name FROM course
-                        WHERE year = ' . $year ;
+            if ($this -> isLogged == TRUE ){
+                $coursesSql = '
+                            SELECT ID, course_name FROM course
+                            WHERE year = ' . $year ;
 
-            $result = $conn -> query($coursesSql);
-
-            while($row = $result -> fetch_assoc()) {
-                //$this -> courses[] = $row["course_name"];
-                $this -> courses[$row['ID']] = $row['course_name'];
+                $result = $conn -> query($coursesSql);
+                
+                while($row = $result -> fetch_assoc()) {
+                    //$this -> courses[] = $row["course_name"];
+                    $this -> courses[$row['ID']] = $row['course_name'];
+                }
             }
         }
 
