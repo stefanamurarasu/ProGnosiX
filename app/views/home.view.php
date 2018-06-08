@@ -33,11 +33,15 @@
     <hr class="hr-dashed">
 
     <!-- Meniul materiilor -->
-    <?php
-         include_once "../../app/views/components/general.components.php";
+    <?php 
 
-         echo Components::createMenu();
+        echo '<div id="navMenu" class="sidenav"
+                <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>';
+        foreach($courses as $key=>$value){
+            echo '<a href="./course.view.php?' . $key. ' " id=' . $key . ' >' . $value . '</a>';
+        }
 
+        echo '</div>';
     ?>
 
 

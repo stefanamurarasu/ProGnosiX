@@ -15,6 +15,7 @@
 
             $courses = $loggedUser -> getCourses();
 
+
             if($loggedUser -> isLogged()) {
                 include_once "../views/course.view.php";
             } else {
@@ -29,6 +30,7 @@
                 Auth::logout();
                 header("Location: ../views/login.view.html");
             }
+
             break;
 
         default:

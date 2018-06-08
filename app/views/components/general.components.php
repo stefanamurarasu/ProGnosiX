@@ -17,7 +17,6 @@
         //va fi apelata pentru runda activa
         static function active_round_view(){
             return '
-                    <h1 class="to-align">Tehnologii WEB</h1>
                     <h2 class="title-grey">Ce notă crezi că vei obține?</h2>
                     <hr class="sep">
                     <p class="text-grey">Nu uita! Ai voie să ghicești o singură dată.</p>
@@ -74,8 +73,6 @@
         //va fi apelata pentru runda inactiva
         static function inactive_round_view(){
             return '
-                <h1 class="to-align">Tehnologii WEB</h1>
-
                 <h2 class="title-grey">Vezi ultimele rezultate:
                     <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRMnYur2yUmHnkaCgx0zglwzm95TdfiUqolq-FmojbJKz3xruW89GLxu4w-CO8IQt5GJh2DkM7gY3JG/pubhtml">aici</a>
                 </h2>

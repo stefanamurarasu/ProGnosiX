@@ -38,20 +38,21 @@
         echo '<div id="navMenu" class="sidenav"
                 <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>';
         foreach($courses as $key=>$value){
-            echo '<a href="./course.view.php" id=' . $key . ' >' . $value . '</a>';
+            echo '<a href="./course.view.php?' . $key. ' " id=' . $key . ' >' . $value . '</a>';
+        }
+        echo '</div>';
+
+        //pentru a stabili pagina de curs accesata
+        foreach($courses as $key=>$value){
+            if(isset($_GET[$key])){
+                //echo '<p>' . $courseName . '</p>';
+                $courseName = $value;
+                $courseID = $key;
+                break;
+            }
         }
 
-        echo '</div>';
     ?>
-
-    <div>
-        <?php 
-                // foreach($courses as $key=>$value){
-                //     echo $key . '-' . $value;
-                // }
-                
-            ?>
-    </div>
 
     <div id="content" class="main-content">
         <span class="burger-menu" onclick="toggleNav()">&#9776;</span>
@@ -64,7 +65,17 @@
             <div id="lab" class="course-content">
                 <?php 
                     include_once "../../app/views/components/general.components.php";
-                    echo Components::active_round_view();
+                    include_once "../../app/models/rundatest.model.php";
+
+                    $isActive = Rounds::isActive($courseID, 'lab');
+
+                    if ($isActive){
+                        echo '<h1 class="to-align">' . $courseName . '</h1>';
+                        echo Components::active_round_view();
+                    } else {
+                        echo '<h1 class="to-align">' . $courseName . '</h1>';
+                        echo Components::inactive_round_view();
+                    }
                 ?>
             </div>
 
@@ -72,7 +83,17 @@
             <div id="curs" class="course-content">
                 <?php 
                     include_once "../../app/views/components/general.components.php";
-                    echo Components::inactive_round_view();
+                    include_once "../../app/models/rundatest.model.php";
+
+                    $isActive = Rounds::isActive($courseID, 'course');
+
+                    if ($isActive){
+                        echo '<h1 class="to-align">' . $courseName . '</h1>';
+                        echo Components::active_round_view();
+                    } else {
+                        echo '<h1 class="to-align">' . $courseName . '</h1>';
+                        echo Components::inactive_round_view();
+                    }
                 ?>
                 
             </div>
