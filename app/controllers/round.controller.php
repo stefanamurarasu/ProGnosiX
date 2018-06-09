@@ -14,7 +14,7 @@
             if($loggedUser -> isLogged()) {
                 include_once "../views/activate_round.view.php";
             } else {
-                include_once "../views/login_failed.view.html";
+                header("Location: ../views/login_failed.view.html"); //aici ar trebui un mesaj de eroare pe pagina curenta
             }
             break;
 
