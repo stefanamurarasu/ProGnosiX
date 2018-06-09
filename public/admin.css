@@ -59,6 +59,16 @@
     cursor: pointer;
 }
 
+.button-type{
+    background-color: #18cbde1c;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+
+}
+
 .button-group{
     background-color:#18cbde1c;
     color: white;
@@ -115,6 +125,15 @@
     z-index: 1;
 }
 
+.button-type-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
 .button-group-content{
     display: none;
     position: absolute;
@@ -133,15 +152,6 @@
     z-index: 1;
 }
 
-.button-year-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.button-year-content a:hover {background-color: #f1f1f1}
-
 .choose:hover .button-year-content {
     display: block;
 }
@@ -150,20 +160,19 @@
     background-color: #babdbe14;
 }
 
-.button-sgroup-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.button-sgroup-content a:hover {background-color: #f1f1f1}
-
 .choose_1:hover .button-sgroup-content {
     display: block;
 }
 
 .choose_1:hover .button-sgroup {
+    background-color: #babdbe14;
+}
+
+.choose_2:hover .button-type-content {
+    display: block;
+}
+
+.choose_2:hover .button-type {
     background-color: #babdbe14;
 }
 
