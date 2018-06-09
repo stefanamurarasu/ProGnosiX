@@ -48,22 +48,20 @@
             }
         }
 
-        static function makePrediction($username , $grade, $round_ID,  $courseID, $evalType){
+        static function makePrediction($grade, $registrationNb, $round_ID,  $courseID, $evalType){
             global $conn;
 
-            $registrationNb = getRegistrationNb($username);
-
-            $sql = "INSERT INTO token (choose_grade, registration_number, round_ID, course_ID, evaluation_type) 
-                    VALUES ('{$grade}', '{$registrationNb}', '{$round_ID}', '{$courseID}', '{$evalType}')
-                ";
+            $sql = "INSERT INTO prediction (choose_grade, registration_number, round_ID, course_ID, evaluation_type) VALUES ('{$grade}', '{$registrationNb}', '{$round_ID}', '{$courseID}', '{$evalType}')";
 
             $conn->query($sql);
         }
 
-        private function getRegistrationNb($username){
-            
+        public function getRegistrationNb($username){
+            global $conn; 
+
             $sql = "SELECT registration_number FROM student WHERE username='{$username}'";
-            $this -> registrationNb = $conn->query($sql);
+            $nbResult = $conn->query($sql);
+            $this -> registrationNb = $nbResult -> fetch_assoc()["registration_number"];
 
             return $this -> registrationNb;
         }
