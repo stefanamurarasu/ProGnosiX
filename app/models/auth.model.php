@@ -9,18 +9,22 @@
         static function register($registration_nb, $last_name, $first_name, $year, $username, $password, $repeat_password, $email){
             global $conn;
 
-            $sql = "SELECT registration_number FROM student WHERE registration_number='{$registration_nb}'";
-            $result = $conn->query($sql);
+            $stmt = $conn->prepare('SELECT*FROM student WHERE registration_number= ?');
+
+            $stmt->bind_param('s', $registration_nb);
+            $stmt->execute();
+
+            $result = $stmt->get_result();
+
+            $row = $result -> fetch_assoc();
 
             //verifica sa nu fie deja inregistrat
             if ($result->num_rows > 0) {
+                $_SESSION["errorMessage"] = 'Numarul matricol deja exista!';
                 return FALSE;
 
             //daca nu are deja cont
-            } else {
-                
-                if($password == $repeat_password){
-                    
+            } else {                   
                     //asigneaza un token
                     $generate_token = bin2hex(openssl_random_pseudo_bytes(10));
                     $token = substr($generate_token, 0, 10);
@@ -31,9 +35,8 @@
                     $dataToInsert = "INSERT INTO student (registration_number, last_name, first_name, year, username, psw, repeat_password, email) VALUES ('{$registration_nb}', '{$last_name}', '{$first_name}', '{$year}', '{$username}', '{$password}', '{$repeat_password}', '{$email}')";
                     $conn->query($dataToInsert);
                     return $token;
-                }
             }
-        }
+    }
 
         static function login($username, $password){
             global $conn;
