@@ -7,31 +7,44 @@ include "../config.php";
 $conn = new mysqli($GLOBALS["servername"], $GLOBALS["username"], $GLOBALS["password"], $GLOBALS["db"]);
 
 //clasa pentru perioada in care sunt active rundele
-
 class Round {
 
-    static function checkRound($year, $course_id, $start_time, $end_time){
+    static function isActive($id, $round_type) {
         global $conn;
-        
-        $sql = "SELECT 'round' FROM `round` WHERE 'round'='{$round}'";
-        
-        $result = $conn->query($sql);
-        $isActive = $result -> fetch_assoc () ["round"]; 
 
-        //verifica daca runda este activa
-
-        if($isActive === 1 ) {
-            return FALSE;
-        } else {
-            $checkRound = "INSERT INTO `round` (year, round, course_id, start_time, end_time) VALUES ('{$year}', '{$round}', '{$course_id}', '{$start_time}', '{$end_time}')";
-            $conn->query($checkRound);
+        if ($round_type === 'lab'){
+            $sql = "SELECT round_status FROM rounds WHERE course_id = '". $id ."' AND round_type = 'lab'";
+        } elseif ($round_type === 'course') {
+            $sql = "SELECT round_status FROM rounds WHERE course_id = '". $id ."' AND round_type = 'course'";
         }
-            
 
-        return $checkRound;
-    } 
+        $result = $conn->query($sql);
+        $isActive =  $result -> fetch_assoc()["round_status"];
+
+        return $isActive;
+    }
+
+    static function activateRound($year, $status, $round_type, $start_time, $end_time, $course_id){
+        global $conn;
+
+        if ($round_type === 'lab'){
+            $sql = "SELECT ID FROM rounds WHERE course_id = '". $course_id ."' AND round_type = 'lab'";
+        } elseif ($round_type === 'course') {
+            $sql = "SELECT ID FROM rounds WHERE course_id = '". $course_id ."' AND round_type = 'course'";
+        }
+
+        $result = $conn->query($sql);
+        $isActive =  $result -> fetch_assoc()["ID"];
+
+        if ($isActive){
+            return 0; //runda existenta
+        } else {
+            $activateSql = "INSERT INTO rounds (course_year, round_status, round_type, start_time, end_time, course_id) VALUES ('{$year}', '{$status}', '{$round_type}', '{$start_time}', '{$end_time}', '{$course_id}')";
+            $conn->query($activateSql);
+            return 1; 
+        }
+    }
+
 }
-
-
 ?>
 

@@ -65,9 +65,9 @@
             <div id="lab" class="course-content">
                 <?php 
                     include_once "../../app/views/components/general.components.php";
-                    include_once "../../app/models/rundatest.model.php";
+                    include_once "../../app/models/round.model.php";
 
-                    $isActive = Rounds::isActive($courseID, 'lab');
+                    $isActive = Round::isActive($courseID, 'lab');
 
                     if ($isActive){
                         echo '<h1 class="to-align">' . $courseName . '</h1>';
@@ -83,9 +83,9 @@
             <div id="curs" class="course-content">
                 <?php 
                     include_once "../../app/views/components/general.components.php";
-                    include_once "../../app/models/rundatest.model.php";
+                    include_once "../../app/models/round.model.php";
 
-                    $isActive = Rounds::isActive($courseID, 'course');
+                    $isActive = Round::isActive($courseID, 'course');
 
                     if ($isActive){
                         echo '<h1 class="to-align">' . $courseName . '</h1>';
