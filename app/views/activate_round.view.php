@@ -57,7 +57,7 @@
                     <option value="14">Retele Petri si Aplicatii</option>
                     <option value="15">Calcul numeric</option>
                     <option value="16">PMS Office</option>
-                    <option value="16">Grafica pe calculator</option>
+                    <option value="17">Grafica pe calculator</option>
                 </select>
             </div>
             <div class="choose_2">

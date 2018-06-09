@@ -48,6 +48,7 @@
                 //echo '<p>' . $courseName . '</p>';
                 $courseName = $value;
                 $courseID = $key;
+                $_SESSION['courseID'] = $courseID;
                 break;
             }
         }
@@ -63,43 +64,49 @@
 
             <!-- Alege nota laborator -->
             <div id="lab" class="course-content">
-                <?php 
-                    include_once "../../app/views/components/general.components.php";
-                    include_once "../../app/models/round.model.php";
+                <form action="../controllers/course.controller.php" method="POST">
+                    <?php 
+                        include_once "../../app/views/components/general.components.php";
+                        include_once "../../app/models/round.model.php";
 
-                    $isActive = Round::isActive($courseID, 'lab');
+                        $isActive = Round::isActive($courseID, 'lab');
 
-                    if ($isActive){
-                        echo '<h1 class="to-align">' . $courseName . '</h1>';
-                        echo Components::active_round_view();
-                    } else {
-                        echo '<h1 class="to-align">' . $courseName . '</h1>';
-                        echo Components::inactive_round_view();
-                    }
-                ?>
+                        if ($isActive){
+                            echo '<h1 class="to-align">' . $courseName . '</h1>';
+                            echo Components::active_round_view('lab');
+                        } else {
+                            echo '<h1 class="to-align">' . $courseName . '</h1>';
+                            echo Components::inactive_round_view();
+                        }
+            
+                    ?>
+                </form>
             </div>
 
             <!-- Alege nota curs -->
             <div id="curs" class="course-content">
-                <?php 
-                    include_once "../../app/views/components/general.components.php";
-                    include_once "../../app/models/round.model.php";
+                <form action="../controllers/course.controller.php" method="POST">
+                    <?php 
+                        include_once "../../app/views/components/general.components.php";
+                        include_once "../../app/models/round.model.php";
 
-                    $isActive = Round::isActive($courseID, 'course');
+                        $isActive = Round::isActive($courseID, 'course');
 
-                    if ($isActive){
-                        echo '<h1 class="to-align">' . $courseName . '</h1>';
-                        echo Components::active_round_view();
-                    } else {
-                        echo '<h1 class="to-align">' . $courseName . '</h1>';
-                        echo Components::inactive_round_view();
-                    }
-                ?>
-                
+                        if ($isActive){
+                            echo '<h1 class="to-align">' . $courseName . '</h1>';
+                            echo Components::active_round_view('course');
+                        } else {
+                            echo '<h1 class="to-align">' . $courseName . '</h1>';
+                            echo Components::inactive_round_view();
+                        }
+                    ?>
+                </form>
             </div>
-
-            <button class="button-course" onclick="choose_eval('lab', this, 'rgba(0, 150, 136, 0.77)')" id="defaultOpen">Laborator</button>
-            <button class="button-course" onclick="choose_eval('curs', this, 'rgba(0, 150, 136, 0.77)')">Curs</button>
+            
+           
+            <button  class="button-course" onclick="choose_eval('lab', this, 'rgba(0, 150, 136, 0.77)')" id="defaultOpen" name="lab">Laborator</button>
+            <button  class="button-course" onclick="choose_eval('curs', this, 'rgba(0, 150, 136, 0.77)')" name="course">Curs</button>
+                
         <!-- /Prognoze -->
         </div>
 
