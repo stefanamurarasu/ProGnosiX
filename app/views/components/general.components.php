@@ -3,11 +3,23 @@
         
         //va fi apelata pentru runda activa
         static function active_round_view($type){
-            return '
+            echo '
                     <h2 class="title-grey">Ce notă crezi că vei obține?</h2>
-                    <hr class="sep">
-                    <p class="text-grey">Nu uita! Ai voie să ghicești o singură dată.</p>
-                    <div class="grades">
+                    <hr class="sep">';
+
+                    
+                        if(isset($_SESSION["submitGrade"])) {
+                            if ($_SESSION["submitGrade"]){
+                                echo '<p class="text-grey">Alegerea ta a fost inregistrata! May the force be with you!</p>';
+                                unset($_SESSION["submitGrade"]);
+                            } else {                               
+                                echo '<p class="text-grey">Nu uita! Ai voie să ghicești o singură dată.</p>';
+                                unset($_SESSION["submitGrade"]);
+                            }
+                        }
+                                       
+             echo       
+                    '<div class="grades">
                         <label class="container">1
                             <input type="radio" checked="checked" name="radio" value=1>
                             <span class="checkmark"></span>

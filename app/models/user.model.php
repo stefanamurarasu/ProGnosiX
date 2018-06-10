@@ -51,9 +51,20 @@
         static function makePrediction($grade, $registrationNb, $round_ID,  $courseID, $evalType){
             global $conn;
 
-            $sql = "INSERT INTO prediction (choose_grade, registration_number, round_ID, course_ID, evaluation_type) VALUES ('{$grade}', '{$registrationNb}', '{$round_ID}', '{$courseID}', '{$evalType}')";
+            $sql = "SELECT choose_grade FROM prediction 
+                    WHERE registration_number='{$registrationNb}' 
+                    AND round_ID='{$round_ID}'";
 
-            $conn->query($sql);
+            $result = $conn->query($sql);
+
+            if ($result->num_rows === 0) {
+                $gradeSql = "INSERT INTO prediction (choose_grade, registration_number, round_ID, course_ID, evaluation_type) VALUES ('{$grade}', '{$registrationNb}', '{$round_ID}', '{$courseID}', '{$evalType}')";
+                $conn->query($gradeSql);
+                return TRUE;
+                
+            } else {
+                return FALSE;
+            }
         }
 
         public function getRegistrationNb($username){
