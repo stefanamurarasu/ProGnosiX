@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<last_updates>
+<course>
+      <name>Tehnologii Web</name>
+      <start>2018-06-10</start>
+      <description>Runda este momentan inactivă. Pentru a vă putea ghici nota, trebuie să așteptați până la runda următoare.</description>
+</course>
+<course>
+      <name>Programare Avansată</name>
+      <start>2018-06-10</start>
+      <description>Au apărut rezultate finale. Consultați pagina materiei pentru mai multe detalii.</description>
+</course>
+<course>
+      <name>Ingineria Programării</name>
+      <start>2018-06-10</start>
+      <description>Runda este activă. Acum vă puteți ghici nota.</description>
+</course>
+<course>
+      <name>Practică SGBD</name>
+      <start>2018-06-10</start>
+      <description>Runda este momentan inactivă. Pentru a vă putea ghici nota, trebuie să așteptați până la runda următoare.</description>
+</course>
+<course>
+      <name>Limba Engleză</name>
+      <start>2018-06-10</start>
+      <description>Au apărut rezultate finale. Consultați pagina materiei pentru mai multe detalii.</description>
+</course>
+<course>
+      <name>Opțional</name>
+      <start>2018-06-10</start>
+      <description>Runda este activă. Acum vă puteți ghici nota.</description>
+</course>
+</last_updates>
