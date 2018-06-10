@@ -73,6 +73,9 @@
                         $isActive = Round::isActive($courseID, 'lab');
 
                         if ($isActive){
+                            $roundLabID = Round :: getIdRound($_SESSION['courseID'], 'lab');
+                            $timeLab = Round :: getRoundDate($roundLabID);
+
                             echo '<h1 class="to-align">' . $courseName . '</h1>';
                             echo Components::active_round_view('lab', $timeLab);
                         } else {
@@ -94,6 +97,9 @@
                         $isActive = Round::isActive($courseID, 'course');
 
                         if ($isActive){
+                            $roundCourseID = Round :: getIdRound($_SESSION['courseID'], 'course');
+                            $timeCourse= Round :: getRoundDate($roundCourseID);
+
                             echo '<h1 class="to-align">' . $courseName . '</h1>';
                             echo Components::active_round_view('course', $timeCourse);
                         } else {

@@ -19,12 +19,6 @@
             // variabila folosita in course.view.php
             $courses = $loggedUser -> getCourses();
 
-            $roundLabID = Round :: getIdRound($_SESSION['courseID'], 'lab');
-            $timeLab = Round :: getRoundDate($roundLabID);
-
-            $roundCourseID = Round :: getIdRound($_SESSION['courseID'], 'course');
-            $timeCourse= Round :: getRoundDate($roundCourseID);
-
             if($loggedUser -> isLogged()) {
                 include_once "../views/course.view.php";
             } else {
@@ -52,11 +46,6 @@
             }
 
             $courses = $loggedUser -> getCourses();
-            $roundLabID = Round :: getIdRound($_SESSION['courseID'], 'lab');
-            $timeLab = Round :: getRoundDate($roundLabID);
-
-            $roundCourseID = Round :: getIdRound($_SESSION['courseID'], 'course');
-            $timeCourse= Round :: getRoundDate($roundCourseID);
 
             //pentru a stabili materia accesata
             if(isset($_POST["submit_grade_lab"])) {

@@ -64,8 +64,13 @@
                 <a href="#">PSGBD</a>
             </div>
         </div>
+
+        <?php include '../../public/fileUpload.php';?>
         <h2>Pentru alegerile tale: </h2>
-        <button href="./register.view.html" class="result-button button-white vutton-opacity">Încarcă rezultate</button>
+        <form action="../../public/fileUpload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+        </form>
     </div>
 
     <footer class="footer" id="footer">
