@@ -1,33 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<last_updates>
-<course>
-      <name>Tehnologii Web</name>
-      <start>2018-06-10</start>
-      <description>Runda este momentan inactivă. Pentru a vă putea ghici nota, trebuie să așteptați până la runda următoare.</description>
-</course>
-<course>
-      <name>Programare Avansată</name>
-      <start>2018-06-10</start>
-      <description>Au apărut rezultate finale. Consultați pagina materiei pentru mai multe detalii.</description>
-</course>
-<course>
-      <name>Ingineria Programării</name>
-      <start>2018-06-10</start>
-      <description>Runda este activă. Acum vă puteți ghici nota.</description>
-</course>
-<course>
-      <name>Practică SGBD</name>
-      <start>2018-06-10</start>
-      <description>Runda este momentan inactivă. Pentru a vă putea ghici nota, trebuie să așteptați până la runda următoare.</description>
-</course>
-<course>
-      <name>Limba Engleză</name>
-      <start>2018-06-10</start>
-      <description>Au apărut rezultate finale. Consultați pagina materiei pentru mai multe detalii.</description>
-</course>
-<course>
-      <name>Opțional</name>
-      <start>2018-06-10</start>
-      <description>Runda este activă. Acum vă puteți ghici nota.</description>
-</course>
-</last_updates>
+<rss version="2.0">
+<channel> <!--contine toate informatiile despre site -->
+<title>Noutăți</title>
+<description>Ultimele Actualizări Ale Aplicației</description>
+<item>
+  <title>Tehnologii Web</title>
+  <link>http://localhost:1234/Proiect_Repo/ProGnosiX/app/views/course.view.php</link>
+  <pubDate>Duminică, 19 Iunie 2018 14:27:30 GMT</pubDate>
+  <description>[CDATA[Runda este momentan inactivă. Pentru a vă putea ghici nota, trebuie să așteptați până la runda următoare.]]</description>
+</item>
+<item>
+  <title>Programare Avansată</title>
+  <link>http://localhost:1234/Proiect_Repo/ProGnosiX/app/views/course.view.php</link>
+  <pubDate>Duminică, 19 Iunie 2018 14:27:30 GMT</pubDate>
+  <description>[CDATA[Au apărut rezultate finale. Consultați pagina materiei pentru mai multe detalii.]]</description>
+</item>
+<item>
+  <title>Ingineria Programării</title>
+  <link>http://localhost:1234/Proiect_Repo/ProGnosiX/app/views/course.view.php</link>
+  <pubDate>Duminică, 19 Iunie 2018 14:27:30 GMT</pubDate>
+  <description>[CDATA[Runda este activă. Acum vă puteți ghici nota.]]</description>
+</item>
+<item>
+  <title>Practică SGBD</title>
+  <link>http://localhost:1234/Proiect_Repo/ProGnosiX/app/views/course.view.php</link>
+  <pubDate>Duminică, 19 Iunie 2018 14:27:30 GMT</pubDate>
+  <description>[CDATA[Runda este momentan inactivă. Pentru a vă putea ghici nota, trebuie să așteptați până la runda următoare.]]</description>
+</item>
+<item>
+  <title>Limba Engleză</title>
+  <link>http://localhost:1234/Proiect_Repo/ProGnosiX/app/views/course.view.php</link>
+  <pubDate>Duminică, 19 Iunie 2018 14:27:30 GMT</pubDate>
+  <description>[CDATA[Au apărut rezultate finale. Consultați pagina materiei pentru mai multe detalii.]]</description>
+</item>
+<item>
+  <title>Opțional</title>
+  <link>http://localhost:1234/Proiect_Repo/ProGnosiX/app/views/course.view.php</link>
+  <pubDate>Duminică, 19 Iunie 2018 14:27:30 GMT</pubDate>
+  <description>[CDATA[Runda este activă. Acum vă puteți ghici nota.]]</description>
+</item>
+</channel>
+</rss>
