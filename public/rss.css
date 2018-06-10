@@ -166,74 +166,9 @@ input[type=submit] {
     color: #fff;
 }
 
-.title-news{
-    width: 60%;
-    margin-top: 20px;
-    margin: 5% 20%;
-    padding:25px;
-    border: #151515;
-}
-    
-.title-opacity{
-     background: rgba(255, 255, 255, 0.07);
-}
-
-
-h1{
-    text-align: center;
-    color: #f1f1f1;
-    font-size: 36px;
-}
-
-.title-news h2{
-    color: #f1f1f1;
-    font-size: 25px;
-    text-align: left;
-    line-height: 50px;
-}
-
-[itemprop="name"]{
-    text-align:left;
-    color: #f1f1f1;
-}
-
-[itemprop="dateTime"]{
-    text-align: left;
-    color: #f1f1f1;
-
-}
-
-.title-news p{
-    text-align: left;
-    color: #40babd;
-}
-
-.course-button{
-    padding: 10px 15px;
-    margin-bottom:12px;
-    margin-top:12px;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #666;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px rgba(0, 150, 136, 0.77);
-}
-
-.course-button:active{
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-
-}
-
-.paragraph{
-    margin-top:50px;
-    margin-bottom:30px;
-}
 
 /* Galaxy S5 */
-@media (min-width: 320px) and (max-height: 812px){
+/* @media (min-width: 320px) and (max-height: 812px){
 
     .logo a {
         padding: 3% 30%;
@@ -265,25 +200,25 @@ h1{
         padding: 0;
     }
 
-}
+} */
 
 /* iPhone 6/7/8 */
-@media (min-width: 320px) and (max-height: 736px){
+/* @media (min-width: 320px) and (max-height: 736px){
     .header-right{
         padding: 2% 15% 0% 15%;
     }
-}
+} */
     
 /* iPhone 6/7/8 Plus, iPhone X*/
-@media (min-width: 320px) and (max-height: 812px){
+/* @media (min-width: 320px) and (max-height: 812px){
     .header-right{
         padding: 2% 25% 0% 15%;
     }
-}
+} */
 
 /* iPhone 6/7/8*/
-@media (min-width: 320px) and (max-height: 812px){
+/* @media (min-width: 320px) and (max-height: 812px){
     .header-right{
         padding: 2% 20% 0% 15%;
     }
-}
+} */
