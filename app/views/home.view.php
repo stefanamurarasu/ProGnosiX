@@ -125,7 +125,7 @@
                 <div class="text-tags white-content">
                     <ul>
                         <li class="rss-image">
-                            <a class="rss-subtext" href="./rss.view.html" title="Subscribe to RSS Feed">RSS Feed</a>
+                            <a class="rss-subtext" href="./rss.view.php" title="Subscribe to RSS Feed">RSS Feed</a>
                         </li>
                     </ul>
                 </div>
