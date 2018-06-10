@@ -69,7 +69,7 @@
                 <b>E-mail</b>
             </label>
             <input type="text" placeholder="Introduceți E-mail" name="email" required>
-
+            
             <div class="clearfix">
                 <a href='../views/login.view.html'>
                     <button type="button" class="cancelbtn" name="cancel_register">Anulează</button>

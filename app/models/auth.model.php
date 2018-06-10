@@ -20,11 +20,15 @@
 
             //verifica sa nu fie deja inregistrat
             if ($result->num_rows > 0) {
-                $_SESSION["errorMessage"] = 'Numarul matricol deja exista!';
+                $_SESSION["errorMessage"] = 'Numarul matricol deja există!';
                 return FALSE;
 
             //daca nu are deja cont
-            } else {                   
+            } else {
+                
+                $validateEmail = Auth::validateEmail($_POST["email"]);
+
+                if($validateEmail){
                     //asigneaza un token
                     $generate_token = bin2hex(openssl_random_pseudo_bytes(10));
                     $token = substr($generate_token, 0, 10);
@@ -35,6 +39,10 @@
                     $dataToInsert = "INSERT INTO student (registration_number, last_name, first_name, year, username, psw, repeat_password, email) VALUES ('{$registration_nb}', '{$last_name}', '{$first_name}', '{$year}', '{$username}', '{$password}', '{$repeat_password}', '{$email}')";
                     $conn->query($dataToInsert);
                     return $token;
+                }
+                else{
+                    $_SESSION["errorMessage"] = 'Domeniul pe care l-ați introdus nu este valid!';
+                }
             }
     }
 
@@ -65,6 +73,16 @@
                 return $token;
                 }
             }
+        }
+        
+        function validateEmail($email){
+            $allowedDomain = array('info.uaic.ro');
+            list($user, $domain) = explode('@', $email);
+            if (in_array($domain, $allowedDomain))
+            {
+                return true;
+            }
+            return false;
         }
         
         static function logout() {
