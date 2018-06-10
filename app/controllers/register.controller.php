@@ -23,18 +23,14 @@
                     header("Location: ../views/register.view.php");
                 } else {
                     $registerToken = Auth::register($_POST["nr_matricol"], $_POST["nume"], $_POST["prenume"], $_POST["an"], $_POST["username"], $_POST["parola"], $_POST["repeat_parola"], $_POST["email"]);
-
-            
+                    
                     if($registerToken) {
-                        
                         $_SESSION["token"] = $registerToken;
                         header("Location: ../views/home.view.php");
                     } else {
                         $_SESSION["register_failed"] = TRUE;
                         header("Location: ../views/register.view.php");
                     } 
-
-
                 }  
             }
         }
