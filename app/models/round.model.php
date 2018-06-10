@@ -48,12 +48,23 @@ class Round {
     static function getIdRound($course_id, $round_type){
         global $conn;
 
-        $sql = 'SELECT ID FROM rounds WHERE course_id = "'. $course_id .'" AND round_type = "'. $round_type .'" ';
+        $sql = "SELECT ID FROM rounds WHERE course_id = '". $course_id ."' AND round_type = '". $round_type ."'";
         $result = $conn->query($sql);
 
         $roundID =  $result -> fetch_assoc()["ID"];
 
         return $roundID;
+    }
+
+    static function getRoundDate($round_id){
+        global $conn;
+
+        $sql = "SELECT end_time FROM rounds WHERE ID = '{$round_id}'";
+        $result = $conn->query($sql);
+
+        $date = $result-> fetch_assoc()["end_time"];
+        return $date;
+        
     }
 
 }

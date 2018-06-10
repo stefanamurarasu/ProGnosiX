@@ -49,6 +49,7 @@
                 $courseName = $value;
                 $courseID = $key;
                 $_SESSION['courseID'] = $courseID;
+                $_SESSION['courseKey'] = $courseID;
                 break;
             }
         }
@@ -73,7 +74,7 @@
 
                         if ($isActive){
                             echo '<h1 class="to-align">' . $courseName . '</h1>';
-                            echo Components::active_round_view('lab');
+                            echo Components::active_round_view('lab', $timeLab);
                         } else {
                             echo '<h1 class="to-align">' . $courseName . '</h1>';
                             echo Components::inactive_round_view();
@@ -94,7 +95,7 @@
 
                         if ($isActive){
                             echo '<h1 class="to-align">' . $courseName . '</h1>';
-                            echo Components::active_round_view('course');
+                            echo Components::active_round_view('course', $timeCourse);
                         } else {
                             echo '<h1 class="to-align">' . $courseName . '</h1>';
                             echo Components::inactive_round_view();
@@ -102,11 +103,11 @@
                     ?>
                 </form>
             </div>
+
+            <input type="button"  class="button-course lab" onclick="choose_eval('lab', this, 'rgba(0, 150, 136, 0.77)')" id="defaultOpen" name="labButton" value="Laborator"/>
+            <input type="button" class="button-course da" onclick="choose_eval('curs', this, 'rgba(0, 150, 136, 0.77)')" name="courseButton" value="Curs"/>
             
-           
-            <button  class="button-course" onclick="choose_eval('lab', this, 'rgba(0, 150, 136, 0.77)')" id="defaultOpen" name="lab">Laborator</button>
-            <button  class="button-course" onclick="choose_eval('curs', this, 'rgba(0, 150, 136, 0.77)')" name="course">Curs</button>
-                
+            
         <!-- /Prognoze -->
         </div>
 
@@ -182,7 +183,7 @@
             <!-- /Informations -->
         </div>
     </div>
-
+    
     <div class="contact">
         <h3 class="to-align title">CONTACT</h3>
         <div class="contact-info-left">
@@ -221,12 +222,34 @@
 
     </div>
 
+    <!-- AJAX call and jquery and reload on success-->
+
+    <script>
+        $(document).on("click", ".pick-grade", function() {
+            var nameAttr = $(this).attr("name");
+
+            $.ajax({
+                type: "POST",
+                url: "../controllers/course.controller.php
+                data: {active:active},
+                success: function(data){
+                    document.location.reload(true);
+                }
+            });
+
+        });
+            
+        </script>
+
+
+
+
     <footer class="footer dark-content" id="footer">
         &copy; ProGnosiX Team 2018
     </footer>
 
     <script src="../../public/sidemenu.js"></script>
-    <script src="../../public/comingsoon.js"></script>
+    <!-- <script src="../../public/comingsoon.js"></script> -->
     <script src="../../public/display_content.js"></script>
     
 
