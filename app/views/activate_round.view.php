@@ -73,7 +73,7 @@
             </div>
             <br>
             <h3 style="color:white">Scurtă descriere: </h3> <br><br>
-            <input id="description" type="text" name="description">
+            <input id="description" type="text" name="resultDescription">
             <h2>Pentru alegerile tale: </h2>
             <button name="activate_round" type="submit" class="result-button button-white vutton-opacity">Activează runda</button>
 

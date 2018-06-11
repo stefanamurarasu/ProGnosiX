@@ -46,7 +46,7 @@
                 $endDate = isset($_POST['end_time']) ? $_POST['end_time'] : false;
  
                 $status = 'yes';
-                $result = Round :: activateRound($yearOption, $status, $typeOption, $startDate, $endDate, $courseOption);
+                $result = Round :: activateRound($yearOption, $status, $typeOption, $startDate, $endDate, $courseOption, $resultDescription);
                 
                 if ($result === 0){
                     $_SESSION["activate_failed"] = TRUE;
