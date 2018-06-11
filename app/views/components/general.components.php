@@ -94,10 +94,10 @@
         }
 
         //va fi apelata pentru runda inactiva
-        static function inactive_round_view(){
+        static function inactive_round_view($filePath){
             return '
                 <h2 class="title-grey">Vezi ultimele rezultate:
-                    <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRMnYur2yUmHnkaCgx0zglwzm95TdfiUqolq-FmojbJKz3xruW89GLxu4w-CO8IQt5GJh2DkM7gY3JG/pubhtml">aici</a>
+                    <a href="'. $filePath .'">aici</a>
                 </h2>
                 <hr class="sep">
                 <h2 class="title-grey padd-subtitle">Descarcă rezultatele în format PDF/CSV:</h2>
