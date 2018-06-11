@@ -24,7 +24,7 @@ class Round {
         return $isActive;
     }
 
-    static function activateRound($year, $status, $round_type, $start_time, $end_time, $course_id){
+    static function activateRound($year, $status, $round_type, $start_time, $end_time, $course_id, $result){
         global $conn;
 
         // if ($round_type === 'lab'){
@@ -39,7 +39,7 @@ class Round {
         // if ($isActive){
         //     return 0; //runda existenta
         // } else {
-        $activateSql = "INSERT INTO rounds (course_year, round_status, round_type, start_time, end_time, course_id) VALUES ('{$year}', '{$status}', '{$round_type}', '{$start_time}', '{$end_time}', '{$course_id}')";
+        $activateSql = "INSERT INTO rounds (course_year, round_status, round_type, start_time, end_time, course_id, result_description) VALUES ('{$year}', '{$status}', '{$round_type}', '{$start_time}', '{$end_time}', '{$course_id}', '{$result}')";
             $conn->query($activateSql);
             return 1; 
         // }
