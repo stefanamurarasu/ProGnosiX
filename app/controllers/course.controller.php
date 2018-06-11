@@ -8,6 +8,7 @@
             include_once "../models/user.model.php";
             include_once "../models/round.model.php";
             include_once "../models/course.model.php";
+            include_once "../models/results.model.php";
 
             if(!isset($_SESSION["token"])) {
                 $loggedUser = new User(NULL);
@@ -18,6 +19,7 @@
             // pentru materiile la care este asignat studentul
             // variabila folosita in course.view.php
             $courses = $loggedUser -> getCourses();
+            $year = $loggedUser -> getYear();
 
             if($loggedUser -> isLogged()) {
                 include_once "../views/course.view.php";
@@ -32,6 +34,7 @@
             include_once "../models/auth.model.php";
             include_once "../models/round.model.php";
             include_once "../models/user.model.php";
+            include_once "../models/results.model.php";
 
             if(isset($_POST["logout_user"])) {
                 Auth::logout();
@@ -46,12 +49,12 @@
             }
 
             $courses = $loggedUser -> getCourses();
+            $year = $loggedUser -> getYear();
 
             //pentru a stabili materia accesata
             if(isset($_POST["submit_grade_lab"])) {
                 //nota aleasa
                 $value = $_POST["radio"]; 
-                echo $value;
 
                 $username = $loggedUser -> getUsername();
                 $regNumber = $loggedUser -> getRegistrationNb($username);
@@ -61,13 +64,9 @@
                 if ($prediction){
                     $_SESSION['submitGrade'] = TRUE;
                     header("Location: ../views/course.view.php?". $_SESSION['courseKey'] ." " );
-                    // de schimbat redirectarea?
                 } else {
                     $_SESSION['submitGrade'] = FALSE;
-                    header("Location: ../views/course.view.php?". $_SESSION['courseKey'] ." " );
-                    // de schimbat redirectarea?
-                    
-                    
+                    header("Location: ../views/course.view.php?". $_SESSION['courseKey'] ." " );   
                 }
                 
 
@@ -85,13 +84,9 @@
                 if ($prediction){
                     $_SESSION['submitGrade'] = TRUE;
                     header("Location: ../views/course.view.php?". $_SESSION['courseKey'] ." " );
-                    // plus mesaj de succes, ca s-a facut prognoza
-                    // de schimbat redirectarea?
                 } else {
                     $_SESSION['submitGrade'] = FALSE;
                     header("Location: ../views/course.view.php?". $_SESSION['courseKey'] ." " );
-                    // plus mesaj de eroare ca nu poate alege a doua oara
-                    // de schimbat redirectarea?
                 }
             }
 
