@@ -8,10 +8,10 @@ $conn = new mysqli($GLOBALS["servername"], $GLOBALS["username"], $GLOBALS["passw
 
 //clasa pentru perioada in care sunt active rundele
 class Result {
-    static function insertResults($year, $filepath, $groupNb, $semian, $course_id){
+    static function insertResults($year, $filepath, $groupNb, $course_id, $description, $eval_type){
         global $conn;
 
-        $sql = "INSERT INTO result (course_year, filepath, group_number, semian, course_id) VALUES ('{$year}', '{$filepath}', '{$groupNb}', '{$semian}', '{$course_id}')";
+        $sql = "INSERT INTO result (course_year, filepath, group_number, course_id, result_description, eval_type) VALUES ('{$year}', '{$filepath}', '{$groupNb}', '{$course_id}', '{$description}', '{$eval_type}')";
 
         $conn->query($sql);
         return 1;

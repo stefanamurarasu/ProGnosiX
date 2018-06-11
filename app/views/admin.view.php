@@ -26,36 +26,30 @@
     <hr class="hr-dashed">
 
     <div id="content" class="admin-content">
+    <form action="../controllers/results.controller.php" method="post" enctype="multipart/form-data">
         <div class="choose">
             <button class="button-year">Alegeți anul studentului</button>
-            <select class="button-year-content">
+            <select name="selectYear" class="button-year-content">
                 <option value="1">Anul 1</option>
                 <option value="2">Anul 2</option>
                 <option value="3">Anul 3</option>
             </select>
         </div>
-        <div class="choose_1">
-            <button class="button-sgroup">Alegeți semianul studentului</button>
-            <select class="button-sgroup-content">
-                <a value="A">A</a>
-                <a value="B">B</a>
-            </select>
-        </div>
         <div class="choose_2">
             <button class="button-group">Alegeți grupa studentului</button>
-            <select class="button-group-content">
-                <option value="G1">Grupa 1</option>
-                <option value="G2">Grupa 2</option>
-                <option value="G3">Grupa 3</option>
-                <option value="G4">Grupa 4</option>
-                <option value="G5">Grupa 5</option>
-                <option value="G6">Grupa 6</option>
-                <option value="G7">Grupa 7</option>
+            <select name="selectGroupNb" class="button-group-content">
+                <option value="1">Grupa 1</option>
+                <option value="2">Grupa 2</option>
+                <option value="3">Grupa 3</option>
+                <option value="4">Grupa 4</option>
+                <option value="5">Grupa 5</option>
+                <option value="6">Grupa 6</option>
+                <option value="7">Grupa 7</option>
             </select>
         </div>
         <div class="choose_3">
             <button class="button-course">Alegeți materia la care predați</button>
-            <select class="button-course-content">
+            <select name="selectCourse" class="button-course-content">
                 <option value="1">Tehnologii Web</option>
                 <option value="2">PSGBD</option>
                 <option value="3">Programare Avansată</option>
@@ -76,16 +70,22 @@
             </select>
         </div>
 
-        <?php include '../../public/fileUpload.php';?>
+        <div class="choose_2">
+                <button class="button-type" type="button">Alegeți tipul de examinare</button>
+                <select name="selectType" class="button-type-content">
+                    <option value="lab">Laborator</option>
+                    <option value="course">Curs</option>
+                </select>
+        </div>
         <br>
         <h3 style="color:white">Scurtă descriere: </h3> <br><br>
-        <input id="description" type="text" name="resultDescription">
+        <input id="description" type="text" name="result">
         <h2>Pentru alegerile tale: </h2>
-        <form action="../../public/fileUpload.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <input type="submit" value="Upload Image" name="submit">
-        </form>
-        </div>
+        
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload File" name="submit_file">
+    </form>
+    </div>
 
     <footer class="footer" id="footer">
         &copy; ProGnosiX Team 2018
