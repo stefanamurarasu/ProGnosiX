@@ -42,6 +42,7 @@
         }
 
         echo '</div>';
+
     ?>
 
 
@@ -51,47 +52,56 @@
 
         <!-- News -->
         <div class="news-section">
+            <?php
+            
+            foreach($courses as $key=>$value){
+                echo '<div class="clear news-item paragraph-padding-64">
+                        <div class="position-paragraph pg-container">
+                            <h1 class="txt-color">'.$value.'</h1>'; 
+                
+                $result = Announcements::getDescription($key);
+                echo '<p>'. $result.'</p>';
+                echo  '<span>
+                            <a class="link-style" href="../views/course.view.php?'.$key.'">Vezi pagina materiei&#8594;</a>
+                       </span>';
 
-            <div class="clear news-item paragraph-padding-64">
-                <div class="position-paragraph pg-container">
-                    <h1 class="txt-color">TEHNOLOGII WEB</h1>
-                    <p>Tocmai s-a activat o nouă rundă. Fii sigur că ești printre primii care își încearcă norocul!</p>
-                    <span>
-                        <a class="link-style" href="first_course.view.html">Vezi pagina materiei&#8594;</a>
-                    </span>
-                    <div class="position-details pg-details">
-                        <p class="test pg-border pg-padding-large pg-padding-32 to-align">Timp rămas: 7d 20:12h</p>
-                    </div>
-                </div>
-            </div>
+                $roundId = Round:: getIdRound($key, 'lab');
+                $date = Round:: getRoundDate($roundId);
 
-            <div class="clear news-item paragraph-padding-64">
-                <div class="position-paragraph pg-container">
-                    <h1 class="txt-color">INGINERIA PROGRAMĂRII</h1>
-                    <p>S-au afisat rezultatele la Ingineria Programarii, la testul de laborator. Daca nu ai aflat deja ce nota
-                        ai obtinut, intra pe link-ul de mai jos.
-                    </p>
-                    <span>
-                        <a class="link-style" href="first_course.view.html">Vezi pagina materiei&#8594;</a>
-                    </span>
-                    <div class="position-details pg-details">
-                        <p class="test pg-border pg-padding-large pg-padding-32 to-align">Timp rămas: 20d 20:12h</p>
-                    </div>
-                </div>
-            </div>
+                // counter
 
-            <div class="clear news-item paragraph-padding-64">
-                <div class="position-paragraph pg-container">
-                    <h1 class="txt-color">PROGRAMARE AVANSATĂ</h1>
-                    <p>S-a mai activat o rundă. Verifică detaliile de pe pagina de Programare Avansată.</p>
-                    <span>
-                        <a class="link-style" href="first_course.view.html">Vezi pagina materiei&#8594;</a>
-                    </span>
-                    <div class="position-details pg-details">
-                        <p class="test pg-border pg-padding-large pg-padding-32 to-align">Timp rămas: 7d 20:12h</p>
-                    </div>
-                </div>
-            </div>
+                echo '<script>
+                var countDownDate = new Date(" '. $date . ' 12:00:00").getTime();
+
+                var countdownfunction = setInterval(function() {
+                    
+                    var now = new Date().getTime();
+                    
+                    var distance = countDownDate - now;
+                    
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
+                    
+                    if (distance < 0) {
+                        clearInterval(countdownfunction);
+                        document.getElementById("demo").innerHTML = "EXPIRED";
+                    }
+                }, 1000);
+                </script>';
+                // counter
+                
+                echo '<div class="position-details pg-details">
+                        <p class="test pg-border pg-padding-large pg-padding-32 to-align">Timp rămas: <a style="color:white" id="demo" class="counter"></a></p>
+                      </div>';
+            }
+            ?>
+        </div>
+    </div>
 
             <!-- /News -->
         </div>
@@ -168,6 +178,8 @@
     </footer>
 
     <script src="../../public/sidemenu.js"></script>
+
+   
 </body>
 
 </html>

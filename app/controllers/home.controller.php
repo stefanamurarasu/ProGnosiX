@@ -5,6 +5,9 @@
         case "GET":
             include_once "../models/user.model.php";
             include_once "../models/course.model.php";
+            include_once "../models/home.model.php";
+            include_once "../models/round.model.php";
+
 
             if(!isset($_SESSION["token"])) {
                 $loggedUser = new User(NULL);
