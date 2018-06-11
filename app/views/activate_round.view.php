@@ -67,11 +67,23 @@
                     <option value="course">Curs</option>
                 </select>
             </div>
+            <div class="date">
+                <input type="date" required name="start_time" placeholder="Te rog specifică o dată">
+                <input type="date" required name="end_time" placeholder="Te rog specifică o dată">
+            </div>
+            <br>
+            <h3 style="color:white">Scurtă descriere: </h3> <br><br>
+            <input id="description" type="text" name="description">
             <h2>Pentru alegerile tale: </h2>
-            <input type="date" required name="start_time" placeholder="Te rog specifică o dată">
-            <input type="date" required name="end_time" placeholder="Te rog specifică o dată">
             <button name="activate_round" type="submit" class="result-button button-white vutton-opacity">Activează runda</button>
+
         </form>
     </div>
+
+    <footer class="footer" id="footer">
+        &copy; ProGnosiX Team 2018
+    </footer>
+
+</body>
 
 </html>
