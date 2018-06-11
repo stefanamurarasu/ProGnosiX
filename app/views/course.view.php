@@ -80,7 +80,7 @@
                             echo Components::active_round_view('lab', $timeLab);
                         } else {
                             echo '<h1 class="to-align">' . $courseName . '</h1>';
-                            $filePath = Result:: getFilePath($year, $_SESSION['courseID']);
+                            $filePath = Result:: getFilePath($year, $_SESSION['courseID'], 'lab');
                             echo Components::inactive_round_view($filePath);
                         }
             
@@ -105,7 +105,7 @@
                             echo Components::active_round_view('course', $timeCourse);
                         } else {
                             echo '<h1 class="to-align">' . $courseName . '</h1>';
-                            $filePath = Result :: getFilePath($year, $_SESSION['courseID']);
+                            $filePath = Result :: getFilePath($year, $_SESSION['courseID'], 'course');
                             echo Components::inactive_round_view($filePath);
                         }
                     ?>
