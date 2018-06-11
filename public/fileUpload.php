@@ -4,7 +4,7 @@
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
     $fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-    // Check if image file is a actual image or fake image
+    // Check if image file is an actual file or fake file
     if(isset($_POST["submit"])) {
 
         // Check if file already exists
@@ -13,8 +13,8 @@
             $uploadOk = 0;
         }
 
-        // Allow certain file formats
-        if($fileType != "xls" or $fileType != "xlsx") {
+        //Allow certain file formats
+        if($fileType != ".xls" or $fileType != ".xlsx") {
             echo "Sorry, only excel files are allowed.";
             $uploadOk = 0;
         }
