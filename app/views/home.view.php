@@ -12,6 +12,16 @@
 <body>
 <?php 
         include "../controllers/home.controller.php";
+    $myfile = fopen("rss.xml", "w");
+    $txt = "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\">
+<channel>
+<atom:link href=\"http://localhost:1234/ultima-ultima-versiune/app/views/rss.xml\" rel=\"self\" type=\"application/rss+xml\" />
+<title>Noutati RSS Feed</title>
+<link>http://localhost:1234/ultima-ultima-versiune/app/views/login.view.php</link>
+<description>Noutati</description>\n";
+    fwrite($myfile, $txt);
+    fclose($myfile);
     ?>
     <header class="header neutral" id="header">
         <div class="logo">
@@ -44,8 +54,6 @@
         echo '</div>';
 
     ?>
-
-
     <!-- Main content -->
     <div id="content" class="main-content">
         <span class="burger-menu" onclick="toggleNav()">&#9776;</span>
@@ -53,12 +61,12 @@
         <!-- News -->
         <div class="news-section">
             <?php
+            $myfile = fopen("rss.xml", "a");
             
             foreach($courses as $key=>$value){
                 echo '<div class="clear news-item paragraph-padding-64">
                         <div class="position-paragraph pg-container">
                             <h1 class="txt-color">'.$value.'</h1>'; 
-                
                 $result = Announcements::getDescription($key);
                 echo '<p>'. $result.'</p>';
                 echo  '<span>
@@ -69,7 +77,6 @@
                 $date = Round:: getRoundDate($roundId);
 
                 // counter
-
                 echo '<script>
                 var countDownDate = new Date(" '. $date . ' 12:00:00").getTime();
 
@@ -97,14 +104,29 @@
                 
                 echo '<div class="position-details pg-details">
                         <p class="test pg-border pg-padding-large pg-padding-32 to-align">Timp rămas: <a style="color:white" id="demo" class="counter"></a></p>
+                      </div>
+                      </div>
                       </div>';
+
+                // rss feed
+                    $text = "<item>\n <title>". $value ."</title>\n <link>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?".$key."</link>\n";
+                    fwrite($myfile, $text);
+                    $guid = " <guid>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?".$key."</guid>\n";
+                    fwrite($myfile, $guid);
+                    $description = " <description>".$result."</description>\n";
+                    fwrite($myfile, $description);
+                    $endItem = "</item>\n";
+                    fwrite($myfile, $endItem);
+
+                //rss feed
             }
+            $final = "</channel>\n</rss>";
+            fwrite($myfile, $final);
+            fclose($myfile);
             ?>
         </div>
-    </div>
-
-            <!-- /News -->
-        </div>
+        <!-- /News -->
+        
 
         <!-- Informations -->
         <div class="info-section paragraph-padding-64">
@@ -143,7 +165,7 @@
             </div>
 
             <!-- Subscribe Section -->
-            <div class="subscribe-section white-content">
+            <!-- <div class="subscribe-section white-content">
                 <div class="tags-content">
                     <h4>Subscribe</h4>
                 </div>
@@ -156,23 +178,21 @@
                     <button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="button-sub">Subscribe</button>
                 </div>
                 <!-- Subscribe Section -->
-            </div>
+            
             <!-- /Informations -->
         </div>
 
         <!-- Pagination -->
-        <div class="pagination">
+        <!-- <div class="pagination">
             <div class="pag-numbers">
                 <a class="button button-black" href="#">1</a>
                 <a class="button button-black-hover" href="#">2</a>
                 <a class="button button-black-hover" href="#">3</a>
                 <a class="button button-black-hover" href="#">»</a>
             </div>
-        </div>
+        </div> -->
         <!-- /Main content -->
     </div>
-
-
     <footer class="footer dark-content" id="footer">
         &copy; ProGnosiX Team 2018
     </footer>
@@ -181,5 +201,4 @@
 
    
 </body>
-
 </html>
