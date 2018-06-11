@@ -74,6 +74,35 @@
                 }
             }
         }
+
+        static function login_admin($username, $password){
+            global $conn;
+
+            $stmt = $conn->prepare('SELECT*FROM user_admin WHERE username= ? AND psw= ?');
+
+            $stmt->bind_param('ss', $username, $password);
+            $stmt->execute();
+
+            $result = $stmt->get_result();
+
+            $row = $result -> fetch_assoc();
+
+            if($result->num_rows === 0){
+                return FALSE;
+            
+            } else {
+                
+                if($username==$row['username'] && $password==$row['psw']){
+
+                $generate_token =  bin2hex(openssl_random_pseudo_bytes(10));
+                $token = substr($generate_token, 0, 10);
+                $tokenSql = "INSERT INTO token (session_token, username) VALUES ('{$token}', '{$username}')";
+                $conn->query($tokenSql);
+
+                return $token;
+                }
+            }
+        }
         
         function validateEmail($email){
             $allowedDomain = array('info.uaic.ro');
