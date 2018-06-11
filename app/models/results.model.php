@@ -18,9 +18,9 @@ class Result {
         return 1;
     }
 
-    static function getFilePath($year, $course_id){
+    static function getFilePath($year, $course_id, $eval_type){
         global $conn;
-        $sql = "SELECT filepath FROM result WHERE course_id = '". $course_id ."' AND course_year = '". $year ."'";
+        $sql = "SELECT filepath FROM result WHERE course_id = '". $course_id ."' AND course_year = '". $year ."' AND eval_type = '". $eval_type ."'";
 
         $result = $conn->query($sql);
         $filepath =  $result -> fetch_assoc()["filepath"];
