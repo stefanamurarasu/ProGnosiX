@@ -97,7 +97,7 @@
         static function inactive_round_view($filePath){
             return '
                 <h2 class="title-grey">Vezi ultimele rezultate:
-                    <a href="'. $filePath .'">aici</a>
+                    <a href="../controllers/'. $filePath .'">aici</a>
                 </h2>
                 <hr class="sep">
                 <h2 class="title-grey padd-subtitle">Descarcă rezultatele în format PDF/CSV:</h2>
