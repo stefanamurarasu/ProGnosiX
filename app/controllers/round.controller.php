@@ -44,22 +44,21 @@
                 $typeOption = isset($_POST['selectType']) ? $_POST['selectType'] : false;
                 $startDate = isset($_POST['start_time']) ? $_POST['start_time'] : false;
                 $endDate = isset($_POST['end_time']) ? $_POST['end_time'] : false;
-                $resultDescription = $_POST['result'];
+                $resultDescription = isset($_POST['result']) ? $_POST['result'] : false;
 
 
                 
-                echo 'lala';
                 $status = 'yes';
-                //$result = Round :: activateRound($yearOption, $status, $typeOption, $startDate, $endDate, $courseOption, $resultDescription);
+                $result = Round :: activateRound($yearOption, $status, $typeOption, $startDate, $endDate, $courseOption, $resultDescription);
                 
-                // if ($result === 0){
-                //     $_SESSION["activate_failed"] = TRUE;
-                //     header("Location: ../views/round_failed.view.html");
+                if ($result === 0){
+                    $_SESSION["activate_failed"] = TRUE;
+                    header("Location: ../views/round_failed.view.html");
                     
-                // } else {
-                //     $_SESSION["activate_worked"] = TRUE;
-                //     header("Location: ../views/activate_round.view.php");
-                // }
+                } else {
+                    $_SESSION["activate_worked"] = TRUE;
+                    header("Location: ../views/activate_round.view.php");
+                }
 
                 header("Location: ../views/activate_round.view.php");
                 
