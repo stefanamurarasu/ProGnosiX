@@ -8,6 +8,7 @@ $conn = new mysqli($GLOBALS["servername"], $GLOBALS["username"], $GLOBALS["passw
 
 //clasa pentru perioada in care sunt active rundele
 class Result {
+
     static function insertResults($year, $filepath, $groupNb, $course_id, $description, $eval_type){
         global $conn;
 
@@ -15,6 +16,16 @@ class Result {
 
         $conn->query($sql);
         return 1;
+    }
+
+    static function getFilePath($year, $course_id){
+        global $conn;
+        $sql = "SELECT filepath FROM result WHERE course_id = '". $course_id ."' AND course_year = '". $year ."'";
+
+        $result = $conn->query($sql);
+        $filepath =  $result -> fetch_assoc()["filepath"];
+
+        return $filepath;
     }
 
 }
