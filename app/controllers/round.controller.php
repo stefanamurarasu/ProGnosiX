@@ -44,12 +44,11 @@
                 $typeOption = isset($_POST['selectType']) ? $_POST['selectType'] : false;
                 $startDate = isset($_POST['start_time']) ? $_POST['start_time'] : false;
                 $endDate = isset($_POST['end_time']) ? $_POST['end_time'] : false;
-                $resultDescription = isset($_POST['result']) ? $_POST['result'] : false;
 
 
                 
                 $status = 'yes';
-                $result = Round :: activateRound($yearOption, $status, $typeOption, $startDate, $endDate, $courseOption, $resultDescription);
+                $result = Round :: activateRound($yearOption, $status, $typeOption, $startDate, $endDate, $courseOption);
                 
                 if ($result === 0){
                     $_SESSION["activate_failed"] = TRUE;

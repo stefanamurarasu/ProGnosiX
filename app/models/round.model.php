@@ -24,25 +24,25 @@ class Round {
         return $isActive;
     }
 
-    static function activateRound($year, $status, $round_type, $start_time, $end_time, $course_id, $result_desciption){
+    static function activateRound($year, $status, $round_type, $start_time, $end_time, $course_id){
         global $conn;
 
-        if ($round_type === 'lab'){
-            $sql = "SELECT ID FROM rounds WHERE course_id = '". $course_id ."' AND round_type = 'lab'";
-        } elseif ($round_type === 'course') {
-            $sql = "SELECT ID FROM rounds WHERE course_id = '". $course_id ."' AND round_type = 'course'";
-        }
+        // if ($round_type === 'lab'){
+        //     $sql = "SELECT ID FROM rounds WHERE course_id = '". $course_id ."' AND round_type = 'lab'";
+        // } elseif ($round_type === 'course') {
+        //     $sql = "SELECT ID FROM rounds WHERE course_id = '". $course_id ."' AND round_type = 'course'";
+        // }
 
-        $result = $conn->query($sql);
-        $isActive =  $result -> fetch_assoc()["ID"];
+        // $result = $conn->query($sql);
+        // $isActive =  $result -> fetch_assoc()["ID"];
 
-        if ($isActive){
-            return 0; //runda existenta
-        } else {
-        $activateSql = "INSERT INTO rounds (course_year, round_status, round_type, start_time, end_time, course_id, result_description) VALUES ('{$year}', '{$status}', '{$round_type}', '{$start_time}', '{$end_time}', '{$course_id}', '{$result_description}'";
+        // if ($isActive){
+        //     return 0; //runda existenta
+        // } else {
+        $activateSql = "INSERT INTO rounds (course_year, round_status, round_type, start_time, end_time, course_id) VALUES ('{$year}', '{$status}', '{$round_type}', '{$start_time}', '{$end_time}', '{$course_id}')";
             $conn->query($activateSql);
             return 1; 
-        }
+        // }
     }
 
     static function getIdRound($course_id, $round_type){
