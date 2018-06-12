@@ -18,7 +18,7 @@
         </div>
         <div class="header-right">
             <span class="make-me-inline">Hello,
-                <a href="./profile.view.html">
+                <a href="./profile.view.php">
                     <img src="../../public/images/user-icon.png" alt="User icon" class="user-icon">
                 </a>
             </span>
