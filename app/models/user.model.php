@@ -10,6 +10,8 @@
         private $year;
         private $registrationNb;
         private $username;
+        private $firstname;
+        private $lastname;
 
         public function __construct($token) {
             global $conn;
@@ -29,10 +31,19 @@
             // anul userului
             $yearSql = 'SELECT year FROM student WHERE username = "' . $this -> username . '" ';
             $yearResult =  $conn->query($yearSql);
-
             $this -> year =  $yearResult -> fetch_assoc()["year"];
-            //$year = mysqli_fetch_assoc($yearResult);
-            //echo $year;
+
+
+            //prenumele userului
+            $firstnameSql = 'SELECT first_name FROM student WHERE username = "' . $this -> username . '" ';
+            $firstnameResult =  $conn->query($firstnameSql);
+            $this -> firstname =  $firstnameResult -> fetch_assoc()["first_name"];
+
+
+            //pnumele userului
+            $lastnameSql = 'SELECT last_name FROM student WHERE username = "' . $this -> username . '" ';
+            $lastnameResult =  $conn->query($lastnameSql);
+            $this -> lastname =  $lastnameResult -> fetch_assoc()["last_name"];
 
             if ($this -> isLogged == TRUE ){
                 $coursesSql = '
@@ -77,6 +88,27 @@
             return $this -> registrationNb;
         }
 
+        public function uploadPhoto($username, $photoPath){
+            global $conn; 
+
+            $sqlUpdate = "UPDATE student SET photo_path = '{$photoPath}' WHERE username='{$username}'";
+            $conn->query($sqlUpdate);
+         
+            return 1;
+        }
+
+        public function getPhoto($username){
+            global $conn; 
+
+            $sql = "SELECT photo_path FROM student WHERE username='{$username}'";
+            $sqlResult = $conn->query($sql);
+            $photoPath = $sqlResult -> fetch_assoc()["photo_path"];
+         
+            return $photoPath;
+        }
+
+
+
         // cursurile userului
         public function getCourses() {
             return $this -> courses;
@@ -92,6 +124,10 @@
 
         public function getUsername(){
             return $this -> username;
+        }
+
+        public function getName(){
+            return $this -> firstname . ' ' . $this -> lastname ;
         }
 
     }
