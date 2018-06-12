@@ -6,6 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pagina cursului</title>
     <link rel="stylesheet" href="../../public/courses.css">
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#submitEmail').click(function(){
+                var email= $('#email').val();
+                
+                var data = 'email= ' + email;
+                console.log(data);
+
+                $.ajax({
+                    type: "POST",
+                    URL: '../../public/ajax.php',
+                    data: varData,
+                    success: function(){
+                        alert("Felicitări! Tocmai v-ați abonat la site-ul nostru!");
+                    }
+                    
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -191,8 +212,9 @@
                         Introduceți e-mailul pentru a primi notificări
                         <br id="break"> despre ultimele postări de pe aplicație.
                     </p>
-                    <input class="sub-input" type="text" placeholder="E-mail..." style="width:100%">
-                    <button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="button-sub">Subscribe</button>
+                    <input id="email" class="sub-input" type="text" placeholder="E-mail..." style="width:100%">
+                    <label for="email"></label>
+                    <button id="submitEmail" type="button" onclick="document.getElementById('subscribe').style.display='block'" class="button-sub">Subscribe</button>
                 </div>
                 <!-- Subscribe Section -->
             </div>
