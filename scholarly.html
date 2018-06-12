@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+		Scolary
+    </title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<center><h1>ProGnosiX</h1></center>
+<center><h3>Murarașu Ștefana</h3></center>
+<center><h3>Dudău Andreea-Codruța</h3></center>
+
+<h3><b>1.Introducere</b></h3>
+<p>Se dorește dezvoltarea unei aplicații Web pentru realizarea de prognoze privitoare la punctajele obtinute de studenti la probele 
+de evaluare -- teste scrise, activitati de laborator, proiecte etc. -- a cunostintelor la anumite discipline (e.g., Ingineria programarii, Practica SGBD, Tehnologii Web). 
+Pentru fiecare runda a prognozelor, un utilizator (eventual, autentificat) va putea "ghici" doar o singura data nota pe care o va lua. In cazul in care nota precizata de 
+acesta va coincide cu cea reala (preluata dintr-un document CSV, JSON sau XML separat), va primi P unitati in plus la punctaj, in caz contrar va obtine M unitati in minus.
+Dupa un numar de R runde, se vor putea afisa punctajele finale ale tuturor celor evaluati. Schimbarile de situatie vor fi disponibile via un flux RSS. 
+Situatiile cu punctaje vor fi disponibile, de asemenea, ca documente adoptand formatele CSV si PDF.</p>
+
+<h3><b>Utilizatorul înregistrat</b></h3>
+Se loghează pe aplicație folosind un username și o parolă.<br>
+După ce s-a logat, studentul are acces la urmatoarele lucruri: <br>
+      -> dacă o rundă este activă, acesta poate sa își ghicească nota (doar o singură data); <br>
+      -> de asemenea, dacă sunt disponibile rezultatele(fie laborator, fie curs), le poate descărca în format CSV sau PDF; <br>
+      -> atunci cand își viziteaza profilul, își poate vedea ultima notă obținută, procentajul(mărit sau scăzut), dar și nota finală. <br>
+      
+<h3><b>Utilizator fără cont</b></h3>
+Utilizatorul fără cont va putea accesa doar prima pagina, unde, dacă va dori, își va putea crea un cont nou.
+
+<h3><b>Administratorul</b></h3>
+Se loghează pe aplicație folosind un username și o parolă.<br>
+După ce s-a logat, administratorul are acces la urmatoarele lucruri: <br>
+   -> poate activa perioada de timp (runda) în care studentul își va putea "ghici nota";
+   -> poate încărca rezultatele obținute la curs sau laborator;
+
+<h3><b>2.Etapele dezvoltarii proiectului</b></h3>
+1.	Prototipul.<br>
+2.	Arhitectura proiectului (Bazată pe design pattern-ul MVC).<br>
+3.  Backend.<br>
+
+<h3><b>3.Tehnologii</b></h3>
+
+Proiectul utilizează următoarele tehnologii:<br>
+    <br>
+    1.HTML5<br>
+    <br>
+    2.CSS<br>
+    <br>
+    3.Javascript<br>
+    <br>
+    4.PHP<br>
+
+<h3><b>4.MySQL</b></h3>
+
+Tabele folosite:<br>
+    <br>
+    course(course, grade, prediction, result, rounds, student, token, user_admin)<br>
+    grade(id, registration_number, value, date, course_name)<br>
+    prediction(id, choose_grade, registration_number, round_id, course_id, evaluation_type)<br>
+    result(id, course_year, filepath, csv_path, pdf_path, group_number, course_id, result_description, eval_type)<br>
+    student(id, registration_number, last_name, first_name, year, username, psw, repeat_password)<br>
+    token(session_token, username)<br>
+    user_admin(username, password)<br>
+
+<h3><b>5.Structura</b></h3>
+
+->Pagina de pornire:<br>
+<br>
+•	Va contine un buton care va redirecționa spre pagina de înregistrare a utilizatorului, field-urile pentru autentificare (în cazul în care studentul are deja cont) și
+modalități de contact ale administratorului.<br>
+<br>
+
+->Paginile de cursuri conțin: <br>
+<br>
+•	Note de la 1 la 10 care pot fi "ghicite".<br>
+•	Redirecționarea spre RSS Feed.<br>
+•	Cronometru pentru a vedea cât timp mai are la dispozitie până o rundă devine inactivă.<br>
+•	Modalitate de subscribe la site.<br>
+<br>
+
+->Pagina pentru Rss Feed:<br>
+<br>
+•	Ultimele noutăți aduse de către aplicație. (format XML) <br>
+<br>
+->Pagina de profil a utilizatorului.<br>
+->Pagina în care pot fi vazute anunțuri despre toate materiile.<br>
+
+</body>
+</html>
