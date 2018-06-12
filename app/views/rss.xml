@@ -6,39 +6,33 @@
 <link>http://localhost:1234/ultima-ultima-versiune/app/views/login.view.php</link>
 <description>Noutati</description>
 <item>
- <title>Tehnologii WEB</title>
- <link>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?1</link>
- <guid>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?1</guid>
- <description>Tocmai s-a activat o noua runda</description>
+ <title>ACTN</title>
+ <link>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?13</link>
+ <guid>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?13</guid>
+ <description>Tocmai s-a activat o noua runda. Fii sigur ca alegi o nota!</description>
 </item>
 <item>
- <title>Practica SGBD</title>
- <link>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?2</link>
- <guid>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?2</guid>
+ <title>Retele Petri</title>
+ <link>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?14</link>
+ <guid>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?14</guid>
+ <description>Inca o runda activa. Alege o nota!</description>
+</item>
+<item>
+ <title>Calcul numeric</title>
+ <link>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?15</link>
+ <guid>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?15</guid>
+ <description>S-a activat o runda!</description>
+</item>
+<item>
+ <title>Ms Office</title>
+ <link>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?16</link>
+ <guid>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?16</guid>
  <description></description>
 </item>
 <item>
- <title>Programare avansata</title>
- <link>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?3</link>
- <guid>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?3</guid>
- <description></description>
-</item>
-<item>
- <title>Ingineria programarii</title>
- <link>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?4</link>
- <guid>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?4</guid>
- <description></description>
-</item>
-<item>
- <title>Introducere in criptografie</title>
- <link>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?5</link>
- <guid>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?5</guid>
- <description></description>
-</item>
-<item>
- <title>Modele continue si Matlab</title>
- <link>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?6</link>
- <guid>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?6</guid>
+ <title>Grafica pe calculator</title>
+ <link>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?17</link>
+ <guid>http://localhost:1234/ultima-ultima-versiune/app/views/course.view.php?17</guid>
  <description></description>
 </item>
 </channel>
