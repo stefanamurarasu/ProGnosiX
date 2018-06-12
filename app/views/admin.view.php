@@ -38,13 +38,13 @@
         <div class="choose_2">
             <button class="button-group">Alegeți grupa studentului</button>
             <select name="selectGroupNb" class="button-group-content">
-                <option value="1">Grupa 1</option>
-                <option value="2">Grupa 2</option>
-                <option value="3">Grupa 3</option>
-                <option value="4">Grupa 4</option>
-                <option value="5">Grupa 5</option>
-                <option value="6">Grupa 6</option>
-                <option value="7">Grupa 7</option>
+                <option value="Grupa 1">Grupa 1</option>
+                <option value="Grupa 2">Grupa 2</option>
+                <option value="Grupa 3">Grupa 3</option>
+                <option value="Grupa 4">Grupa 4</option>
+                <option value="Grupa 5">Grupa 5</option>
+                <option value="Grupa 6">Grupa 6</option>
+                <option value="Grupa 7">Grupa 7</option>
             </select>
         </div>
         <div class="choose_3">
@@ -83,7 +83,7 @@
         <h2>Pentru alegerile tale: </h2>
         
         <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload File" name="submit_file">
+        <input type="submit" value="Incarca rezultatele" name="submit_file">
     </form>
     </div>
 
