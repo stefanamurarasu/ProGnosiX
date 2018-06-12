@@ -340,6 +340,21 @@ a {
     border: none;
 }
 
+.export {
+    background-color: #555555;
+    opacity: 0.7;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.export:hover {
+    opacity: 0.8;
+    background-color:rgba(0, 150, 136, 0.77);
+}
+
 .dropdown {
     padding: 5% 0% 9% 9%;
 }
