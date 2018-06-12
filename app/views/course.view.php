@@ -69,6 +69,7 @@
                     <?php 
                         include_once "../../app/views/components/general.components.php";
                         include_once "../../app/models/round.model.php";
+                        include_once "../../app/models/results.model.php";
 
                         $isActive = Round::isActive($courseID, 'lab');
 
@@ -81,7 +82,9 @@
                         } else {
                             echo '<h1 class="to-align">' . $courseName . '</h1>';
                             $filePath = Result:: getFilePath($year, $_SESSION['courseID'], 'lab');
-                            echo Components::inactive_round_view($filePath);
+                            $csvPath = Result:: getCSVPath($year, $_SESSION['courseID'], 'lab');
+                            $pdfPath = Result:: getPDFPath($year, $_SESSION['courseID'], 'lab');
+                            echo Components::inactive_round_view($filePath, $csvPath, $pdfPath);
                         }
             
                     ?>
@@ -94,6 +97,7 @@
                     <?php 
                         include_once "../../app/views/components/general.components.php";
                         include_once "../../app/models/round.model.php";
+                        include_once "../../app/models/results.model.php";
 
                         $isActive = Round::isActive($courseID, 'course');
 
@@ -106,7 +110,11 @@
                         } else {
                             echo '<h1 class="to-align">' . $courseName . '</h1>';
                             $filePath = Result :: getFilePath($year, $_SESSION['courseID'], 'course');
-                            echo Components::inactive_round_view($filePath);
+                            //$csvPath = Result:: getCSVPath($year, $_SESSION['courseID'], 'course');
+                            $csvPath = substr($filePath, 0, 18).'csv';
+                            //$pdfPath = Result:: getPDFPath($year, $_SESSION['courseID'], 'course');
+                            $pdfPath = substr($filePath, 0, 18).'pdf';
+                            echo Components::inactive_round_view($filePath, $csvPath, $pdfPath);
                         }
                     ?>
                 </form>
