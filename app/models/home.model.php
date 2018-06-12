@@ -8,10 +8,10 @@ $conn = new mysqli($GLOBALS["servername"], $GLOBALS["username"], $GLOBALS["passw
 
 class Announcements{
 
-    static function getDescription($course_id){
+    static function getDescription($course_id, $eval_type){
         global $conn;
 
-        $sql = "SELECT result_description FROM rounds WHERE course_id = '". $course_id ."'";
+        $sql = "SELECT result_description FROM rounds WHERE course_id = '". $course_id ."' AND round_type = '". $eval_type ."'";
 
         $result = $conn->query($sql);
 

@@ -66,8 +66,15 @@
             foreach($courses as $key=>$value){
                 echo '<div class="clear news-item paragraph-padding-64">
                         <div class="position-paragraph pg-container">
-                            <h1 class="txt-color">'.$value.'</h1>'; 
-                $result = Announcements::getDescription($key);
+                            <h1 class="txt-color">'.$value.'</h1>';
+
+                $int = (int)$key;
+
+                if ($int % 2 == 0){
+                    $result = Announcements::getDescription($key, 'lab');
+                } else {
+                    $result = Announcements::getDescription($key, 'course');
+                }
                 echo '<p>'. $result.'</p>';
                 echo  '<span>
                             <a class="link-style" href="../views/course.view.php?'.$key.'">Vezi pagina materiei&#8594;</a>
