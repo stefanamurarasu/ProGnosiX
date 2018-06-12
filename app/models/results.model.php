@@ -48,4 +48,13 @@ class Result {
         return $filepath;
     }
 
+    static function insertIntoGrade($grupa, $nume, $nota_obtinuta, $nota_ghicita, $procentaje, $nota_finala, $nr_matricol, $id_curs){
+        global $conn;
+
+        $sql = "INSERT INTO grade (grupa, nume, nota_obtinuta, nota_ghicita, procentaje, nota_finala, nr_matricol, id_curs) VALUES ('{$grupa}', '{$nume}', '{$nota_obtinuta}', '{$nota_ghicita}', '{$procentaje}', '{$nota_finala}', '{$nr_matricol}', '{$id_curs}')";
+
+        $conn->query($sql);
+        return 1;
+    }
+
 }

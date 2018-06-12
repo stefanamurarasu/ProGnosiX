@@ -110,6 +110,27 @@
                 $pdfPath = 'uploads/rezultate.pdf';
                 $result = Result :: insertResults($year,  $filepath, $csvPath, $pdfPath, $groupNb, $course, $resultDescription, $type);
                 
+
+                //process CSV and INSERT in DB
+                // course id -> $course
+                $err_upTmpName = 'C:/xampp/htdocs/ultima-ultima-versiune/app/controllers/uploads/rezultate.csv';
+                $row = 0;
+                if (($handle = fopen($err_upTmpName, "r")) !== FALSE) {
+                    while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+                        if($row == 0){ 
+                            $row++; 
+                        } else {
+                            // $data[0] = grupa; $data[1] = nume; $data[2] = nota obtinuta; $data[3] = nota ghicita, $data[4] = procentaj, $data[5] = nota finala, $data[6]=nr_matricol
+                            /*********************************************************************************************************************/
+
+                            if(!empty($data[0]) && !empty($data[1]) && !empty($data[2]) && !empty($data[3]) && !empty($data[4]) && !empty($data[5]) && !empty($data[6])){ 
+                                $result2 = Result :: insertIntoGrade($data[0],  $data[1], $data[2], $data[3], $data[4], $data[5], $data[6], $course);
+                            }
+                        }
+                    }
+                }
+                fclose($handle);
+
                 if ($result){
                     $_SESSION["results_worked"] = TRUE;
                     header("Location: ../views/admin.view.php");
@@ -130,5 +151,26 @@
             break;
     }
 
+?>
+
+<?php
+
+// $err_upTmpName = 'rezultate.csv';
+// $row = 0;
+// if (($handle = fopen($err_upTmpName, "r")) !== FALSE) {
+//     while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+//         if($row == 0){ 
+//             $row++; 
+//         } else {
+//     // $data[0] = grupa; $data[1] = nume; $data[2] = nota obtinuta; $data[3] = nota ghicita, $data[4] = procentaj, $data[5] = nota finala
+// /*********************************************************************************************************************/
+//             if(!empty($data[0]) && !empty($data[1])) 
+//                 echo $data[0].' - '.$data[1].' - '.$data[2].' - '.$data[3].' - '.$data[4].' - '.$data[5].'<br/>';
+//         }
+//     }
+// } else {
+//     echo 'File could not be opened.';
+// }	
+// fclose($handle);
 ?>
     
