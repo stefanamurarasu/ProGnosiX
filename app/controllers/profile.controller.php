@@ -65,7 +65,7 @@
                     
                     $uploadPhoto = $loggedUser -> uploadPhoto($username, $target_file);
                     // $photoPath = $loggedUser -> getPhoto($username);
-                    header("Location: ../viewsprovile.view.php");
+                    header("Location: ../views/profile.view.php");
             }
 
             if(isset($_POST["logout_user"])) {
