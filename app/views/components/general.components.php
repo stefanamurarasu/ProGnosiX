@@ -94,7 +94,7 @@
         }
 
         //va fi apelata pentru runda inactiva
-        static function inactive_round_view($filePath){
+        static function inactive_round_view($filePath, $CSVPath, $PDFPath){
             return '
                 <h2 class="title-grey">Vezi ultimele rezultate:
                     <a href="../controllers/'. $filePath .'">aici</a>
@@ -103,11 +103,8 @@
                 <h2 class="title-grey padd-subtitle">Descarcă rezultatele în format PDF/CSV:</h2>
                 <hr class="sep">
                 <div class="dropdown">
-                    <button class="dropbtn">Descarcă rezultate</button>
-                    <div class="dropdown-content">
-                        <a href="#">CSV</a>
-                        <a href="#">PDF</a>
-                    </div>
+                    <a class="export" style="color:white;" href="../controllers/'. $CSVPath .'">Download CSV</a>
+                    <a class="export" style="color:white;" href="../controllers/'. $PDFPath .'">Download PDF</a>
                 </div>
             ';
         }
